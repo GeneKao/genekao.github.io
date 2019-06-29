@@ -1,0 +1,6 @@
+[project]
+name = GENEATCG
+
+
+[servers.ghpages]
+target = ghpages://GeneKao/geneatcg
