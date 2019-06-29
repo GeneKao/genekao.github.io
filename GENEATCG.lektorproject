@@ -3,4 +3,4 @@ name = GENEATCG
 
 
 [servers.ghpages]
-target = ghpages://GeneKao/geneatcg
+target = ghpages+https://GeneKao/geneatcg
