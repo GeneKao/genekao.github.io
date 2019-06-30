@@ -1,6 +1,11 @@
 title: Hello World
 ---
-body: Hello world! This is the first post. I am migrating my old website to GitHub Pages using [Lektor](https://www.getlektor.com/)  static content management system
+body:
+
+Hello world! 
+
+
+This is the first post. I am migrating my old website to GitHub Pages using [Lektor](https://www.getlektor.com/)  static content management system. 
 ---
 labels: blog
 ---
