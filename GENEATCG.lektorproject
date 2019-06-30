@@ -1,7 +1,7 @@
 [project]
 name = GENEATCG
 url_style = absolute
-url = https://genekao.github.io
+url = https://genekao.github.io/
 
 
 [packages]
@@ -10,7 +10,7 @@ lektor-minify = 1.2
 lektor-markdown-highlighter = 0.3
 
 [servers.ghpages]
-target = ghpages+https://GeneKao/genekao.github.io
+target = ghpages+https://GeneKao/genekao.github.io/
 
 
 
