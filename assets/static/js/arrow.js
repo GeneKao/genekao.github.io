@@ -1,0 +1,3 @@
+var arrow = function (params) {
+    
+}

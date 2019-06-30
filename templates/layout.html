@@ -1,29 +1,64 @@
 <!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<title>{% block title %}Welcome{% endblock %} — GENEATCG</title>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="{{ this.title }} | Gene Ting-Chun Kao" />
+    <meta name="author" content="Gene Ting-Chun Kao" />
+    <meta name="copyright" content="Gene Ting-Chun Kao" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{'.'|url(external=true)}}" />
+    <link rel="alternate" type="application/atom+xml" title="Gene's blog" href="/atom.xml">
+    <meta name="description" content="{{ this.metadesc }}" />
+    <title>{% block title %}home{% endblock %} | Gene Ting-Chun Kao</title>
+    <link rel="icon" sizes="32x32" href="/static/favicon-32x32.png" type="image/png" />
+    {% block head%}
+    {%endblock%}
+</head>
+
 <body>
-  <header>
-    <h1>GENEATCG</h1>
-    <nav>
-      <ul class="nav navbar-nav">
-        <li{% if this._path == '/' %} class="active"{% endif
-          %}><a href="{{ '/'|url }}">Welcome</a></li>
-        {% for href, title in [
-          ['/blog', 'Blog'],
-          ['/projects', 'Projects'],
-          ['/about', 'About']
-        ] %}
-          <li{% if this.is_child_of(href) %} class="active"{% endif
-            %}><a href="{{ href|url }}">{{ title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
-  <div class="page">
-    {% block body %}{% endblock %}
-  </div>
-  <footer>
-    &copy; Copyright 2019 by Gene Ting-Chun Kao.
-  </footer>
+    <div class=skiptocontent>
+        <a href=#maincontent>skip to main content</a>
+    </div>
+
+        {% block body %}{% endblock %}
+
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="">contact</a>
+                </li>
+                <li>
+                    <a href="/labels/">labels</a>
+                </li>
+                <li>
+                    <a href="/sitemap.html">sitemap</a>
+                </li>
+                <li>
+                    <span>&copy; 2019 Gene Ting-Chun Kao</span>
+                </li>
+            </ul>
+
+            <form id="ddg" name="x" action="//duckduckgo.com/">
+              <input type="hidden" value="https://genekao.github.io/geneatcg/" name="sites"></input>
+                <input type="search" placeholder="Search" name="q"></input>
+                <input type="hidden" value="1" name="kh"></input>
+                <input type="hidden" value="1" name="kn"></input>
+                <input type="hidden" value="1" name="kac"></input>
+                <button class="button" type="submit">Go</button>
+            </form>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//static.getclicky.com/js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+        })();
+    </script>
 </body>
+
+</html>

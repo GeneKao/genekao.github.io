@@ -1,6 +1,5 @@
-title: Welcome to GENEATCG!
+_model: blog
 ---
-body:
-
-This is a basic demo website that shows how to use Lektor for a basic
-website with some pages and a blog.
+title: Home
+---
+metadesc: Home page of Gene Ting-Chun Kao

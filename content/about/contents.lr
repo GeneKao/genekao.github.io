@@ -1,7 +1,30 @@
-title: About this Website
+_model: page
+---
+title: About
 ---
 body:
 
-This is a website that was made with the Lektor quickstart.
+Hi this is Gene Ting-Chun Kao
 
-And it does not contain a lot of information.
+
+### About me
+
+Gene Ting-Chun Kao is an architectural designer and a prolific programmer who specialises in the field of computational design, digital fabrication and visual computing in computer science. 
+
+In 2013, he graduated with a Bachelor of Architecture degree from Tamkang University, earning the Best Project Award for Undergraduate Design Thesis and the Excellent Performance Award of Overall Academic Performance. In 2016, he obtained a Master of Science degree from Stuttgart University ITECH Integrative Technologies and Architectural Design Research and participated in the computational group of the ICD/ITKE Research Pavilion 2015-16. His master's thesis Assembly-Aware Design of Masonry Shell Structures: A Computational Approach was completed under the supervision of Professor Jan Knippers and Achim Menges of ITKE and ICD. The research was published and presented during the Pecha Kucha plenary session at the International Association for Shell and Spatial Structures (IASS) 2017 conference in Hamburg.
+
+From 2013 to 2014, Gene worked as a research and teaching assistant at the Digital Design & Fabrication LAB (CCC Lab), Dept. of Architecture, Tamkang University under the supervision of Professor Chen Chen-Cheng. From 2016 to 2018 he was a software developer at Ed. Züblin AG / Strabag AG where he focused on research & development, innovation and software development for various construction and national research projects.
+
+He strongly believes architectural aesthetics are closely related to structural systems and geometry logic. By cooperating with architects, computer scientists, and structure engineers, Gene has developed several computer programs to integrate interdisciplinary fields and has shared many open source projects online.
+
+Gene is a PhD candidate at the Institute of Technology in Architecture at ETH Zurich, where he is a research assistant in the Block Research Group and NCCR Digital Fabrication.
+
+
+
+### License
+
+The content for this site, including blog posts, images and other assets is covered under [CC-BY-SA](http://creativecommons.org/licenses/by-sa/4.0/) and the source code for this site is covered under [MIT](https://opensource.org/licenses/MIT). 
+
+
+---
+metadesc: About page of Gene Ting-Chun Kao

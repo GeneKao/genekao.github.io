@@ -1,20 +1,29 @@
-{% macro render_blog_post(post, from_index=false) %}
-  <div class="blog-post">
-  {% if from_index %}
-    <h2><a href="{{ post|url }}">{{ post.title }}</a></h2>
-  {% else %}
-    <h2>{{ post.title }}</h2>
-  {% endif %}
-  <p class="meta">
-    written by
-    {% if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {% else %}
-      {{ post.author }}
-    {% endif %}
-    on {{ post.pub_date }}
-  </p>
-  {{ post.body }}
-  </div>
+{% macro render_blog(post) %}
+<div class="post">
+    <div class="post-url">
+        <a href="{{ post|url }}">
+            {% if post.children.include_undiscoverable(True) %}
+                Series: 
+            {% endif %}
+            {{ post.title }}
+        </a>
+        {% if post.children.include_undiscoverable(True) %}
+            <div class="post-children">
+                Parts
+                <ul>
+                    {% for child in post.children.include_undiscoverable(True) %}
+                        <li>
+                            {% if child.is_undiscoverable %}
+                                {{child.part}}
+                            {% else %}
+                                <a href="{{child|url}}" title="{{child.title}}">{{ child.part }}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif%}
+    </div>
+    <div class="post-date">{{post.pub_date}}</div>
+</div>
 {% endmacro %}

@@ -1,0 +1,10 @@
+<header>
+    <ul>
+        {% for href, title in [ ['/', 'home'], ['/about', 'about'], ['/portfolio', 'Portfolio'] ] %}
+        <li>
+            <a href="{{ href|url }}">{{ title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <div>GENEATCG</div>
+</header>

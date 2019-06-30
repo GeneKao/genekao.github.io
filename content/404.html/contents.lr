@@ -1,0 +1,7 @@
+_template: 404.html
+---
+_model: page
+---
+_discoverable: no
+---
+metadesc: 404 page of Gene's blog
