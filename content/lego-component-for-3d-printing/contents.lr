@@ -1,0 +1,21 @@
+title: LEGO component for 3d printing
+---
+body:
+
+<img src="LEGO-e1387030667805-1024x892.png" alt="drawing" width="100%"/>
+
+### LEGO component for 3d printing
+
+在Rhino3D軟體裡用python程式語言 創造客制化的樂高原件。 樂高元件設計 LEGO customized components developed through Python script using Rhino 3D software. We can design our own lego components via 3d printer. Mouse left click => make LEGO up part. Mouse left click => make LEGO down part.
+
+<img src="3d-LEGO-component-1024x559.jpg" alt="drawing" width="100%"/>
+
+### Method:
+
+Basically, the methodology is quite simple. 1. Replace any surface with lego unit. We can find its dimensions [here](https://upload.wikimedia.org/wikipedia/commons/1/1a/Lego_dimensions.svg). 2. Trim a hole. 3. Extrude surfaces. 4. Join all faces.
+
+
+---
+labels: python, rhino-grasshopper, fabrication, design, programming, tku
+---
+pub_date: 2013-12-14

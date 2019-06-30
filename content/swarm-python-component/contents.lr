@@ -158,6 +158,6 @@ rect = rs.AddRectangle(plane, rectX, rectY)
 
 ``` 
 ---
-labels: python, programming, design
+labels: python, programming, design, rhino-grasshopper
 ---
 pub_date: 2014-06-25
