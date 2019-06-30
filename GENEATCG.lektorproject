@@ -1,7 +1,7 @@
 [project]
 name = GENEATCG
 url_style = absolute
-url = https://genekao.github.io/geneatcg/
+url = https://genekao.github.io
 
 
 [packages]
