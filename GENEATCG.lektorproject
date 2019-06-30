@@ -10,7 +10,7 @@ lektor-minify = 1.2
 lektor-markdown-highlighter = 0.3
 
 [servers.ghpages]
-target = ghpages+https://GeneKao/genekao.github.io?cname=www.geneatcg.com
+target = ghpages+https://GeneKao/genekao.github.io?cname=geneatcg.com
 
 
 
