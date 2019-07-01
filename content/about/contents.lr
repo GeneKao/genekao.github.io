@@ -7,8 +7,7 @@ body:
 Hi, I am Gene!
 
 
-
-<img src="Gene_profile.jpg" alt="drawing" width="100%"/>
+<img src="Gene_profile2.jpg" alt="drawing" width="100%" onmouseover="this.src='Gene_profile2.jpg';" onmouseout="this.src='Gene_profile.jpg';" />
 
 
 ### About me
