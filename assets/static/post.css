@@ -23,7 +23,7 @@ a {
 
 a:hover,
 a:focus {
-    color: royalblue;
+    color:#0067cd;
 }
 
 p strong {
@@ -292,7 +292,7 @@ p code {
 .post-labels ul li a {
     padding: 0 4px;
     text-decoration: none;
-    color: royalblue;
+    color: #cd0067;
     margin-right: 1px;
 }
 
@@ -369,12 +369,12 @@ p code {
 
     header ul li a {
         display: initial;
-        color: royalblue;
+        color: #cd0067;
         text-decoration: none;
     }
 
     header div {
-        color: #dd0c39;
+        color: #0067cd;
         display: inline;
     }
 
