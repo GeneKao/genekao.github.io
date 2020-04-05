@@ -1,0 +1,42 @@
+_model:
+
+page
+title: Publications
+---
+labels: research
+---
+body:
+
+----
+
+2019
+
+### [High-Performance Corrugated Concrete Shell Construction on Bending-actuated Robotically 3D-printed Formworks](https://www.ingentaconnect.com/content/iass/piass/2019/00002019/00000006/art00008)
+
+Wang X, Tam KM, Földesi D, Lee H, Seo JI, Vasileiou A, Luo Y, So CP, Zhang X, Karsan Z, Kao GT. High-Performance Corrugated Concrete Shell Construction on Bending-actuated Robotically 3D-printed Formworks. InProceedings of IASS Annual Symposia 2019 Oct 7 (Vol. 2019, No. 6, pp. 1-8). International Association for Shell and Spatial Structures (IASS).
+
+----
+
+2017 
+
+### [Assembly-aware design of masonry shell structures: a computational approach](https://www.geneatcg.com/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/)
+
+<img src="./aad-masonry-shell.png" width="100%">
+
+Kao, G.T., Korner, A., Sonntag, D., Nguyen, L., Menges, A., Knippers, J., 2017. Assembly-aware design of masonry shell structures: a computational approach, in: Proceedings of IASS Annual Symposia, International Association for Shell and Spatial Structures (IASS). pp. 1–10.
+
+----
+---
+pub_date: 2017-10-31
+---
+last_updated_date: 2020-04-05
+---
+_hidden: no
+---
+_discoverable: no
+---
+metadesc: publications
+---
+modified_date: 2020-04-05
+---
+title: Publications
