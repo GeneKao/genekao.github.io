@@ -1,0 +1,77 @@
+title: oh-my-phd
+---
+body:
+
+I am doing my PhD study at ETH Zurich. I try to document what I have been learning here in this [Github repo](https://github.com/GeneKao/oh-my-phd). 
+
+
+
+# Table of Contents
+
+1.  [Oh My PhD!](#org64699cd)
+    1.  [Writings](#orge0efd7c)
+        1.  [orgmode-latex-templates](#orgda42040)
+    2.  [Coding](#org51278f9)
+        1.  [programming notes](#org0261370)
+        2.  [oh-my-opengl](#org628ab52)
+    3.  [Learning](#org0ee2194)
+        1.  [courses at ETH](#orgee0f969)
+        2.  [math foundations](#orgf1c8035)
+        3.  [optimisation](#orgc7e62a5)
+        4.  [(discrete) differential geometry](#org5ece396)
+        5.  [structural mechanics](#orgc7b7dc5)
+    4.  [Time management](#orgdeefae9)
+        1.  [phd-org-mode](#org4c63e83)
+
+
+<a id="org64699cd"></a>
+
+# Oh My PhD!
+
+Hi Welcome to Oh My PhD! I will document some interesting and useful things I learn during my PhD study at ETH here.
+
+![img](http://phdcomics.com/comics/images/archive_list_warning.gif)
+![img](http://phdcomics.com/comics/archive/phd030718s.gif)
+
+<a id="orge0efd7c"></a>
+## Writings
+<a id="orgda42040"></a>
+### [orgmode-latex-templates](https://github.com/GeneKao/orgmode-latex-templates)
+My org-mode templates for latex-style writing
+This repo contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.
+<a id="org51278f9"></a>
+## Coding
+<a id="org0261370"></a>
+### [programming notes](https://github.com/GeneKao/programming-notes)
+My programming related notes
+<a id="org628ab52"></a>
+### [oh-my-opengl](https://github.com/GeneKao/oh-my-opengl)
+My OpenGL practice
+<a id="org0ee2194"></a>
+## Learning
+<a id="orgee0f969"></a>
+### [courses at ETH](./courses.md)
+<a id="orgf1c8035"></a>
+### [math foundations](./math-found.md)
+Some math resources I find it very useful online.
+<a id="orgc7e62a5"></a>
+### [optimisation](optimisation.md)
+<a id="org5ece396"></a>
+### [(discrete) differential geometry](discrete-differential-geometry.md)
+<a id="orgc7b7dc5"></a>
+### [structural mechanics](structureal-mechanics.md)
+<a id="orgdeefae9"></a>
+## Time management
+<a id="org4c63e83"></a>
+### [phd-org-mode](https://github.com/GeneKao/phd-org-mode)
+My phd orgmode to organize my scheduling. Based on this template.
+
+
+---
+labels: blog, research
+---
+last_updated_date: 2020-11-09
+---
+metadesc: phd-study
+---
+pub_date: 2020-11-09
