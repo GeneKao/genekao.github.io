@@ -1,5 +1,9 @@
 language: python
 python: 3.7.3
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - $HOME/.cache/lektor/builds
 install: "pip install -r requirements.txt"
 script: "lektor build"
 deploy:
