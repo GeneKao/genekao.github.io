@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="title" content="Emacs Org Mode export to pdf | Gene Ting-Chun Kao" />
+    <meta name="author" content="Gene Ting-Chun Kao" />
+    <meta name="copyright" content="Gene Ting-Chun Kao" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://genekao.github.io/emacs-org-mode-export-to-pdf/" />
+    <link rel="stylesheet" href="/static/pygments.css">
+    <link rel="alternate" type="application/atom+xml" title="Gene's blog" href="/atom.xml">
+    <meta name="description" content="org-mode, latex, pdf, templates, emacs" />
+    <title>Emacs Org Mode export to pdf | Gene Ting-Chun Kao</title>
+    <link rel="icon" sizes="32x32" href="/static/favicon-32x32.png" type="image/png" />
+    
+<link rel="stylesheet" href="/static/post.min.css?h=c18c0458">
+
+
+</head>
+
+<body>
+
+    <div class="ga-script">
+<div id="ga-script"></div>
+<script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-143638925-1', 'auto');
+        ga('send', 'pageview');
+</script>
+</div>
+
+    <div class=skiptocontent>
+        <a href=#maincontent>skip to main content</a>
+    </div>
+
+        
+<header>
+    <ul>
+        
+        <li>
+            <a href="/">Home</a>
+        </li>
+        
+        <li>
+            <a href="/about/">About</a>
+        </li>
+        
+        <li>
+            <a href="/publications/">Publications</a>
+        </li>
+        
+        <li>
+            <a href="/resume/">Resume</a>
+        </li>
+        
+        <li>
+            <a href="/portfolio/">Portfolio</a>
+        </li>
+        
+    </ul>
+    <div>GENEATCG</div>
+</header>
+<main id="maincontent" tabindex="-1">
+  
+<article class="post">
+        <div class="post-title">
+            <h1>
+                    
+                Emacs Org Mode export to pdf
+            </h1>
+        </div>
+        <div class="post-body">
+        
+        <div class="post-body-inner">
+            <div class="post-content">
+                <p><a href="https://orgmode.org/"><b>Emacs Org Mode</b></a> is a perfect tool to do almost anything! I particularly like its slogan and design concept: <a href="http://doc.norang.ca/org-mode.html"><b>Organize Your Life In Plain Text</b></a>!</p>
+<p>I use Org Mode for many things, which includes writing a to-do list, building a study plan, writing blog posts (including this one), scribbling documents to organise my thoughts (you can also run code in Org Mode, how cool is that!), and planning a research paper.</p>
+<p>I would like to share my .org files with <a href="https://www.latex-project.org/">LaTex</a> starter code and show how I use it to write research documents. Later I export them from .org file to .tex then to .pdf. I like this pipeline because I don't need to worry about the layout while writing. I can also combine many different syntaxes, such as latex in the .org file.</p>
+<p>Here are some screenshots:</p>
+<p>.org file 
+<img src="/emacs-org-mode-export-to-pdf/simple-org.png" alt="img"></p>
+<p>.pdf
+<img src="/emacs-org-mode-export-to-pdf/simple-pdf.png" alt="img"></p>
+<h1>Table of Contents</h1>
+<ol>
+<li><a href="/emacs-org-mode-export-to-pdf/#org9a91d10">My org-mode templates for latex-style writing</a></li>
+<li><a href="/emacs-org-mode-export-to-pdf/#orga3e0278">Emacs settings</a></li>
+<li><a href="/emacs-org-mode-export-to-pdf/#org1a80e12">Export from .org file to .pdf</a></li>
+</ol>
+<p><a id="org9a91d10"></a></p>
+<h1>My org-mode templates for latex-style writing</h1>
+<p><a href="https://github.com/GeneKao/orgmode-latex-templates"><b>This repo</b></a> contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.</p>
+<p><a id="orga3e0278"></a></p>
+<h1>Emacs settings</h1>
+<p>I am using <a href="https://github.com/seagle0128/.emacs.d">Centaur Emacs</a> for my emacs setting,
+so if you encounter any different exporting result, please refer to the emacs setting and my <a href="https://github.com/GeneKao/.emacs.d">fork</a> version (in the branch <b>gene-emacs</b>).</p>
+<p>Or those lines to your .emacs setting file.</p>
+<div class="hll"><pre><span></span>    <span class="p">(</span><span class="k">setq</span> <span class="nv">org-latex-pdf-process</span>
+          <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;latexmk -pdflatex=&#39;pdflatex -interaction nonstopmode&#39; -pdf -bibtex -f %f&quot;</span><span class="p">))</span>
+
+
+
+    <span class="p">(</span><span class="nb">unless</span> <span class="p">(</span><span class="nb">boundp</span> <span class="ss">&#39;org-latex-classes</span><span class="p">)</span>
+      <span class="p">(</span><span class="k">setq</span> <span class="nv">org-latex-classes</span> <span class="no">nil</span><span class="p">))</span>
+
+    <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-latex-classes</span>
+                 <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;ethz&quot;</span>
+                   <span class="s">&quot;\\documentclass[a4paper,11pt,titlepage]{memoir}</span>
+<span class="s">    \\usepackage[utf8]{inputenc}</span>
+<span class="s">    \\usepackage[T1]{fontenc}</span>
+<span class="s">    \\usepackage{fixltx2e}</span>
+<span class="s">    \\usepackage{graphicx}</span>
+<span class="s">    \\usepackage{longtable}</span>
+<span class="s">    \\usepackage{float}</span>
+<span class="s">    \\usepackage{wrapfig}</span>
+<span class="s">    \\usepackage{rotating}</span>
+<span class="s">    \\usepackage[normalem]{ulem}</span>
+<span class="s">    \\usepackage{amsmath}</span>
+<span class="s">    \\usepackage{textcomp}</span>
+<span class="s">    \\usepackage{marvosym}</span>
+<span class="s">    \\usepackage{wasysym}</span>
+<span class="s">    \\usepackage{amssymb}</span>
+<span class="s">    \\usepackage{hyperref}</span>
+<span class="s">    \\usepackage{mathpazo}</span>
+<span class="s">    \\usepackage{color}</span>
+<span class="s">    \\usepackage{enumerate}</span>
+<span class="s">    \\definecolor{bg}{rgb}{0.95,0.95,0.95}</span>
+<span class="s">    \\tolerance=1000</span>
+<span class="s">          [NO-DEFAULT-PACKAGES]</span>
+<span class="s">          [PACKAGES]</span>
+<span class="s">          [EXTRA]</span>
+<span class="s">    \\linespread{1.1}</span>
+<span class="s">    \\hypersetup{pdfborder=0 0 0}&quot;</span>
+                   <span class="p">(</span><span class="s">&quot;\\chapter{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\chapter*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\section{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\section*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\subsection{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\subsection*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\subsubsection{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\subsubsection*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\paragraph{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\paragraph*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\subparagraph{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\subparagraph*{%s}&quot;</span><span class="p">)))</span>
+
+
+    <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-latex-classes</span>
+                 <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;article&quot;</span>
+                   <span class="s">&quot;\\documentclass[11pt,a4paper]{article}</span>
+<span class="s">    \\usepackage[utf8]{inputenc}</span>
+<span class="s">    \\usepackage[T1]{fontenc}</span>
+<span class="s">    \\usepackage{fixltx2e}</span>
+<span class="s">    \\usepackage{graphicx}</span>
+<span class="s">    \\usepackage{longtable}</span>
+<span class="s">    \\usepackage{float}</span>
+<span class="s">    \\usepackage{wrapfig}</span>
+<span class="s">    \\usepackage{rotating}</span>
+<span class="s">    \\usepackage[normalem]{ulem}</span>
+<span class="s">    \\usepackage{amsmath}</span>
+<span class="s">    \\usepackage{textcomp}</span>
+<span class="s">    \\usepackage{marvosym}</span>
+<span class="s">    \\usepackage{wasysym}</span>
+<span class="s">    \\usepackage{amssymb}</span>
+<span class="s">    \\usepackage{hyperref}</span>
+<span class="s">    \\usepackage{mathpazo}</span>
+<span class="s">    \\usepackage{color}</span>
+<span class="s">    \\usepackage{enumerate}</span>
+<span class="s">    \\definecolor{bg}{rgb}{0.95,0.95,0.95}</span>
+<span class="s">    \\tolerance=1000</span>
+<span class="s">          [NO-DEFAULT-PACKAGES]</span>
+<span class="s">          [PACKAGES]</span>
+<span class="s">          [EXTRA]</span>
+<span class="s">    \\linespread{1.1}</span>
+<span class="s">    \\hypersetup{pdfborder=0 0 0}&quot;</span>
+                   <span class="p">(</span><span class="s">&quot;\\section{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\section*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\subsection{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\subsection*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\subsubsection{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\subsubsection*{%s}&quot;</span><span class="p">)</span>
+                   <span class="p">(</span><span class="s">&quot;\\paragraph{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\paragraph*{%s}&quot;</span><span class="p">)))</span>
+
+
+    <span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;org-latex-classes</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&quot;ebook&quot;</span>
+                                      <span class="s">&quot;\\documentclass[11pt, oneside]{memoir}</span>
+<span class="s">    \\setstocksize{9in}{6in}</span>
+<span class="s">    \\settrimmedsize{\\stockheight}{\\stockwidth}{*}</span>
+<span class="s">    \\setlrmarginsandblock{2cm}{2cm}{*} % Left and right margin</span>
+<span class="s">    \\setulmarginsandblock{2cm}{2cm}{*} % Upper and lower margin</span>
+<span class="s">    \\checkandfixthelayout</span>
+<span class="s">    % Much more laTeX code omitted</span>
+<span class="s">    &quot;</span>
+                                      <span class="p">(</span><span class="s">&quot;\\chapter{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\chapter*{%s}&quot;</span><span class="p">)</span>
+                                      <span class="p">(</span><span class="s">&quot;\\section{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\section*{%s}&quot;</span><span class="p">)</span>
+                                      <span class="p">(</span><span class="s">&quot;\\subsection{%s}&quot;</span> <span class="o">.</span> <span class="s">&quot;\\subsection*{%s}&quot;</span><span class="p">)))</span>
+</pre></div>
+<p><a id="org1a80e12"></a></p>
+<h1>Export from .org file to .pdf</h1>
+<p>Use the key combination</p>
+<pre><code>C-c C-e l o
+</code></pre>
+<p>For more information, please refer to the <a href="https://orgmode.org/guide/LaTeX-and-PDF-export.html">official documentation</a>.</p>
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="post-meta">
+        <div class="post-date">Published: 
+            <div>2020-11-09</div>
+            Last updated:
+            <div>2020-11-09</div>
+        </div>
+        
+        <div class="post-labels">Labels:
+            <ul>
+                
+                <li>
+                    <a href="/labels/org-mode">org-mode</a></li>
+                
+                <li>
+                    <a href="/labels/emacs">emacs</a></li>
+                
+                <li>
+                    <a href="/labels/research">research</a></li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</article>
+
+    <div class="post-nav">
+        
+        <div class="left">
+            
+        </div>
+        <div class="right">
+            
+            <a href="/oh-my-phd/">oh-my-phd</a>&#8594;
+            
+        </div>
+    </div>
+
+
+  
+</main>
+
+
+    <footer>
+        <div>
+            <ul>
+                <li>
+                    <a href="">contact</a>
+                </li>
+                <li>
+                    <a href="/labels/">labels</a>
+                </li>
+                <li>
+                    <a href="/sitemap.html">sitemap</a>
+                </li>
+                <li>
+                    <span>&copy; 2020 Gene Ting-Chun Kao</span>
+                </li>
+            </ul>
+
+            <form id="ddg" name="x" action="//duckduckgo.com/">
+              <input type="hidden" value="https://genekao.github.io/geneatcg/" name="sites"></input>
+                <input type="search" placeholder="Search" name="q"></input>
+                <input type="hidden" value="1" name="kh"></input>
+                <input type="hidden" value="1" name="kn"></input>
+                <input type="hidden" value="1" name="kac"></input>
+                <button class="button" type="submit">Go</button>
+            </form>
+        </div>
+    </footer>
+    <script>
+        (function () {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//static.getclicky.com/js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(s);
+        })();
+    </script>
+</body>
+
+</html>

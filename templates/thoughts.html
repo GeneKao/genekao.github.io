@@ -1,9 +1,0 @@
-{% extends "layout.html" %}
-{% from "macros/thoughts.html" import render_thought %}
-
-{% block title %}{{ this.title }}{% endblock %}
-{% block body %}
-  {% for child in this.pagination.items %}
-    {{ render_thought(child, from_index=true) }}
-  {% endfor %}
-{% endblock %}
