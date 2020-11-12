@@ -41,6 +41,7 @@ so if you encounter any different exporting result, please refer to the emacs se
 
 Or those lines to your .emacs setting file.
 
+``` lisp
     (setq org-latex-pdf-process
           '("latexmk -pdflatex='pdflatex -interaction nonstopmode' -pdf -bibtex -f %f"))
     
@@ -131,7 +132,7 @@ Or those lines to your .emacs setting file.
                                       ("\\chapter{%s}" . "\\chapter*{%s}")
                                       ("\\section{%s}" . "\\section*{%s}")
                                       ("\\subsection{%s}" . "\\subsection*{%s}")))
-
+```
 
 <a id="org1a80e12"></a>
 
