@@ -1,0 +1,95 @@
+title: Processing 101 – 02 BouncingBallSimple
+---
+body:
+
+### Bouncing Ball
+
+<img src="BouncingBallSimple-1024x754.png" alt="drawing" width="80%"/>
+
+
+When the shape hits the edge of the window, it reverses its direction. In this version, we assume that the bounce surface is hard (rigid), and that air resistance is negligible 
+
+Dictionary: [Bouncing Ball ](http://www.real-world-physics-problems.com/bouncing-ball-physics.html)
+
+Code Inspired From: 
+[Processing/Examples/Bounce](https://processing.org/examples/bounce.html)
+
+``` java 
+Ball b; 
+ 
+void setup() {
+  size(650, 450);
+  //frameRate(20);
+  smooth();
+  b = new Ball(new PVector(width/2, height/2));
+}
+ 
+void draw() {
+  background(200);
+  b.draw();
+}
+ 
+void mousePressed() {
+  b = new Ball(new PVector(width/2, height/2));
+}
+ 
+class Ball {
+ 
+  PVector pos; 
+  PVector dir = new PVector(mouseX-width/2, mouseY-height/2);
+  PVector vel; 
+  int rad = 20; 
+ 
+  Ball(PVector pos) {
+    this.pos = pos;
+    vel = PVector.div(dir, (width/2)/5);
+  }
+ 
+  void draw() {
+    display();
+    bound();
+    run();
+    fill(0, 102, 153);
+    text("Ball Position = " + (int)pos.x + ", " + (int)pos.y, 10, 20);
+    text("Ball Velocity = " + vel.mag(), 10, 40);
+  }
+ 
+  void bound() {
+    if (pos.x > width-rad || pos.x < rad)
+      vel.x *= -1; 
+    if (pos.y > height-rad || pos.y < rad)
+      vel.y *= -1;
+  }
+ 
+  void run() {
+    pos.add(vel);
+  }
+ 
+  void display() {
+    fill(255);
+    noStroke();
+    ellipse(pos.x, pos.y, rad*2, rad*2);
+    displayArrow();
+  }
+ 
+  void displayArrow() {
+    strokeWeight(dist(width/2, height/2, mouseX, mouseY)/100);
+    stroke(255, 100);
+    line(width/2, height/2, mouseX, mouseY);
+    stroke(255, 255, 0);
+    fill(255, 255, 0, 100);
+    ellipse(mouseX, mouseY, 20, 20);
+    if (mousePressed) {
+      stroke(255, 255, 0);
+      fill(255, 255, 0);
+      ellipse(mouseX, mouseY, 40, 40);
+    }
+  }
+}
+```
+---
+pub_date: 2013-08-21
+---
+labels: processing, programming
+---
+part: 2

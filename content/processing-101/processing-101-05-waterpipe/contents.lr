@@ -1,0 +1,173 @@
+title: Processing 101 – 05 waterPipe
+---
+body:
+
+<img src="Pipe-01-1024x512.jpg" alt="drawing" width="100%"/>
+
+
+``` java 
+///////////////////////////////////////
+/**************************************
+ //www.geneatcg.com/
+  
+ Processing 101 - 05
+ Wriiten by Gene Kao
+ Date --- 2013/04/16
+  
+ **************************************/
+///////////////////////////////////////
+ 
+ 
+Pipe[][] grids;
+ 
+int width = 650; 
+int height = 450;
+int x = 20; 
+int y = 15;
+int gridx = width/x; 
+int gridy = height/y; 
+int w = 15; 
+ 
+void setup() {
+ 
+  size(width, height);
+  smooth(); 
+  background(200);
+  rectMode(CENTER);
+  frameRate(10);
+ 
+  grids = new Pipe[2*x][2*y];
+ 
+  for (int i = 0; i < 2*x-1; i++) {
+    for (int j = 0; j < 2*y-1; j++) {
+      if (i % 2 == 0 || j % 2 ==0) {
+        PVector pos = new PVector(i*gridx/2+gridx/2, j*gridy/2+gridy/2);
+        grids[i][j] = new Pipe(pos, i, j, false);
+      } 
+      else {
+        PVector o = new PVector(0, 0);
+        grids[i][j] = new Pipe(o, i, j, false);
+      }
+    }
+  }
+  rand();
+}
+ 
+void draw() {
+ 
+  background(200);
+ 
+  for (int i = 0; i < 2*x-1; i++) {
+    for (int j = 0; j < 2*y-1; j++) {
+      if (i % 2 == 0 || j % 2 ==0) {
+        if (i % 2 == 0 && j % 2 ==0) fill(255, 0, 0);
+        else fill(255);
+        strokeWeight(1);
+        ellipse(grids[i][j].loc.x, grids[i][j].loc.y, 5, 5);
+ 
+        if (i % 2 == 0 && j % 2 ==0) {
+ 
+          strokeWeight(w);
+          grids[i][j].testLeftUP();
+        }
+      }
+    }
+  }
+}
+ 
+void mousePressed() {
+  startover();
+  rand();
+}
+ 
+ 
+void rand() {
+  for (int i = 0; i < 2*x-1; i++) {
+    for (int j = 0; j < 2*y-1; j++) {
+      if (i % 2 == 0 || j % 2 ==0) {
+        if (i % 2 == 0 && j % 2 ==0) fill(255, 0, 0);
+        else fill(255);
+        //strokeWeight(1);
+        //ellipse(grids[i][j].loc.x, grids[i][j].loc.y, 5, 5);
+        if (i % 2 == 0 && j % 2 ==0) {
+ 
+          grids[i][j].randomize();
+        }
+      }
+    }
+  }
+}
+ 
+void startover() {
+  for (int i = 0; i < 2*x-1; i++) {
+    for (int j = 0; j < 2*y-1; j++) {
+      grids[i][j].initial();
+    }
+  }
+}
+ 
+ 
+ 
+class Pipe {
+ 
+  PVector loc; 
+  int i; 
+  int j; 
+  boolean taken = false;
+ 
+  Pipe(PVector loc, int i, int j, boolean taken) {
+    this.loc = loc; 
+    this.i = i; 
+    this.j = j; 
+    this.taken = taken;
+  }
+ 
+  void starter() {
+    if (i == 0 && j == 0) {
+      if (random(1)>0.5) {
+        grids[0][1].taken = true;
+      }
+      if (random(1)>0.5) {
+        grids[1][0].taken = true;
+      }
+    }
+  }
+ 
+  void testLeftUP() {
+ 
+    if ( ( i > 0 && j > 0 ) && (i<2*x-2 && j<2*y-2) ) {
+ 
+      if (grids[i][j-1].taken == true) {
+        line(loc.x, loc.y, grids[i][j-2].loc.x, grids[i][j-2].loc.y);
+      }
+      if (grids[i-1][j].taken == true) {
+        line(loc.x, loc.y, grids[i-2][j].loc.x, grids[i-2][j].loc.y);
+      }
+    }
+  }
+ 
+  void randomize() {
+ 
+    if ((j>0 && j < 2*y-2) && (i>0 && i < 2*x-2)) {
+ 
+      if (random(1)>0.5) {
+        grids[i][j+1].taken = true;
+      }
+      if (random(1)>0.5) {
+        grids[i+1][j].taken = true;
+      }
+    }
+  }
+ 
+  void initial() {
+    grids[i][j].taken = false;
+  }
+}
+```
+
+---
+pub_date: 2014-06-28
+---
+labels: processing, programming
+---
+part: 5

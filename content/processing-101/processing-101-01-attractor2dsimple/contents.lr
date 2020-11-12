@@ -1,0 +1,43 @@
+title: Processing 101 – 01 Attractor2DSimple
+---
+body:
+
+<img src="Attractor2DSimple.png" alt="drawing" width="80%"/>
+
+Attractor
+Each circle on the grid points change its diameters, which based on distance between mouse position and point’s location. Dictionary: [Attractor](https://en.wikipedia.org/wiki/Attractor) 吸引子，原本為複雜科學裡的一個專有名詞，近期廣被用來描述於Parametricism。 最先被運用在[Grasshopper](https://www.grasshopper3d.com/)裡頭。 
+
+
+``` java 
+int space = 20;
+int shiftX; 
+int shiftY; 
+ 
+void setup() {
+  size(650, 450);
+  smooth();
+  shiftX = (width % space)/2;
+  shiftY = (height % space)/2;
+}
+ 
+void draw() {
+  background(200);
+ 
+  for (float x = space-shiftX; x < width; x+=space) {
+    for (float y = space-shiftY; y < height; y+=space) {
+       
+      line(x, 0, x, height);
+       
+      float rad = dist(mouseX, mouseY, x, y);
+      stroke(rad, rad, rad);
+      ellipse(x, y, rad/(1.5*space), rad/(1.5*space)); 
+    }
+  }
+}
+```
+---
+labels: processing, programming
+---
+pub_date: 2013-08-20
+---
+part: 1

@@ -1,0 +1,45 @@
+title: Processing 101 – 03 Wave
+---
+body:
+
+### Wave 
+
+<img src="wave-1024x754.png" alt="drawing" width="100%"/>
+
+A Cosine Function is used in this small program. d = the distance between our mouse position and all points (grid). The radius of ellipse is positive with Cos(d). In the End, “t” is used as time parameter. Dictionary: Find out more mathematical function here: [The Beauty of Math](http://www.winosi.onlinehome.de/Gallery_t12.htm). 
+
+
+
+``` java 
+int t = 0;
+float z;
+ 
+void setup() {
+  size(650, 450, P2D);
+  smooth();
+  noStroke();
+}
+ 
+void draw() {
+  background(200);
+ 
+  for (int i = 10; i < width; i+= 10) {
+    for (int j = 10; j < height; j+= 10) { 
+      float x = i/10;
+      float y = j/10;    
+      float d = dist(mouseX/10, mouseY/10, x, y);
+      //z = cos(sqrt( (x*x) + (y*y) /*- 0.5*t*/));
+      z = cos(d - 0.2*t);
+      ellipse(i, j, 10*z, 10*z);
+    }
+  }
+  t++; 
+}
+
+```
+---
+labels: programming, processing
+---
+pub_date: 2013-11-28
+---
+part: 3

@@ -1,0 +1,19 @@
+title: Master Thesis Reading – Steering Behavior For Autonomous Characters
+---
+body:
+
+Master Thesis Reading List – 2 Steering Behavior For Autonomous Characters Author: Craig Reynolds ([Paper Download](http://www.red3d.com/cwr/steer/)) 
+
+<img src="pathfoll.gif" alt="drawing" width="100%"/>
+
+Abstract: This paper presents solutions for one requirement of autonomous characters in animation and games: the ability to navigate around their world in a life-like and improvisational manner. These “steering behaviors” are largely independent of the particulars of the character’s means of locomotion. Combinations of steering behaviors can be used to achieve higher level goals (For example: get from here to there while avoiding obstacles, follow this corridor, join that group of characters…) This paper divides motion behavior into three levels. It will focus on the middle level of steering behaviors, briefly describe the lower level of locomotion, and touch lightly on the higher level of goal setting and strategy.
+
+<p style="margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;"><a style="text-decoration: underline;" title="View Reviewing Craig W. Reynolds’ paper,1999 on Scribd" href="https://www.scribd.com/doc/289872753/Reviewing-Craig-W-Reynolds-paper-1999">Reviewing Craig W. Reynolds’ paper,1999</a></p>
+<iframe id="doc_92032" class="scribd_iframe_embed" src="https://www.scribd.com/embeds/289872753/content?start_page=1&amp;view_mode=scroll&amp;show_recommendations=true" width="100%" height="600" frameborder="0" scrolling="no" data-auto-height="false" data-aspect-ratio="undefined"></iframe>
+
+---
+pub_date: 2015-11-16
+---
+labels: thesis, uni-stuttgart, research
+---
+part: 1

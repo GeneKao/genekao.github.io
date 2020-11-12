@@ -1,0 +1,278 @@
+title: Processing 101 – 06 TwoPlayersGA
+---
+body:
+
+### Two Players Game of Life First Test
+
+<img src="p2life-100x100.png" alt="drawing" width="25%"/>
+
+Code refer to Mark Levene, George Roussos’s Paper “[A Two-Player Game of Life](https://arxiv.org/abs/cond-mat/0207679v4)” For more basic Conway’s Game of Life introduction please visit wiki [here](https://en.wikipedia.org/wiki/Conway's_Game_of_Life) 🙂 
+
+
+
+``` java 
+///////////////////////////////////////
+/**************************************
+ //www.geneatcg.com/
+  
+ Processing 101 - 06
+ Wriiten by Gene Kao
+ Date --- 2014/07/26
+  
+ **************************************/
+///////////////////////////////////////
+ 
+int cols = 65*2; 
+int rows = 45*2;
+ 
+GA ga[][] = new GA[cols][rows];
+ 
+void setup() {
+ 
+  size(650, 450);
+  frameRate(20);
+  noStroke();
+  rectMode(CENTER);
+ 
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      if (i > cols/2) {
+        ga[i][j]= new GA(i, j, true);
+      } else {
+        ga[i][j]= new GA(i, j, false);
+      }
+    }
+  }
+}
+ 
+void draw() {
+  background(235);
+ 
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      ga[i][j].run();
+    }
+  }
+ 
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      ga[i][j].updateState();
+    }
+  }
+}
+ 
+void mousePressed() {
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      if (i > cols/2) {
+        ga[i][j]= new GA(i, j, true);
+      } else {
+        ga[i][j]= new GA(i, j, false);
+      }
+    }
+  }
+}
+ 
+class GA {
+ 
+  int x, y; 
+  PVector loc;
+  boolean state, nexState; 
+  boolean team; // team true->white, false->black
+ 
+  int above;
+  int below; 
+  int left; 
+  int right; 
+ 
+  GA(int x, int y, boolean team) {
+ 
+    this.x = x; 
+    this.y = y; 
+    this.team = team;
+ 
+    if (random(2) > 1) {
+      nexState = true;
+    } else {
+      nexState = false;
+    }
+ 
+    loc = new PVector((x+0.5)*(width/cols), (y+0.5)*(height/rows));
+ 
+    setupState();
+  }
+ 
+  void run() {
+    display();
+    calcState();
+    calcStateWhite();
+    calcStateBlack();
+  }
+ 
+  void setupState() {
+    above = (y+rows-1)%rows; 
+    below = (y+rows+1)%rows; 
+    left = (x+cols-1)%cols; 
+    right = (x+cols+1)%cols; 
+ 
+    if (above < 0) 
+      above = rows-1;            
+    if (below > rows)
+      below = 0; 
+    if (left < 0) 
+      left = cols-1;
+    if (right > cols)
+      right = 0;
+  }
+ 
+  void updateState() {
+    state = nexState;
+  }
+ 
+  void calcState() {
+ 
+    int count = 0;
+ 
+    if (ga[left][above].state==true) count++;
+    if (ga[left][y].state==true) count++;
+    if (ga[left][below].state==true) count++;
+    if (ga[x][below].state==true) count++;
+    if (ga[right][below].state==true) count++;
+    if (ga[right][y].state==true) count++;
+    if (ga[right][above].state==true) count++;
+    if (ga[x][above].state==true) count++;
+ 
+ 
+    if (state == true && count < 2) 
+      nexState = false;
+    if (state == true && count <= 3 && count >=2) 
+      nexState = true;
+    if (state == true && count > 3) 
+      nexState = false;
+    if (state == false && count == 3) 
+      nexState = true;
+  }
+ 
+  void calcStateWhite() {
+ 
+    if (team == true) {
+      int countWhite = 0;
+      int countBlack = 0;
+ 
+      if (ga[left][above].state==true && ga[left][above].team==true) countWhite++;
+      if (ga[left][y].state==true && ga[left][y].team==true) countWhite++;
+      if (ga[left][below].state==true && ga[left][below].team==true) countWhite++;
+      if (ga[x][below].state==true && ga[x][below].team==true) countWhite++;
+      if (ga[right][below].state==true && ga[right][below].team==true) countWhite++;
+      if (ga[right][y].state==true && ga[right][y].team==true) countWhite++;
+      if (ga[right][above].state==true && ga[right][above].team==true) countWhite++;
+      if (ga[x][above].state==true && ga[x][above].team==true) countWhite++;
+ 
+      if (ga[left][above].state==true && ga[left][above].team==false) countBlack++;
+      if (ga[left][y].state==true && ga[left][y].team==false) countBlack++;
+      if (ga[left][below].state==true && ga[left][below].team==false) countBlack++;
+      if (ga[x][below].state==true && ga[x][below].team==false) countBlack++;
+      if (ga[right][below].state==true && ga[right][below].team==false) countBlack++;
+      if (ga[right][y].state==true && ga[right][y].team==false) countBlack++;
+      if (ga[right][above].state==true && ga[right][above].team==false) countBlack++;
+      if (ga[x][above].state==true && ga[x][above].team==false) countBlack++;
+ 
+      if (state == false) {
+        if (countWhite == 3 && countBlack !=3)
+          nexState = true;
+        else if (countWhite == 3 && countBlack ==3) {
+          nexState = true;
+          if (random(2)>1) {
+            team = true;
+          } else {
+            team = false;
+          }
+        } else if (countBlack >= 2) { 
+          team = false;
+          state = false;
+        }
+      }
+      if (state == true) { 
+        if (countWhite-countBlack == 2 || countWhite-countBlack== 3) {
+          nexState = true;
+        } else if (countWhite-countBlack == 1 && countWhite >= 2) {
+          nexState = true;
+        } else {
+          nexState = false;
+        }
+      }
+    }
+  }
+ 
+  void calcStateBlack() {
+ 
+    if (team == false) {
+      int countWhite = 0;
+      int countBlack = 0;
+ 
+      if (ga[left][above].state==true && ga[left][above].team==true) countWhite++;
+      if (ga[left][y].state==true && ga[left][y].team==true) countWhite++;
+      if (ga[left][below].state==true && ga[left][below].team==true) countWhite++;
+      if (ga[x][below].state==true && ga[x][below].team==true) countWhite++;
+      if (ga[right][below].state==true && ga[right][below].team==true) countWhite++;
+      if (ga[right][y].state==true && ga[right][y].team==true) countWhite++;
+      if (ga[right][above].state==true && ga[right][above].team==true) countWhite++;
+      if (ga[x][above].state==true && ga[x][above].team==true) countWhite++;
+ 
+      if (ga[left][above].state==true && ga[left][above].team==false) countBlack++;
+      if (ga[left][y].state==true && ga[left][y].team==false) countBlack++;
+      if (ga[left][below].state==true && ga[left][below].team==false) countBlack++;
+      if (ga[x][below].state==true && ga[x][below].team==false) countBlack++;
+      if (ga[right][below].state==true && ga[right][below].team==false) countBlack++;
+      if (ga[right][y].state==true && ga[right][y].team==false) countBlack++;
+      if (ga[right][above].state==true && ga[right][above].team==false) countBlack++;
+      if (ga[x][above].state==true && ga[x][above].team==false) countBlack++;
+ 
+      if (state == false) {
+        if (countWhite != 3 && countBlack ==3)
+          nexState = true;
+        else if (countWhite == 3 && countBlack ==3) {
+          nexState = true;
+          if (random(2)>1) {
+            team = true;
+          } else {
+            team = true;
+          }
+        } else if (countWhite >= 2) {
+          team = true;
+          state = true;
+        }
+      }
+      if (state == true) { 
+        if (countBlack-countWhite == 2 || countBlack-countWhite == 3) {
+          nexState = true;
+        } else if (countBlack-countWhite == 1 && countBlack >= 2) {
+          nexState = true;
+        } else {
+          nexState = false;
+        }
+      }
+    }
+  }
+ 
+  void display() {
+ 
+    if (state == true) {
+      if (team == true) {
+        fill(28, 47, 67, 160);
+        rect(loc.x, loc.y, 10/2, 10/2);
+      } else {
+        fill(64, 187, 128, 150);
+        ellipse(loc.x, loc.y, 10/2, 10/2);
+      }
+    }
+  }
+}
+
+``` 
+---
+labels: processing, programming
+---
+pub_date: 2014-07-25
+---
+part: 6
