@@ -1,0 +1,66 @@
+title: Linear Programming - Basics
+---
+pub_date: 2020-11-13
+---
+part: 1
+---
+labels: learning, math, math-opt, optimisation
+---
+body:
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+# Table of Contents
+
+-   [LP canonical form](#org4f6213f)
+-   [LP standard form](#org875a3c7)
+-   [Real life application](#orgae77828)
+-   [Solving it numerically](#org0c0ed71)
+
+
+<a id="org4f6213f"></a>
+
+# LP canonical form
+
+<body>
+\begin{equation}
+\begin{array}{l}
+\begin{split}
+\max \;\;\; {{\bf{c}}^T}{\bf{x}} & \\
+s.t. \;\;\; {\bf{Ax}} & \le {\bf{b}} \\
+{\bf{x}} & \ge {\bf{0}}
+\end{split}
+\end{array}
+\end{equation}
+</body>
+
+<a id="org875a3c7"></a>
+
+# LP standard form
+
+<body>
+\begin{equation}
+\begin{array}{l}
+\begin{split}
+\max \;\;\; {{\bf{c}}^T}{\bf{x}} & \\
+s.t. \;\;\; {\bf{Ax}} & = {\bf{b}} \\
+{\bf{x}} & \ge {\bf{0}}
+\end{split}
+\end{array}
+\end{equation}
+</body>
+
+<a id="orgae77828"></a>
+
+# Real life application
+<span style="color:red">TODO</span>
+
+<a id="org0c0ed71"></a>
+
+# Solving it numerically
+<span style="color:red">TODO</span>
+---
+metadesc: lp-basics
