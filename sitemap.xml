@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://genekao.github.io/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/linear-programming/</loc></url>
   <url><loc>https://genekao.github.io/emacs-org-mode-export-to-pdf/</loc></url>
   <url><loc>https://genekao.github.io/oh-my-phd/</loc></url>
   <url><loc>https://genekao.github.io/using-git-like-a-pro/</loc></url>
@@ -77,6 +79,11 @@
   <url><loc>https://genekao.github.io/labels/emacs/</loc></url>
   <url><loc>https://genekao.github.io/emacs-org-mode-export-to-pdf/</loc></url>
   <url><loc>https://genekao.github.io/emacs-settings/</loc></url>
+  <url><loc>https://genekao.github.io/labels/eth/</loc></url>
+  <url><loc>https://genekao.github.io/emacs-org-mode-export-to-pdf/</loc></url>
+  <url><loc>https://genekao.github.io/oh-my-phd/</loc></url>
+  <url><loc>https://genekao.github.io/robotic-force-printing-mit-design-build-workshop-2019/</loc></url>
+  <url><loc>https://genekao.github.io/physxgh/</loc></url>
   <url><loc>https://genekao.github.io/labels/fabrication/</loc></url>
   <url><loc>https://genekao.github.io/robotic-force-printing-mit-design-build-workshop-2019/</loc></url>
   <url><loc>https://genekao.github.io/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/</loc></url>
@@ -85,17 +92,47 @@
   <url><loc>https://genekao.github.io/lego-component-for-3d-printing/</loc></url>
   <url><loc>https://genekao.github.io/labels/git/</loc></url>
   <url><loc>https://genekao.github.io/using-git-like-a-pro/</loc></url>
+  <url><loc>https://genekao.github.io/labels/graphics/</loc></url>
+  <url><loc>https://genekao.github.io/physxgh/</loc></url>
+  <url><loc>https://genekao.github.io/leopard/</loc></url>
   <url><loc>https://genekao.github.io/labels/java/</loc></url>
   <url><loc>https://genekao.github.io/digitallampthesisgui_v0a01/</loc></url>
   <url><loc>https://genekao.github.io/thesis-design-process/</loc></url>
   <url><loc>https://genekao.github.io/the-digital-lamp-of-architecture-a-new-church-prototype/</loc></url>
   <url><loc>https://genekao.github.io/labels/latex/</loc></url>
+  <url><loc>https://genekao.github.io/emacs-org-mode-export-to-pdf/</loc></url>
   <url><loc>https://genekao.github.io/writing-a-thesis-with-latex/</loc></url>
+  <url><loc>https://genekao.github.io/labels/learning/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/linear-programming/</loc></url>
+  <url><loc>https://genekao.github.io/labels/thesis/</loc></url>
+  <url><loc>https://genekao.github.io/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/</loc></url>
+  <url><loc>https://genekao.github.io/master-thesis-reading/</loc></url>
+  <url><loc>https://genekao.github.io/master-thesis-reading/master-thesis-reading-steering-behavior-for-autonomous-characters/</loc></url>
+  <url><loc>https://genekao.github.io/master-thesis-reading/master-thesis-reading-the-construction-of-gothic-cathedrals/</loc></url>
+  <url><loc>https://genekao.github.io/digitallampthesisgui_v0a01/</loc></url>
+  <url><loc>https://genekao.github.io/writing-a-thesis-with-latex/</loc></url>
+  <url><loc>https://genekao.github.io/thesis-design-process/</loc></url>
+  <url><loc>https://genekao.github.io/the-digital-lamp-of-architecture-a-new-church-prototype/</loc></url>
+  <url><loc>https://genekao.github.io/labels/math/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/linear-programming/</loc></url>
+  <url><loc>https://genekao.github.io/labels/math-opt/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/linear-programming/</loc></url>
+  <url><loc>https://genekao.github.io/labels/matlab/</loc></url>
+  <url><loc>https://genekao.github.io/labels/optimisation/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/</loc></url>
+  <url><loc>https://genekao.github.io/mathematical-optimisation/linear-programming/</loc></url>
   <url><loc>https://genekao.github.io/labels/org-mode/</loc></url>
   <url><loc>https://genekao.github.io/emacs-org-mode-export-to-pdf/</loc></url>
   <url><loc>https://genekao.github.io/labels/pavilion/</loc></url>
+  <url><loc>https://genekao.github.io/robotic-force-printing-mit-design-build-workshop-2019/</loc></url>
   <url><loc>https://genekao.github.io/icditke-research-pavilion-2015-16-development-and-implementation-demo/</loc></url>
   <url><loc>https://genekao.github.io/butterfly-effect-pavilion-in-i-lan-green-expo-2014/</loc></url>
+  <url><loc>https://genekao.github.io/labels/phd/</loc></url>
+  <url><loc>https://genekao.github.io/emacs-org-mode-export-to-pdf/</loc></url>
+  <url><loc>https://genekao.github.io/oh-my-phd/</loc></url>
   <url><loc>https://genekao.github.io/labels/physical-simulation/</loc></url>
   <url><loc>https://genekao.github.io/physxgh/</loc></url>
   <url><loc>https://genekao.github.io/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/</loc></url>
@@ -153,22 +190,18 @@
   <url><loc>https://genekao.github.io/swarm-python-component/</loc></url>
   <url><loc>https://genekao.github.io/lego-component-for-3d-printing/</loc></url>
   <url><loc>https://genekao.github.io/labels/teaching/</loc></url>
+  <url><loc>https://genekao.github.io/using-git-like-a-pro/</loc></url>
   <url><loc>https://genekao.github.io/robotic-force-printing-mit-design-build-workshop-2019/</loc></url>
-  <url><loc>https://genekao.github.io/labels/thesis/</loc></url>
-  <url><loc>https://genekao.github.io/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/</loc></url>
-  <url><loc>https://genekao.github.io/master-thesis-reading/</loc></url>
-  <url><loc>https://genekao.github.io/master-thesis-reading/master-thesis-reading-steering-behavior-for-autonomous-characters/</loc></url>
-  <url><loc>https://genekao.github.io/master-thesis-reading/master-thesis-reading-the-construction-of-gothic-cathedrals/</loc></url>
-  <url><loc>https://genekao.github.io/digitallampthesisgui_v0a01/</loc></url>
-  <url><loc>https://genekao.github.io/writing-a-thesis-with-latex/</loc></url>
-  <url><loc>https://genekao.github.io/thesis-design-process/</loc></url>
-  <url><loc>https://genekao.github.io/the-digital-lamp-of-architecture-a-new-church-prototype/</loc></url>
+  <url><loc>https://genekao.github.io/physxgh/</loc></url>
   <url><loc>https://genekao.github.io/labels/tku/</loc></url>
   <url><loc>https://genekao.github.io/digitallampthesisgui_v0a01/</loc></url>
   <url><loc>https://genekao.github.io/butterfly-effect-pavilion-in-i-lan-green-expo-2014/</loc></url>
   <url><loc>https://genekao.github.io/lego-component-for-3d-printing/</loc></url>
   <url><loc>https://genekao.github.io/thesis-design-process/</loc></url>
   <url><loc>https://genekao.github.io/the-digital-lamp-of-architecture-a-new-church-prototype/</loc></url>
+  <url><loc>https://genekao.github.io/labels/tools/</loc></url>
+  <url><loc>https://genekao.github.io/physxgh/</loc></url>
+  <url><loc>https://genekao.github.io/leopard/</loc></url>
   <url><loc>https://genekao.github.io/labels/uni-stuttgart/</loc></url>
   <url><loc>https://genekao.github.io/physxgh/</loc></url>
   <url><loc>https://genekao.github.io/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/</loc></url>

@@ -2,13 +2,22 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">GENEATCG</title>
   <id>urn:uuid:b9691a93-2a46-3e2a-8585-f5968e552ea3</id>
-  <updated>2020-11-09T00:00:00Z</updated>
+  <updated>2020-11-13T00:00:00Z</updated>
   <link href="https://genekao.github.io/" />
   <link href="https://genekao.github.io/atom.xml" rel="self" />
   <author>
     <name></name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.2">Lektor Atom Plugin</generator>
+  <entry xml:base="https://genekao.github.io/mathematical-optimisation/">
+    <title type="text">Mathematical Optimisation</title>
+    <id>urn:uuid:0a00a032-58a6-3af5-9103-ee49d2452d41</id>
+    <updated>2020-11-13T00:00:00Z</updated>
+    <link href="https://genekao.github.io/mathematical-optimisation/" />
+    <author>
+      <name></name>
+    </author>
+  </entry>
   <entry xml:base="https://genekao.github.io/oh-my-phd/">
     <title type="text">oh-my-phd</title>
     <id>urn:uuid:66cc4eb2-e136-3c6a-9f8f-b6eb7a283452</id>
