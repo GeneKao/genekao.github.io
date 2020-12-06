@@ -1,0 +1,37 @@
+title: Rhino Mac PyCharm autocomplete
+---
+labels: tools, python, rhino-grasshopper, programming
+---
+last_updated_date: 2020-12-06
+---
+pub_date: 2020-12-06
+---
+body:
+
+![](autocomplete.gif)
+
+Here is how I set up my PyCharm IDE to program in Rhino Mac, so I can have a nice autocompletion functionality for the [<b>RhinoCommon</b> ](https://developer.rhino3d.com/api/RhinoCommon/)and [<b>rhinoscriptsyntax</b>](https://developer.rhino3d.com/api/RhinoScriptSyntax/). 
+
+First, I install the [python stubs](https://github.com/mcneel/pythonstubs) to my created conda environment. 
+This makes sure that we will have the autocomplete for the RhinoCommon API. 
+
+``` bash 
+$ conda create -n your-env-name
+$ conda activate your-env-name
+$ pip install Rhino-stubs
+``` 
+To use specific environment in PyCharm, we will have to select the right environment for the project. 
+This can be set in `PyCharm -> Preferences -> Project: your-project-name -> Python Interpreter`. 
+Normally, our environment python is located at `~/anaconda3/envs/your-env-name/bin/python`. 
+
+Finally, we have to mark rhinoscriptsyntax folder as a source, so PyCharm can recognise them. In macOS, this is located at: `/Applications/Rhinoceros.app/Contents/Frameworks/RhCore.framework/Versions/A/Resources/ManagedPlugIns/RhinoDLR_Python.rhp/RssLib`. 
+We can do this in `PyCharm -> Preferences -> Project: your-project-name -> Python Structure -> Add Content Root`. Make sure that both `ghpythonlib` and `rhinoscript` folders are selected and marked as sources. 
+
+![](sources.png)
+
+Easy! We are done. Happy coding! 
+
+
+
+---
+metadesc: pycharm, autocomplete, rhino, mac, rhinoscriptsyntax, rhinocommon
