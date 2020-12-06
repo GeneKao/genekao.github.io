@@ -2,13 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">GENEATCG</title>
   <id>urn:uuid:b9691a93-2a46-3e2a-8585-f5968e552ea3</id>
-  <updated>2020-11-13T00:00:00Z</updated>
+  <updated>2020-12-06T00:00:00Z</updated>
   <link href="https://genekao.github.io/" />
   <link href="https://genekao.github.io/atom.xml" rel="self" />
   <author>
     <name></name>
   </author>
   <generator uri="https://github.com/ajdavis/lektor-atom" version="0.2">Lektor Atom Plugin</generator>
+  <entry xml:base="https://genekao.github.io/rhino-mac-pycharm-autocomplete/">
+    <title type="text">Rhino Mac PyCharm autocomplete</title>
+    <id>urn:uuid:9d42b0be-4cd9-30f0-a7fe-53356abcc431</id>
+    <updated>2020-12-06T00:00:00Z</updated>
+    <link href="https://genekao.github.io/rhino-mac-pycharm-autocomplete/" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/rhino-mac-pycharm-autocomplete/autocomplete.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Here is how I set up my PyCharm IDE to program in Rhino Mac, so I can have a nice autocompletion functionality for the &lt;a href=&quot;https://developer.rhino3d.com/api/RhinoCommon/&quot;&gt;&lt;b&gt;RhinoCommon&lt;/b&gt; &lt;/a&gt;and &lt;a href=&quot;https://developer.rhino3d.com/api/RhinoScriptSyntax/&quot;&gt;&lt;b&gt;rhinoscriptsyntax&lt;/b&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;First, I install the &lt;a href=&quot;https://github.com/mcneel/pythonstubs&quot;&gt;python stubs&lt;/a&gt; to my created conda environment. 
+This makes sure that we will have the autocomplete for the RhinoCommon API.&lt;/p&gt;
+&lt;div class=&quot;hll&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ conda create -n your-env-name
+$ conda activate your-env-name
+$ pip install Rhino-stubs
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To use specific environment in PyCharm, we will have to select the right environment for the project. 
+This can be set in &lt;code&gt;PyCharm -&amp;gt; Preferences -&amp;gt; Project: your-project-name -&amp;gt; Python Interpreter&lt;/code&gt;. 
+Normally, our environment python is located at &lt;code&gt;~/anaconda3/envs/your-env-name/bin/python&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, we have to mark rhinoscriptsyntax folder as a source, so PyCharm can recognise them. In macOS, this is located at: &lt;code&gt;/Applications/Rhinoceros.app/Contents/Frameworks/RhCore.framework/Versions/A/Resources/ManagedPlugIns/RhinoDLR_Python.rhp/RssLib&lt;/code&gt;. 
+We can do this in &lt;code&gt;PyCharm -&amp;gt; Preferences -&amp;gt; Project: your-project-name -&amp;gt; Python Structure -&amp;gt; Add Content Root&lt;/code&gt;. Make sure that both &lt;code&gt;ghpythonlib&lt;/code&gt; and &lt;code&gt;rhinoscript&lt;/code&gt; folders are selected and marked as sources.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/rhino-mac-pycharm-autocomplete/sources.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Easy! We are done. Happy coding!&lt;/p&gt;
+</content>
+  </entry>
   <entry xml:base="https://genekao.github.io/mathematical-optimisation/">
     <title type="text">Mathematical Optimisation</title>
     <id>urn:uuid:0a00a032-58a6-3af5-9103-ee49d2452d41</id>

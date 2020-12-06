@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="title" content="Mathematical Optimisation | Gene Ting-Chun Kao" />
+    <meta name="title" content="Rhino Mac PyCharm autocomplete | Gene Ting-Chun Kao" />
     <meta name="author" content="Gene Ting-Chun Kao" />
     <meta name="copyright" content="Gene Ting-Chun Kao" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://genekao.github.io/mathematical-optimisation/" />
+    <link rel="canonical" href="https://genekao.github.io/rhino-mac-pycharm-autocomplete/" />
     <link rel="stylesheet" href="/static/pygments.css">
     <link rel="alternate" type="application/atom+xml" title="Gene's blog" href="/atom.xml">
-    <meta name="description" content="" />
-    <title>Mathematical Optimisation | Gene Ting-Chun Kao</title>
+    <meta name="description" content="pycharm, autocomplete, rhino, mac, rhinoscriptsyntax, rhinocommon" />
+    <title>Rhino Mac PyCharm autocomplete | Gene Ting-Chun Kao</title>
     <link rel="icon" sizes="32x32" href="/static/favicon-32x32.png" type="image/png" />
     
 <link rel="stylesheet" href="/static/post.min.css?h=4b6ef7e0">
@@ -69,56 +69,55 @@
 <article class="post">
         <div class="post-title">
             <h1>
-                
-                    Series: 
                     
-                Mathematical Optimisation
+                Rhino Mac PyCharm autocomplete
             </h1>
         </div>
         <div class="post-body">
         
         <div class="post-body-inner">
             <div class="post-content">
-                
-            </div>
-            
-            <div class="post-children">
-                Sub posts
-                <ul>
-                    
-                        <li>
-                            Part 1. 
-                            
-                                <a href="/mathematical-optimisation/linear-programming/">Linear Programming - Basics</a>
-                            
-                             - <span>lp-basics</span>
-                        </li>
-                    
-                </ul>
+                <p><img src="/rhino-mac-pycharm-autocomplete/autocomplete.gif" alt=""></p>
+<p>Here is how I set up my PyCharm IDE to program in Rhino Mac, so I can have a nice autocompletion functionality for the <a href="https://developer.rhino3d.com/api/RhinoCommon/"><b>RhinoCommon</b> </a>and <a href="https://developer.rhino3d.com/api/RhinoScriptSyntax/"><b>rhinoscriptsyntax</b></a>.</p>
+<p>First, I install the <a href="https://github.com/mcneel/pythonstubs">python stubs</a> to my created conda environment. 
+This makes sure that we will have the autocomplete for the RhinoCommon API.</p>
+<div class="hll"><pre><span></span>$ conda create -n your-env-name
+$ conda activate your-env-name
+$ pip install Rhino-stubs
+</pre></div>
+<p>To use specific environment in PyCharm, we will have to select the right environment for the project. 
+This can be set in <code>PyCharm -&gt; Preferences -&gt; Project: your-project-name -&gt; Python Interpreter</code>. 
+Normally, our environment python is located at <code>~/anaconda3/envs/your-env-name/bin/python</code>.</p>
+<p>Finally, we have to mark rhinoscriptsyntax folder as a source, so PyCharm can recognise them. In macOS, this is located at: <code>/Applications/Rhinoceros.app/Contents/Frameworks/RhCore.framework/Versions/A/Resources/ManagedPlugIns/RhinoDLR_Python.rhp/RssLib</code>. 
+We can do this in <code>PyCharm -&gt; Preferences -&gt; Project: your-project-name -&gt; Python Structure -&gt; Add Content Root</code>. Make sure that both <code>ghpythonlib</code> and <code>rhinoscript</code> folders are selected and marked as sources.</p>
+<p><img src="/rhino-mac-pycharm-autocomplete/sources.png" alt=""></p>
+<p>Easy! We are done. Happy coding!</p>
+
             </div>
             
         </div>
     </div>
     <div class="post-meta">
         <div class="post-date">Published: 
-            <div>2020-11-13</div>
-            
+            <div>2020-12-06</div>
+            Last updated:
+            <div>2020-12-06</div>
         </div>
         
         <div class="post-labels">Labels:
             <ul>
                 
                 <li>
-                    <a href="/labels/math">math</a></li>
+                    <a href="/labels/tools">tools</a></li>
                 
                 <li>
-                    <a href="/labels/math-opt">math-opt</a></li>
+                    <a href="/labels/python">python</a></li>
                 
                 <li>
-                    <a href="/labels/optimisation">optimisation</a></li>
+                    <a href="/labels/rhino-grasshopper">rhino-grasshopper</a></li>
                 
                 <li>
-                    <a href="/labels/learning">learning</a></li>
+                    <a href="/labels/programming">programming</a></li>
                 
             </ul>
         </div>
@@ -130,12 +129,10 @@
         
         <div class="left">
             
-            &#8592;<a href="/rhino-mac-pycharm-autocomplete/">Rhino Mac PyCharm autocomplete</a>
-            
         </div>
         <div class="right">
             
-            <a href="/emacs-org-mode-export-to-pdf/">Emacs Org Mode export to pdf</a>&#8594;
+            <a href="/mathematical-optimisation/">Mathematical Optimisation</a>&#8594;
             
         </div>
     </div>
