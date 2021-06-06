@@ -8,12 +8,33 @@ labels: research
 body:
 
 ----
+2021
+
+### [Understanding rigid-block equilibrium method via mathematical programming](https://www.icevirtuallibrary.com/doi/abs/10.1680/jencm.20.00036?journalCode=jencm)
+
+<img src="./rbe-math-opt.png" width="100%">
+
+Gene Ting-Chun Kao, Antonino Iannuzzo, Stelian Coros, Tom Van Mele, and Philippe Block. 2021. Understanding rigid-block equilibrium method via mathematical programming. Proceedings of the Institution of Civil Engineers-Engineering and Computational Mechanics (2021), 1–39.
+
+----
+
+2020
+
+### [3d-Printed Bending-Active Formwork for Shell Structures](https://link.springer.com/chapter/10.1007/978-981-15-6568-7_18)
+
+Wang X, Tam KM, Beaudouin-Mackay A, Hoyle B, Mason M, Guo Z, Gao W, Li C, Zhu W, Karsan Z, Kao GT. 3d-Printed Bending-Active Formwork for Shell Structures. In Architectural Intelligence 2020 (pp. 295-314). Springer, Singapore.
+
+----
 
 2019
 
 ### [High-Performance Corrugated Concrete Shell Construction on Bending-actuated Robotically 3D-printed Formworks](https://www.ingentaconnect.com/content/iass/piass/2019/00002019/00000006/art00008)
 
 Wang X, Tam KM, Földesi D, Lee H, Seo JI, Vasileiou A, Luo Y, So CP, Zhang X, Karsan Z, Kao GT. High-Performance Corrugated Concrete Shell Construction on Bending-actuated Robotically 3D-printed Formworks. InProceedings of IASS Annual Symposia 2019 Oct 7 (Vol. 2019, No. 6, pp. 1-8). International Association for Shell and Spatial Structures (IASS).
+
+### [Tile-vault construction on bending-actuated robotically 3D-printed formwork](https://congress.cimne.com/Formandforce2019/admin/files/fileabstract/a771.pdf)
+
+Wang X., Tam K.-M. M., Beaudouin-MacKay A., Hoyle B., Mason M., Guo Z., Gao W., Li C., Zhu W., Karsan Z., Kao G., Zhang L., Chai H., Yuan P. F. and Block P. Tile-vault construction on bending-actuated robotically 3D-printed formwork, Proceedings of the IASS Symposium 2019, Barcelona,2019.
 
 ----
 
@@ -23,7 +44,7 @@ Wang X, Tam KM, Földesi D, Lee H, Seo JI, Vasileiou A, Luo Y, So CP, Zhang X, K
 
 <img src="./aad-masonry-shell.png" width="100%">
 
-Kao, G.T., Korner, A., Sonntag, D., Nguyen, L., Menges, A., Knippers, J., 2017. Assembly-aware design of masonry shell structures: a computational approach, in: Proceedings of IASS Annual Symposia, International Association for Shell and Spatial Structures (IASS). pp. 1–10.
+Gene T.C. Kao, Axel Körner, Daniel Sonntag, Long Nguyen, Achim Menges, and Jan Knippers. 2017. Assembly-aware design of masonry shell structures: a computa- tional approach. In Proceedings of IASS Annual Symposia, Vol. 2017. International Association for Shell and Spatial Structures (IASS), 1–10.
 
 ----
 ---
