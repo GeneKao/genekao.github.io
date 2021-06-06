@@ -11,13 +11,15 @@ body:
 2021
 
 ### [Understanding rigid-block equilibrium method via mathematical programming](https://www.icevirtuallibrary.com/doi/abs/10.1680/jencm.20.00036?journalCode=jencm)
-
 <img src="./rbe-math-opt.png" width="100%">
 
 Gene Ting-Chun Kao, Antonino Iannuzzo, Stelian Coros, Tom Van Mele, and Philippe Block. 2021. Understanding rigid-block equilibrium method via mathematical programming. Proceedings of the Institution of Civil Engineers-Engineering and Computational Mechanics (2021), 1–39.
 
 
 ### [COMPAS Masonry: A computational framework for practical assessment of unreinforced masonry structures](https://block.arch.ethz.ch/brg/publications/1001)
+<p align="center">
+<img src="./compas-masonry.png" width="60%">
+</p>
 
 Iannuzzo A., Dell'Endice A., Maia Avelino R., Kao G., Van Mele T. and Block P. COMPAS Masonry: A computational framework for practical assessment of unreinforced masonry structures, Proceedings of the SAHC Symposium 2020 (postponed to 2021), Barcelona, 2021.
 
@@ -25,7 +27,10 @@ Iannuzzo A., Dell'Endice A., Maia Avelino R., Kao G., Van Mele T. and Block P. C
 
 2020
 
-### [3d-Printed Bending-Active Formwork for Shell Structures](https://link.springer.com/chapter/10.1007/978-981-15-6568-7_18)
+### [3d-Printed Bending-Active Formwork for Shell Structures](https://link.springer.com/chapter/10.1007/978-981-15-6568-7_18) 
+<p align="center">
+  <img src="./3d-printed-bendactive.png" width="50%">
+</p>
 
 Wang X, Tam KM, Beaudouin-Mackay A, Hoyle B, Mason M, Guo Z, Gao W, Li C, Zhu W, Karsan Z, Kao GT. 3d-Printed Bending-Active Formwork for Shell Structures. In Architectural Intelligence 2020 (pp. 295-314). Springer, Singapore.
 
