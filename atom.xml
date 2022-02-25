@@ -43,92 +43,6 @@ We can do this in &lt;code&gt;PyCharm -&amp;gt; Preferences -&amp;gt; Project: y
       <name></name>
     </author>
   </entry>
-  <entry xml:base="https://genekao.github.io/oh-my-phd/">
-    <title type="text">oh-my-phd</title>
-    <id>urn:uuid:66cc4eb2-e136-3c6a-9f8f-b6eb7a283452</id>
-    <updated>2020-11-09T00:00:00Z</updated>
-    <link href="https://genekao.github.io/oh-my-phd/" />
-    <author>
-      <name></name>
-    </author>
-    <content type="html">&lt;p&gt;I am doing my PhD study at ETH Zurich. I try to document what I have been learning here in this &lt;a href=&quot;https://github.com/GeneKao/oh-my-phd&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
-&lt;h1&gt;Table of Contents&lt;/h1&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgb8dab3c&quot;&gt;Oh My PhD!&lt;/a&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org25ed77b&quot;&gt;Writings&lt;/a&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgeba221e&quot;&gt;orgmode-latex-templates&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgbd9a8ed&quot;&gt;Coding&lt;/a&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org23c7605&quot;&gt;programming notes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org2964785&quot;&gt;oh-my-opengl&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org60224e0&quot;&gt;Learning&lt;/a&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orga8e9587&quot;&gt;courses at ETH&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org2194ca9&quot;&gt;math foundations&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org5eb969d&quot;&gt;optimisation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org24913bd&quot;&gt;(discrete) differential geometry&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org703ca79&quot;&gt;structural mechanics&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org5050725&quot;&gt;Time management&lt;/a&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgc8e5d2b&quot;&gt;phd-org-mode&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgb74d3de&quot;&gt;PhD Research&lt;/a&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org9bcdb5c&quot;&gt;10 Tips for Research and a PhD&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org0760b57&quot;&gt;Write the Paper First&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;a id=&quot;orgb8dab3c&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Oh My PhD!&lt;/h1&gt;
-&lt;p&gt;Hi Welcome to Oh My PhD! I will document some interesting and useful things I learn during my PhD study at ETH here.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/images/archive_list_warning.gif&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/archive/phd030718s.gif&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a id=&quot;org25ed77b&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Writings&lt;/h2&gt;
-&lt;p&gt;&lt;a id=&quot;orgeba221e&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/orgmode-latex-templates&quot;&gt;orgmode-latex-templates&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;My org-mode templates for latex-style writing
-This repo contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.&lt;/p&gt;
-&lt;p&gt;&lt;a id=&quot;orgbd9a8ed&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Coding&lt;/h2&gt;
-&lt;p&gt;&lt;a id=&quot;org23c7605&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/programming-notes&quot;&gt;programming notes&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;My programming related notes&lt;/p&gt;
-&lt;p&gt;&lt;a id=&quot;org2964785&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-opengl&quot;&gt;oh-my-opengl&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;My OpenGL practice&lt;/p&gt;
-&lt;p&gt;&lt;a id=&quot;org60224e0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Learning&lt;/h2&gt;
-&lt;p&gt;&lt;a id=&quot;orga8e9587&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/courses.org&quot;&gt;courses at ETH&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a id=&quot;org2194ca9&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/math-found.org&quot;&gt;math foundations&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Some math resources I find it very useful online.&lt;/p&gt;
-&lt;p&gt;&lt;a id=&quot;org5eb969d&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/optimisation.org&quot;&gt;optimisation&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a id=&quot;org24913bd&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/discrete-differential-geometry.org&quot;&gt;(discrete) differential geometry&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a id=&quot;org703ca79&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/structureal-mechanics.org&quot;&gt;structural mechanics&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a id=&quot;org5050725&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Time management&lt;/h2&gt;
-&lt;p&gt;&lt;a id=&quot;orgc8e5d2b&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/phd-org-mode&quot;&gt;phd-org-mode&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;My phd orgmode to organize my scheduling. Based on this template.&lt;/p&gt;
-&lt;p&gt;&lt;a id=&quot;orgb74d3de&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;PhD Research&lt;/h2&gt;
-&lt;p&gt;&lt;a id=&quot;org9bcdb5c&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://ruder.io/10-tips-for-research-and-a-phd/&quot;&gt;10 Tips for Research and a PhD&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a id=&quot;org0760b57&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;a href=&quot;https://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html&quot;&gt;Write the Paper First&lt;/a&gt;&lt;/h3&gt;
-</content>
-  </entry>
   <entry xml:base="https://genekao.github.io/emacs-org-mode-export-to-pdf/">
     <title type="text">Emacs Org Mode export to pdf</title>
     <id>urn:uuid:95228c57-19fd-3b2a-bbe5-831a76c1d2c7</id>
@@ -256,6 +170,92 @@ so if you encounter any different exporting result, please refer to the emacs se
 &lt;pre&gt;&lt;code&gt;C-c C-e l o
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For more information, please refer to the &lt;a href=&quot;https://orgmode.org/guide/LaTeX-and-PDF-export.html&quot;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="https://genekao.github.io/oh-my-phd/">
+    <title type="text">oh-my-phd</title>
+    <id>urn:uuid:66cc4eb2-e136-3c6a-9f8f-b6eb7a283452</id>
+    <updated>2020-11-09T00:00:00Z</updated>
+    <link href="https://genekao.github.io/oh-my-phd/" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;p&gt;I am doing my PhD study at ETH Zurich. I try to document what I have been learning here in this &lt;a href=&quot;https://github.com/GeneKao/oh-my-phd&quot;&gt;Github repo&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Table of Contents&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgb8dab3c&quot;&gt;Oh My PhD!&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org25ed77b&quot;&gt;Writings&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgeba221e&quot;&gt;orgmode-latex-templates&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgbd9a8ed&quot;&gt;Coding&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org23c7605&quot;&gt;programming notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org2964785&quot;&gt;oh-my-opengl&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org60224e0&quot;&gt;Learning&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orga8e9587&quot;&gt;courses at ETH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org2194ca9&quot;&gt;math foundations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org5eb969d&quot;&gt;optimisation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org24913bd&quot;&gt;(discrete) differential geometry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org703ca79&quot;&gt;structural mechanics&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org5050725&quot;&gt;Time management&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgc8e5d2b&quot;&gt;phd-org-mode&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#orgb74d3de&quot;&gt;PhD Research&lt;/a&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org9bcdb5c&quot;&gt;10 Tips for Research and a PhD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;/oh-my-phd/#org0760b57&quot;&gt;Write the Paper First&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a id=&quot;orgb8dab3c&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Oh My PhD!&lt;/h1&gt;
+&lt;p&gt;Hi Welcome to Oh My PhD! I will document some interesting and useful things I learn during my PhD study at ETH here.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/images/archive_list_warning.gif&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://phdcomics.com/comics/archive/phd030718s.gif&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;org25ed77b&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Writings&lt;/h2&gt;
+&lt;p&gt;&lt;a id=&quot;orgeba221e&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/orgmode-latex-templates&quot;&gt;orgmode-latex-templates&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;My org-mode templates for latex-style writing
+This repo contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;orgbd9a8ed&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Coding&lt;/h2&gt;
+&lt;p&gt;&lt;a id=&quot;org23c7605&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/programming-notes&quot;&gt;programming notes&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;My programming related notes&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;org2964785&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-opengl&quot;&gt;oh-my-opengl&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;My OpenGL practice&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;org60224e0&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Learning&lt;/h2&gt;
+&lt;p&gt;&lt;a id=&quot;orga8e9587&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/courses.org&quot;&gt;courses at ETH&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a id=&quot;org2194ca9&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/math-found.org&quot;&gt;math foundations&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Some math resources I find it very useful online.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;org5eb969d&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/optimisation.org&quot;&gt;optimisation&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a id=&quot;org24913bd&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/discrete-differential-geometry.org&quot;&gt;(discrete) differential geometry&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a id=&quot;org703ca79&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/oh-my-phd/blob/master/structureal-mechanics.org&quot;&gt;structural mechanics&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a id=&quot;org5050725&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Time management&lt;/h2&gt;
+&lt;p&gt;&lt;a id=&quot;orgc8e5d2b&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/GeneKao/phd-org-mode&quot;&gt;phd-org-mode&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;My phd orgmode to organize my scheduling. Based on this template.&lt;/p&gt;
+&lt;p&gt;&lt;a id=&quot;orgb74d3de&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;PhD Research&lt;/h2&gt;
+&lt;p&gt;&lt;a id=&quot;org9bcdb5c&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://ruder.io/10-tips-for-research-and-a-phd/&quot;&gt;10 Tips for Research and a PhD&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a id=&quot;org0760b57&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://www.cs.jhu.edu/~jason/advice/write-the-paper-first.html&quot;&gt;Write the Paper First&lt;/a&gt;&lt;/h3&gt;
 </content>
   </entry>
   <entry xml:base="https://genekao.github.io/using-git-like-a-pro/">
