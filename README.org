@@ -2,7 +2,7 @@
 
 Still work in pogress.
 
-This website is using [[https://www.getlektor.com/][Lektor]] and starter code is from https://gitlab.com/aniemsh/aniemsh.gitlab.io.
+This website is using [[https://www.getlektor.com/][Lektor]].
 
 
 * Build & run the blog
