@@ -42,7 +42,7 @@
     <ul>
         
         <li>
-            <a href="/">Home</a>
+            <a href="/">Blog</a>
         </li>
         
         <li>
@@ -115,152 +115,152 @@ Rules: 1. Press the mouse button for initial ball speed.</p>
 <span class="cm">  </span>
 <span class="cm"> **************************************/</span>
 <span class="c1">///////////////////////////////////////</span>
- 
- 
-<span class="n">Ball</span> <span class="n">b</span><span class="p">;</span> 
-<span class="kt">boolean</span> <span class="n">status</span><span class="p">;</span> 
-<span class="kt">int</span> <span class="n">batSize</span> <span class="o">=</span> <span class="mi">150</span><span class="p">;</span> 
-<span class="kt">int</span> <span class="n">batThick</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> 
-<span class="kt">int</span> <span class="n">AddSpeed</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
- 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">size</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span> <span class="mi">450</span><span class="p">);</span>
-  <span class="n">rectMode</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span>
-  <span class="n">smooth</span><span class="p">();</span>
-  <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ball</span><span class="p">(</span><span class="k">new</span> <span class="n">PVector</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">));</span>
-  <span class="n">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="n">Ball</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">batSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">150</span><span class="p">;</span><span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">batThick</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">AddSpeed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">size</span><span class="p">(</span><span class="mi">650</span><span class="p">,</span><span class="w"> </span><span class="mi">450</span><span class="p">);</span>
+<span class="w">  </span><span class="n">rectMode</span><span class="p">(</span><span class="n">CENTER</span><span class="p">);</span>
+<span class="w">  </span><span class="n">smooth</span><span class="p">();</span>
+<span class="w">  </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Ball</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">));</span>
+<span class="w">  </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">background</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
-  <span class="n">b</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">background</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+<span class="w">  </span><span class="n">b</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">mousePressed</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">b</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Ball</span><span class="p">(</span><span class="k">new</span> <span class="n">PVector</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">));</span>
-  <span class="n">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-  <span class="n">score</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">mousePressed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Ball</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">));</span>
+<span class="w">  </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">  </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">keyPressed</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">if</span> <span class="p">(</span><span class="n">key</span> <span class="o">==</span> <span class="n">CODED</span><span class="p">)</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">keyCode</span> <span class="o">==</span> <span class="n">UP</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">batSize</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="p">}</span> 
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">keyCode</span> <span class="o">==</span> <span class="n">DOWN</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">batSize</span> <span class="o">-=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">keyPressed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CODED</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">keyCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">UP</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">batSize</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">keyCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">DOWN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">batSize</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
- 
-<span class="kd">class</span> <span class="nc">Ball</span> <span class="p">{</span>
- 
-  <span class="n">PVector</span> <span class="n">pos</span><span class="p">;</span> 
-  <span class="n">PVector</span> <span class="n">dir</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PVector</span><span class="p">(</span><span class="n">mouseX</span><span class="o">-</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">mouseY</span><span class="o">-</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
-  <span class="n">PVector</span> <span class="n">vel</span><span class="p">;</span> 
-  <span class="kt">int</span> <span class="n">rad</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> 
- 
-  <span class="n">Ball</span><span class="p">(</span><span class="n">PVector</span> <span class="n">pos</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">pos</span> <span class="o">=</span> <span class="n">pos</span><span class="p">;</span>
-    <span class="n">vel</span> <span class="o">=</span> <span class="n">PVector</span><span class="p">.</span><span class="na">div</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span> <span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">display</span><span class="p">();</span>
-      <span class="n">bound</span><span class="p">();</span>
-      <span class="n">run</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">bat</span><span class="p">();</span>
-    <span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">153</span><span class="p">);</span>
-    <span class="n">text</span><span class="p">(</span><span class="s">&quot;Ball Position = &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
-    <span class="n">text</span><span class="p">(</span><span class="s">&quot;Ball Velocity = &quot;</span> <span class="o">+</span> <span class="n">vel</span><span class="p">.</span><span class="na">mag</span><span class="p">(),</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
-    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">239</span><span class="p">);</span>
-    <span class="n">text</span><span class="p">(</span><span class="s">&quot;Score = &quot;</span> <span class="o">+</span> <span class="n">score</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">);</span>
-  <span class="p">}</span>
- 
- 
- 
-  <span class="kt">void</span> <span class="nf">bound</span><span class="p">()</span> <span class="p">{</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="n">rad</span> <span class="o">-</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="n">vel</span><span class="p">.</span><span class="na">x</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-      <span class="n">vel</span><span class="p">.</span><span class="na">x</span> <span class="o">+=</span> <span class="n">AddSpeed</span><span class="p">;</span> 
-      <span class="n">vel</span><span class="p">.</span><span class="na">y</span> <span class="o">+=</span> <span class="n">AddSpeed</span><span class="p">;</span>
- 
-      <span class="n">score</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span> 
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="n">rad</span> <span class="o">-</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="n">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="n">width</span><span class="o">-</span><span class="n">rad</span> <span class="o">+</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="p">{</span>
- 
-      <span class="n">vel</span><span class="p">.</span><span class="na">x</span> <span class="o">+=</span> <span class="n">AddSpeed</span><span class="p">;</span> 
-      <span class="n">vel</span><span class="p">.</span><span class="na">y</span> <span class="o">+=</span> <span class="n">AddSpeed</span><span class="p">;</span>
-      <span class="n">vel</span><span class="p">.</span><span class="na">x</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-      <span class="n">score</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span> 
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="n">width</span><span class="o">-</span><span class="n">rad</span> <span class="o">+</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="p">{</span>
-      <span class="n">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="n">rad</span> <span class="o">-</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
- 
-      <span class="n">score</span><span class="o">++</span><span class="p">;</span>
-      <span class="n">vel</span><span class="p">.</span><span class="na">y</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-    <span class="p">}</span> 
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="n">rad</span> <span class="o">-</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="n">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="n">height</span><span class="o">-</span><span class="n">rad</span> <span class="o">+</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="p">{</span>
-      <span class="n">vel</span><span class="p">.</span><span class="na">y</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
- 
-      <span class="n">score</span><span class="o">++</span><span class="p">;</span>
-    <span class="p">}</span> 
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="n">height</span><span class="o">-</span><span class="n">rad</span> <span class="o">+</span> <span class="n">batThick</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span> <span class="o">&amp;&amp;</span> <span class="n">pos</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span> <span class="p">{</span>
-      <span class="n">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">pos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">vel</span><span class="p">);</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">display</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-    <span class="n">noStroke</span><span class="p">();</span>
-    <span class="n">ellipse</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="p">,</span> <span class="n">rad</span><span class="p">,</span> <span class="n">rad</span><span class="p">);</span>
-    <span class="n">displayArrow</span><span class="p">();</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">displayArrow</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">strokeWeight</span><span class="p">(</span><span class="n">dist</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">);</span>
-    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-    <span class="n">line</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">);</span>
-    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-    <span class="n">ellipse</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">mousePressed</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-      <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-      <span class="n">ellipse</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">bat</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-    <span class="n">noStroke</span><span class="p">();</span>
-    <span class="n">rect</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="n">height</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">batSize</span><span class="p">,</span> <span class="n">batThick</span><span class="p">);</span>
-    <span class="n">rect</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">batSize</span><span class="p">,</span> <span class="n">batThick</span><span class="p">);</span>
- 
-    <span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">rect</span><span class="p">(</span><span class="n">width</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="n">batThick</span><span class="p">,</span> <span class="n">batSize</span><span class="p">);</span>
-    <span class="n">rect</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">mouseY</span><span class="p">,</span> <span class="n">batThick</span><span class="p">,</span> <span class="n">batSize</span><span class="p">);</span>
-  <span class="p">}</span>
-   
+<span class="w"> </span>
+<span class="kd">class</span> <span class="nc">Ball</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="n">PVector</span><span class="w"> </span><span class="n">dir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PVector</span><span class="p">(</span><span class="n">mouseX</span><span class="o">-</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="o">-</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">PVector</span><span class="w"> </span><span class="n">vel</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">rad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">Ball</span><span class="p">(</span><span class="n">PVector</span><span class="w"> </span><span class="n">pos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">    </span><span class="n">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PVector</span><span class="p">.</span><span class="na">div</span><span class="p">(</span><span class="n">dir</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">display</span><span class="p">();</span>
+<span class="w">      </span><span class="n">bound</span><span class="p">();</span>
+<span class="w">      </span><span class="n">run</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">bat</span><span class="p">();</span>
+<span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">153</span><span class="p">);</span>
+<span class="w">    </span><span class="n">text</span><span class="p">(</span><span class="s">&quot;Ball Position = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="w">    </span><span class="n">text</span><span class="p">(</span><span class="s">&quot;Ball Velocity = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">vel</span><span class="p">.</span><span class="na">mag</span><span class="p">(),</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+<span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">239</span><span class="p">);</span>
+<span class="w">    </span><span class="n">text</span><span class="p">(</span><span class="s">&quot;Score = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">bound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rad</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">AddSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">AddSpeed</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="n">score</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rad</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">width</span><span class="o">-</span><span class="n">rad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">AddSpeed</span><span class="p">;</span><span class="w"> </span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">AddSpeed</span><span class="p">;</span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">      </span><span class="n">score</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">width</span><span class="o">-</span><span class="n">rad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseY</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rad</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="n">score</span><span class="o">++</span><span class="p">;</span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">rad</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">height</span><span class="o">-</span><span class="n">rad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">vel</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="n">score</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">height</span><span class="o">-</span><span class="n">rad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">batThick</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">+</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">mouseX</span><span class="o">-</span><span class="n">batSize</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">vel</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">    </span><span class="n">noStroke</span><span class="p">();</span>
+<span class="w">    </span><span class="n">ellipse</span><span class="p">(</span><span class="n">pos</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">pos</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">rad</span><span class="p">,</span><span class="w"> </span><span class="n">rad</span><span class="p">);</span>
+<span class="w">    </span><span class="n">displayArrow</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayArrow</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">strokeWeight</span><span class="p">(</span><span class="n">dist</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">)</span><span class="o">/</span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="n">line</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">);</span>
+<span class="w">    </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ellipse</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mousePressed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">ellipse</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">bat</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">    </span><span class="n">noStroke</span><span class="p">();</span>
+<span class="w">    </span><span class="n">rect</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="n">height</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">batSize</span><span class="p">,</span><span class="w"> </span><span class="n">batThick</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rect</span><span class="p">(</span><span class="n">mouseX</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">batSize</span><span class="p">,</span><span class="w"> </span><span class="n">batThick</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">fill</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rect</span><span class="p">(</span><span class="n">width</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">,</span><span class="w"> </span><span class="n">batThick</span><span class="p">,</span><span class="w"> </span><span class="n">batSize</span><span class="p">);</span>
+<span class="w">    </span><span class="n">rect</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">mouseY</span><span class="p">,</span><span class="w"> </span><span class="n">batThick</span><span class="p">,</span><span class="w"> </span><span class="n">batSize</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">   </span>
 <span class="p">}</span>
 </pre></div>
 

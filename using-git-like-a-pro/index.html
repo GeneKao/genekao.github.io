@@ -42,7 +42,7 @@
     <ul>
         
         <li>
-            <a href="/">Home</a>
+            <a href="/">Blog</a>
         </li>
         
         <li>
@@ -162,12 +162,12 @@ when annoying vi pop out later (I am sorry for vi users lol). For beginners, I
 will suggest using nano or other editors with GUI. (Those strings with the brown
 colour you should replace whatever makes sense to you. Blue are comments,
 don't type it in your terminal.)</p>
-<div class="hll"><pre><span></span>- $ git config --global user.name <span class="s2">&quot;Git Rock&quot;</span>
-- $ git config --global user.email <span class="s2">&quot;git.rock@email.com&quot;</span>
-- $ git config --global color.ui auto
-- $ git config --global merge.conflictstyle diff3
-- $ git config --global core.editor <span class="s2">&quot;emacs -nw&quot;</span> <span class="c1"># (vi is default setting)</span>
-- $ git config --list <span class="c1"># (to see your git configurations.)</span>
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Git Rock&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;git.rock@email.com&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>color.ui<span class="w"> </span>auto
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>merge.conflictstyle<span class="w"> </span>diff3
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>core.editor<span class="w"> </span><span class="s2">&quot;emacs -nw&quot;</span><span class="w"> </span><span class="c1"># (vi is default setting)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--list<span class="w"> </span><span class="c1"># (to see your git configurations.)</span>
 </pre></div>
 <p><b>Before moving on to the next chapter, take a look at all key terms describe</b>
 <a href="http://video.udacity-data.com.s3.amazonaws.com/topher/2017/March/58d31eb5_ud123-git-keyterms/ud123-git-keyterms.pdf">here</a>.</p>
@@ -187,13 +187,13 @@ do when something goes wrong.</b></p>
 <p>The following commands are some of the most basic commands that you will use
 very often, I will explain other commands later, I just list them here so you
 can check the most basic commands after finishing this tutorial.</p>
-<div class="hll"><pre><span></span>- $ git init
-- $ git clone https://github.com/GeneKao/udacity-build-a-portfolio-site.git
-- $ git status <span class="c1"># (Please use it all the time!)</span>
-- $ git log
-- $ git add
-- $ git commit
-- $ git diff
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>init
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/GeneKao/udacity-build-a-portfolio-site.git
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span><span class="c1"># (Please use it all the time!)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>add
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>commit
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>diff
 </pre></div>
 <h2>4. Review a repo&#39;s history <a name="4"></a></h2>
 <p>In this chapter, you will learn how to use commands such as <code>$ git log</code> with
@@ -217,18 +217,18 @@ or <code>$ git log --patch</code> to show all the details. Or you can use differ
 like <code>--after, --author, --grep, -S</code> to constrain or to filter the git
 information that you want.  Try out all those commands and see what kind of
 information you will get:</p>
-<div class="hll"><pre><span></span>- $ git log --online
-- $ git log --stat
-- $ git log -p, git log --patch
-- $ git log --oneline --decorate --graph --all
-- $ git log --after<span class="o">=</span><span class="s2">&quot;2017-10-1&quot;</span>
-- $ git log --after<span class="o">=</span><span class="s2">&quot;yesterday&quot;</span>
-- $ git log --after<span class="o">=</span><span class="s2">&quot;2017-10-1&quot;</span> --before<span class="o">=</span><span class="s2">&quot;2017-10-1&quot;</span>
-- $ git log --author<span class="o">=</span><span class="s2">&quot;Vincent&quot;</span>
-- $ git log --grep<span class="o">=</span><span class="s2">&quot;bugs&quot;</span>
-- $ git log -- md <span class="c1"># (check changes only for README)</span>
-- $ git log -S<span class="s2">&quot;Hello World&quot;</span> <span class="c1"># (any file that string was modified)</span>
-- $ git show
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--online
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--stat
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>-p,<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--patch
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--decorate<span class="w"> </span>--graph<span class="w"> </span>--all
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">&quot;2017-10-1&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">&quot;yesterday&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--after<span class="o">=</span><span class="s2">&quot;2017-10-1&quot;</span><span class="w"> </span>--before<span class="o">=</span><span class="s2">&quot;2017-10-1&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--author<span class="o">=</span><span class="s2">&quot;Vincent&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--grep<span class="o">=</span><span class="s2">&quot;bugs&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--<span class="w"> </span>md<span class="w"> </span><span class="c1"># (check changes only for README)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>-S<span class="s2">&quot;Hello World&quot;</span><span class="w"> </span><span class="c1"># (any file that string was modified)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>show
 </pre></div>
 <p>If you would like to see more detail documentation of those optional flags
 type<code>$ git log --help</code>.</p>
@@ -248,8 +248,8 @@ commit and the repository is where all Git store all snapshots of your code.</p>
 <p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-5-1.bmp" alt=""></p>
 <p>Figure 5‑1: Diagram of Git work directory, staging index and repo</p>
 <p>To create a commit to the repo, basically you will need to do it in two steps:</p>
-<div class="hll"><pre><span></span><span class="m">1</span>. $ git add md <span class="c1">#(or $ git add . to add everything under current directory.)</span>
-<span class="m">2</span>. $ git commit -m <span class="s2">&quot;add a readme file&quot;</span>
+<div class="hll"><pre><span></span><span class="m">1</span>.<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>md<span class="w"> </span><span class="c1">#(or $ git add . to add everything under current directory.)</span>
+<span class="m">2</span>.<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;add a readme file&quot;</span>
 </pre></div>
 <p>What we have done here is add a file that we would like to commit and move it
 from working directory to staging index. Assuming we have other files still in
@@ -264,20 +264,20 @@ course explains clearly the concept of the working directory, staging index and
 repo. Figure 5-1 shows the summarized diagram, and useful comments are listed
 below. (Just ignore the stash command for now or you can try it on your own. I
 will explain git stash in the next edition.)</p>
-<div class="hll"><pre><span></span>- $ git config -global core.editor emacs <span class="c1"># (Configure your favourite editor)</span>
-- $ git add <span class="c1"># (put them in staging index / stage files)</span>
-- $ git commit -m <span class="s2">&quot;your comment&quot;</span> <span class="c1"># (commit staged files to repo)</span>
-- $ git diff
-- $ git stash <span class="c1"># (make your code WIP and try something else)</span>
-- $ git stash pop <span class="c1"># (reverse the stash or git stash apply)</span>
-- $ git stash list
-- $ git stash save <span class="s2">&quot;Add style to our site&quot;</span>
-- $ git stash show
-- $ git log --oneline --graph stash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
-- $ git stash branch add-stylesheetstash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
-- $ git stash drop stash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
-- $ git stash clear
-  <span class="c1"># (Set up .gitignore file)</span>
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>-global<span class="w"> </span>core.editor<span class="w"> </span>emacs<span class="w"> </span><span class="c1"># (Configure your favourite editor)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span><span class="c1"># (put them in staging index / stage files)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;your comment&quot;</span><span class="w"> </span><span class="c1"># (commit staged files to repo)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>diff
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span><span class="c1"># (make your code WIP and try something else)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>pop<span class="w"> </span><span class="c1"># (reverse the stash or git stash apply)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>list
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>save<span class="w"> </span><span class="s2">&quot;Add style to our site&quot;</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>show
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>--graph<span class="w"> </span>stash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>branch<span class="w"> </span>add-stylesheetstash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>drop<span class="w"> </span>stash@<span class="o">{</span><span class="m">1</span><span class="o">}</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>stash<span class="w"> </span>clear
+<span class="w">  </span><span class="c1"># (Set up .gitignore file)</span>
 </pre></div>
 <p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-5-2.bmp" alt=""></p>
 <p>Figure 5‑2: git stash</p>
@@ -297,25 +297,25 @@ files.</p>
 <p>After you modify your separated development, you can use Git merge to merge one
 branch with another branch. Normally Git will merge it automatically unless two
 branches have modified the same lines, then you will have to manually fix them.</p>
-<div class="hll"><pre><span></span>- $ git tag -a v1.0 <span class="o">(</span>create<span class="o">)</span>
-- $ git tag -a v1.0 a87984 <span class="o">(</span>create<span class="o">)</span>
-- $ git tag -d v1.0 <span class="o">(</span>delete<span class="o">)</span>
-- $ git branch <span class="o">(</span>check<span class="o">)</span>
-- $ git branch <span class="nv">dev_frontend</span> <span class="o">=</span>git checkout -b dev_frontend
-- $ git branch -d dev_frontend <span class="o">(</span>delete<span class="o">)</span>
-- $ git checkout dev_frontend
-- $ git checkout dev_frontend43s20r
-- $ git checkout dev_frontendmaster
-- $ git merge dev_frontend
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0<span class="w"> </span><span class="o">(</span>create<span class="o">)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>-a<span class="w"> </span>v1.0<span class="w"> </span>a87984<span class="w"> </span><span class="o">(</span>create<span class="o">)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>tag<span class="w"> </span>-d<span class="w"> </span>v1.0<span class="w"> </span><span class="o">(</span>delete<span class="o">)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span><span class="o">(</span>check<span class="o">)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span><span class="nv">dev_frontend</span><span class="w"> </span><span class="o">=</span>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>dev_frontend
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>dev_frontend<span class="w"> </span><span class="o">(</span>delete<span class="o">)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>dev_frontend
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>dev_frontend43s20r
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>dev_frontendmaster
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>dev_frontend
 </pre></div>
 <h2>7. Experiments using checkout <a name="7"></a></h2>
 <p>You can not only experiment with your code using different branches and switch
 between them by using git checkout, but also switch to your previous commit or
 specific files.</p>
-<div class="hll"><pre><span></span>- $ git checkout dev<span class="se">\_</span>frontend <span class="c1"># (branch)</span>
-- $ git checkout 43s20r <span class="c1"># (commit)</span>
-- $ git checkout 43s20rpy <span class="c1"># (file)</span>
-- $ git checkout HEADpy <span class="c1"># (go back)</span>
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>dev<span class="se">\_</span>frontend<span class="w"> </span><span class="c1"># (branch)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>43s20r<span class="w"> </span><span class="c1"># (commit)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>43s20rpy<span class="w"> </span><span class="c1"># (file)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>HEADpy<span class="w"> </span><span class="c1"># (go back)</span>
 </pre></div>
 <h2>8. Undoing changes <a name="8"></a></h2>
 <p>To modify the commit, you can type <code>$ git commit --amend</code> to modify the last
@@ -326,12 +326,12 @@ commit to trash directly, so be careful to use it. When you better not use reset
 on the public repo, because this will mess up other people's development.
 Use git revert instead, this will create a new commit to undo the previous
 commit.</p>
-<div class="hll"><pre><span></span>- $ git commit --amend <span class="c1"># (modify the last commit Don&amp;#39;t use it in Public History)</span>
-- $ git revert 43s20r <span class="c1"># (create a new commit to undo)</span>
-- $ git reset HEAD~1 <span class="c1"># (Be careful! Don&#39;t use it in Public History)</span>
-- $ git reset --mixed HEAD~1 <span class="c1"># (move to the working directory, this is the default, add and commit)</span>
-- $ git reset --soft HEAD~1 <span class="c1"># (move to staging index, commit)</span>
-- $ git reset --hard HEAD~1 <span class="c1"># (move to trash, deleted)</span>
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span><span class="c1"># (modify the last commit Don&amp;#39;t use it in Public History)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>revert<span class="w"> </span>43s20r<span class="w"> </span><span class="c1"># (create a new commit to undo)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1"># (Be careful! Don&#39;t use it in Public History)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--mixed<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1"># (move to the working directory, this is the default, add and commit)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--soft<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1"># (move to staging index, commit)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>reset<span class="w"> </span>--hard<span class="w"> </span>HEAD~1<span class="w"> </span><span class="c1"># (move to trash, deleted)</span>
 </pre></div>
 <h2>9. Collaborating and syncing with GitLab <a name="9"></a></h2>
 <p>After having some commits, you might want other people to join your development
@@ -343,14 +343,14 @@ the changes and <code>$ git push origin mater</code> to upload your repo.</p>
 <p>More information to see <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/#platform-linux">GitHub
 documentation</a>
 (GitLab is more or less the same).</p>
-<div class="hll"><pre><span></span>- $ git remote
-- $ git fetch
-- $ git pull
-- $ git push
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>remote
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>fetch
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>pull
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>push
 </pre></div>
 <h2>10. Other useful commands <a name="10"></a></h2>
-<div class="hll"><pre><span></span>- $ git diff-tree --no-commit-id --name-only -r d51488d <span class="c1"># (list all files changes in a commit)</span>
-- $ git ls-tree --name-only -r d51488d <span class="c1"># (list all files in a commit)</span>
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>diff-tree<span class="w"> </span>--no-commit-id<span class="w"> </span>--name-only<span class="w"> </span>-r<span class="w"> </span>d51488d<span class="w"> </span><span class="c1"># (list all files changes in a commit)</span>
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>ls-tree<span class="w"> </span>--name-only<span class="w"> </span>-r<span class="w"> </span>d51488d<span class="w"> </span><span class="c1"># (list all files in a commit)</span>
 </pre></div>
 <h2>11. Development pipeline, branching model and discussion <a name="11"></a></h2>
 <p>I will suggest using gitflow to managing your version and big software
@@ -358,55 +358,55 @@ development. You can also install it on the command line so everything become so
 easy.</p>
 <p>Check the official repository on GitHub:</p>
 <p><a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a></p>
-<div class="hll"><pre><span></span>- $ git flow init
-- $ git flow feature start feature/dev-gk-responsive
-- $ git flow feature finish feature/dev-gk-responsive
-- $ git flow feature publish feature/dev-gk-responsive
-- $ git flow feature pull remote feature/dev-gk-responsive
+<div class="hll"><pre><span></span>-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>flow<span class="w"> </span>init
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>flow<span class="w"> </span>feature<span class="w"> </span>start<span class="w"> </span>feature/dev-gk-responsive
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>flow<span class="w"> </span>feature<span class="w"> </span>finish<span class="w"> </span>feature/dev-gk-responsive
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>flow<span class="w"> </span>feature<span class="w"> </span>publish<span class="w"> </span>feature/dev-gk-responsive
+-<span class="w"> </span>$<span class="w"> </span>git<span class="w"> </span>flow<span class="w"> </span>feature<span class="w"> </span>pull<span class="w"> </span>remote<span class="w"> </span>feature/dev-gk-responsive
 </pre></div>
 <h1>Appendix</h1>
 <h2>A. Git Bash setup <a name="12"></a></h2>
 <p>Installation procedure for using git bash as Linux VM connector:</p>
 <p><a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a></p>
 <p>Create a .profile in the home directory like:</p>
-<div class="hll"><pre><span></span><span class="nb">alias</span> <span class="nv">q</span><span class="o">=</span><span class="s2">&quot;exit&quot;</span>
-<span class="nb">alias</span> <span class="nv">dir</span><span class="o">=</span><span class="s2">&quot;ls -al&quot;</span>
-<span class="nb">alias</span> <span class="nv">vm</span><span class="o">=</span><span class="s2">&quot;ssh -i ~/.ssh/id_rsa_np new_user@YOUR_IP&quot;</span>
+<div class="hll"><pre><span></span><span class="nb">alias</span><span class="w"> </span><span class="nv">q</span><span class="o">=</span><span class="s2">&quot;exit&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">dir</span><span class="o">=</span><span class="s2">&quot;ls -al&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">vm</span><span class="o">=</span><span class="s2">&quot;ssh -i ~/.ssh/id_rsa_np new_user@YOUR_IP&quot;</span>
 
-<span class="k">function</span> <span class="nb">cd</span> <span class="o">{</span>
-    <span class="nb">builtin</span> <span class="nb">cd</span> <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span> <span class="o">&amp;&amp;</span> dir
+<span class="k">function</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nb">builtin</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>dir
 <span class="o">}</span>
 
 <span class="c1"># Interactive operation...</span>
-<span class="nb">alias</span> <span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;rm -i&#39;</span>
-<span class="nb">alias</span> <span class="nv">cp</span><span class="o">=</span><span class="s1">&#39;cp -i&#39;</span>
-<span class="nb">alias</span> <span class="nv">mv</span><span class="o">=</span><span class="s1">&#39;mv -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;rm -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">cp</span><span class="o">=</span><span class="s1">&#39;cp -i&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">mv</span><span class="o">=</span><span class="s1">&#39;mv -i&#39;</span>
 
 <span class="c1"># Default to human-readable figures</span>
-<span class="nb">alias</span> <span class="nv">df</span><span class="o">=</span><span class="s1">&#39;df -h&#39;</span>
-<span class="nb">alias</span> <span class="nv">du</span><span class="o">=</span><span class="s1">&#39;du -h&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">df</span><span class="o">=</span><span class="s1">&#39;df -h&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">du</span><span class="o">=</span><span class="s1">&#39;du -h&#39;</span>
 
 <span class="c1"># Misc :)</span>
-<span class="nb">alias</span> <span class="nv">less</span><span class="o">=</span><span class="s1">&#39;less -r&#39;</span> <span class="c1"># raw control characters</span>
-<span class="nb">alias</span> <span class="nv">whence</span><span class="o">=</span><span class="s1">&#39;type -a&#39;</span> <span class="c1"># where, of a sort</span>
-<span class="nb">alias</span> <span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color&#39;</span> <span class="c1"># show differences in colour</span>
-<span class="nb">alias</span> <span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span> <span class="c1"># show differences in colour</span>
-<span class="nb">alias</span> <span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span> <span class="c1"># show differences in colour</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">less</span><span class="o">=</span><span class="s1">&#39;less -r&#39;</span><span class="w"> </span><span class="c1"># raw control characters</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">whence</span><span class="o">=</span><span class="s1">&#39;type -a&#39;</span><span class="w"> </span><span class="c1"># where, of a sort</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">grep</span><span class="o">=</span><span class="s1">&#39;grep --color&#39;</span><span class="w"> </span><span class="c1"># show differences in colour</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">egrep</span><span class="o">=</span><span class="s1">&#39;egrep --color=auto&#39;</span><span class="w"> </span><span class="c1"># show differences in colour</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">fgrep</span><span class="o">=</span><span class="s1">&#39;fgrep --color=auto&#39;</span><span class="w"> </span><span class="c1"># show differences in colour</span>
 
 
 <span class="c1"># Some shortcuts for different directory listings</span>
-<span class="nb">alias</span> <span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -hF --color=tty&#39;</span> <span class="c1"># classify files in colour</span>
-<span class="nb">alias</span> <span class="nv">dir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=vertical&#39;</span>
-<span class="nb">alias</span> <span class="nv">vdir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=long&#39;</span>
-<span class="nb">alias</span> <span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span> <span class="c1"># long list</span>
-<span class="nb">alias</span> <span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span> <span class="c1"># all but . and ..</span>
-<span class="nb">alias</span> <span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span> <span class="c1">#</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ls</span><span class="o">=</span><span class="s1">&#39;ls -hF --color=tty&#39;</span><span class="w"> </span><span class="c1"># classify files in colour</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">dir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=vertical&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">vdir</span><span class="o">=</span><span class="s1">&#39;ls --color=auto --format=long&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ll</span><span class="o">=</span><span class="s1">&#39;ls -l&#39;</span><span class="w"> </span><span class="c1"># long list</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">la</span><span class="o">=</span><span class="s1">&#39;ls -A&#39;</span><span class="w"> </span><span class="c1"># all but . and ..</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">l</span><span class="o">=</span><span class="s1">&#39;ls -CF&#39;</span><span class="w"> </span><span class="c1">#</span>
 
 <span class="c1"># Enable tab completion</span>
-<span class="nb">source</span> ~/.git-terminal-config/git-completion.bash
+<span class="nb">source</span><span class="w"> </span>~/.git-terminal-config/git-completion.bash
 
 <span class="c1"># Change command prompt</span>
-<span class="nb">source</span> ~/.git-terminal-config/git-prompt.sh
+<span class="nb">source</span><span class="w"> </span>~/.git-terminal-config/git-prompt.sh
 
 <span class="c1"># colors!</span>
 <span class="nv">red</span><span class="o">=</span><span class="s2">&quot;\[\033[38;5;203m\]&quot;</span>
@@ -416,19 +416,19 @@ easy.</p>
 <span class="nv">gray</span><span class="o">=</span><span class="s2">&quot;\[\033[1;30m\]&quot;</span>
 <span class="nv">reset</span><span class="o">=</span><span class="s2">&quot;\[\033[0m\]&quot;</span>
 
-<span class="nb">export</span> <span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">GIT_PS1_SHOWDIRTYSTATE</span><span class="o">=</span><span class="m">1</span>
 
 <span class="c1"># &#39;\u&#39; adds the name of the current user to the prompt</span>
 <span class="c1"># &#39;\$(__git_ps1)&#39; adds git-related stuff</span>
 <span class="c1"># &#39;\W&#39; adds the name of the current directory</span>
-<span class="nb">export</span> <span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$red</span><span class="s2">\u</span><span class="nv">$yellow</span><span class="s2">\$(__git_ps1)</span><span class="nv">$green</span><span class="s2"> \W</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$red</span><span class="s2">\u</span><span class="nv">$yellow</span><span class="s2">\$(__git_ps1)</span><span class="nv">$green</span><span class="s2"> \W</span>
 $<span class="s2"> </span><span class="nv">$reset</span><span class="s2">&quot;</span>
 <span class="c1"># Set Git language to English</span>
 <span class="c1">#alias git=&#39;LANG=en_US git&#39;</span>
-<span class="nb">alias</span> <span class="nv">git</span><span class="o">=</span><span class="s1">&#39;LANG=en_GB git&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">git</span><span class="o">=</span><span class="s1">&#39;LANG=en_GB git&#39;</span>
 <span class="c1"># Set Git language to English</span>
 <span class="c1">#alias git=&#39;LC_ALL=en_US git&#39;</span>
-<span class="nb">alias</span> <span class="nv">git</span><span class="o">=</span><span class="s1">&#39;LC_ALL=en_GB git&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">git</span><span class="o">=</span><span class="s1">&#39;LC_ALL=en_GB git&#39;</span>
 </pre></div>
 <p>In git bash, run the following commands:</p>
 <h2>B. Cygwin setup <a name="13"></a></h2>

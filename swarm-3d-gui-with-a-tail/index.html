@@ -42,7 +42,7 @@
     <ul>
         
         <li>
-            <a href="/">Home</a>
+            <a href="/">Blog</a>
         </li>
         
         <li>
@@ -91,83 +91,83 @@
 <span class="c1">// Copyright   : GNU General Public License</span>
 <span class="c1">// Description : Swarm 3D with Tail GUI</span>
 <span class="c1">//============================================================================</span>
- 
-<span class="kn">import</span> <span class="nn">toxi.geom.*</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">processing.opengl.*</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">peasy.*</span><span class="p">;</span> 
-<span class="kn">import</span> <span class="nn">controlP5.*</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nn">java.util.Calendar</span><span class="p">;</span>
- 
-<span class="n">Manage</span> <span class="n">man</span><span class="p">;</span>
-<span class="n">PeasyCam</span> <span class="n">jCam</span><span class="p">;</span>
-<span class="n">ControlP5</span> <span class="n">jControl</span><span class="p">;</span>
-<span class="n">ArrayList</span> <span class="n">fishes</span><span class="p">;</span> 
- 
-<span class="n">PMatrix3D</span> <span class="n">currCameraMatrix</span><span class="p">;</span>
-<span class="n">PGraphics3D</span> <span class="n">g3</span><span class="p">;</span>
- 
-<span class="kt">int</span> <span class="n">c1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">c2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">c3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="kt">boolean</span> <span class="n">attractor</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-<span class="kt">boolean</span> <span class="n">stop</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
- 
-<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">size</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">800</span><span class="p">,</span> <span class="n">OPENGL</span><span class="p">);</span>
-  <span class="n">smooth</span><span class="p">();</span>
-  <span class="n">g3</span> <span class="o">=</span> <span class="p">(</span><span class="n">PGraphics3D</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
- 
-  <span class="n">jCam</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PeasyCam</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-  <span class="n">Slider</span><span class="p">();</span>
- 
-  <span class="n">man</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Manage</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span> 
-  <span class="n">man</span><span class="p">.</span><span class="na">createFish</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">toxi.geom.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">processing.opengl.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">peasy.*</span><span class="p">;</span><span class="w"> </span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">controlP5.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Calendar</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="n">Manage</span><span class="w"> </span><span class="n">man</span><span class="p">;</span>
+<span class="n">PeasyCam</span><span class="w"> </span><span class="n">jCam</span><span class="p">;</span>
+<span class="n">ControlP5</span><span class="w"> </span><span class="n">jControl</span><span class="p">;</span>
+<span class="n">ArrayList</span><span class="w"> </span><span class="n">fishes</span><span class="p">;</span><span class="w"> </span>
+<span class="w"> </span>
+<span class="n">PMatrix3D</span><span class="w"> </span><span class="n">currCameraMatrix</span><span class="p">;</span>
+<span class="n">PGraphics3D</span><span class="w"> </span><span class="n">g3</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">attractor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="kt">boolean</span><span class="w"> </span><span class="n">stop</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">size</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span><span class="w"> </span><span class="mi">800</span><span class="p">,</span><span class="w"> </span><span class="n">OPENGL</span><span class="p">);</span>
+<span class="w">  </span><span class="n">smooth</span><span class="p">();</span>
+<span class="w">  </span><span class="n">g3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">PGraphics3D</span><span class="p">)</span><span class="n">g</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">jCam</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PeasyCam</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">  </span><span class="n">Slider</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">man</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Manage</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">);</span><span class="w"> </span>
+<span class="w">  </span><span class="n">man</span><span class="p">.</span><span class="na">createFish</span><span class="p">();</span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">draw</span><span class="p">()</span> <span class="p">{</span>
- 
-  <span class="k">if</span> <span class="p">(</span><span class="n">jControl</span><span class="p">.</span><span class="na">window</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="na">isMouseOver</span><span class="p">())</span> <span class="p">{</span>
-    <span class="n">jCam</span><span class="p">.</span><span class="na">setActive</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-  <span class="p">}</span> 
-  <span class="k">else</span> <span class="p">{</span>
-    <span class="n">jCam</span><span class="p">.</span><span class="na">setActive</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-  <span class="p">}</span>
- 
-  <span class="n">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-  <span class="n">man</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
- 
-  <span class="n">gui</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jControl</span><span class="p">.</span><span class="na">window</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="na">isMouseOver</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">jCam</span><span class="p">.</span><span class="na">setActive</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span>
+<span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">jCam</span><span class="p">.</span><span class="na">setActive</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">background</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="n">man</span><span class="p">.</span><span class="na">display</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">gui</span><span class="p">();</span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">keyReleased</span><span class="p">()</span> <span class="p">{</span> 
-  <span class="k">if</span> <span class="p">(</span><span class="n">key</span> <span class="o">==</span> <span class="sc">&#39;s&#39;</span> <span class="o">||</span> <span class="n">key</span> <span class="o">==</span> <span class="sc">&#39;S&#39;</span><span class="p">)</span> <span class="n">saveFrame</span><span class="p">(</span><span class="n">timestamp</span><span class="p">()</span><span class="o">+</span><span class="s">&quot;_##.png&quot;</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">keyReleased</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;s&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;S&#39;</span><span class="p">)</span><span class="w"> </span><span class="n">saveFrame</span><span class="p">(</span><span class="n">timestamp</span><span class="p">()</span><span class="o">+</span><span class="s">&quot;_##.png&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-  
-<span class="n">String</span> <span class="nf">timestamp</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">Calendar</span> <span class="n">now</span> <span class="o">=</span> <span class="n">Calendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
-  <span class="k">return</span> <span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%1$ty%1$tm%1$td_%1$tH%1$tM%1$tS&quot;</span><span class="p">,</span> <span class="n">now</span><span class="p">);</span>
+<span class="w">  </span>
+<span class="n">String</span><span class="w"> </span><span class="nf">timestamp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">Calendar</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Calendar</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%1$ty%1$tm%1$td_%1$tH%1$tM%1$tS&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">now</span><span class="p">);</span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">Slider</span><span class="p">()</span> <span class="p">{</span>
-   
-  <span class="n">jControl</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ControlP5</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-  <span class="c1">//mousePosistion </span>
-  <span class="n">jControl</span><span class="p">.</span><span class="na">addSlider</span><span class="p">(</span><span class="s">&quot;c1&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">610</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
-  <span class="n">jControl</span><span class="p">.</span><span class="na">addSlider</span><span class="p">(</span><span class="s">&quot;c2&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">630</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
-  <span class="n">jControl</span><span class="p">.</span><span class="na">addSlider</span><span class="p">(</span><span class="s">&quot;c3&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">650</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
-   
-  <span class="n">jControl</span><span class="p">.</span><span class="na">addToggle</span><span class="p">(</span><span class="s">&quot;attractor&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">680</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">10</span><span class="p">).</span><span class="na">setMode</span><span class="p">(</span><span class="n">ControlP5</span><span class="p">.</span><span class="na">SWITCH</span><span class="p">);</span>
-  <span class="n">jControl</span><span class="p">.</span><span class="na">addToggle</span><span class="p">(</span><span class="s">&quot;stop&quot;</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">715</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-   
-  <span class="n">jControl</span><span class="p">.</span><span class="na">setAutoDraw</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
- 
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">Slider</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span>
+<span class="w">  </span><span class="n">jControl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ControlP5</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">//mousePosistion </span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">addSlider</span><span class="p">(</span><span class="s">&quot;c1&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">610</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">addSlider</span><span class="p">(</span><span class="s">&quot;c2&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">630</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">addSlider</span><span class="p">(</span><span class="s">&quot;c3&quot;</span><span class="p">,</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">650</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">10</span><span class="p">);</span>
+<span class="w">   </span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">addToggle</span><span class="p">(</span><span class="s">&quot;attractor&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">680</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">).</span><span class="na">setMode</span><span class="p">(</span><span class="n">ControlP5</span><span class="p">.</span><span class="na">SWITCH</span><span class="p">);</span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">addToggle</span><span class="p">(</span><span class="s">&quot;stop&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">715</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+<span class="w">   </span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">setAutoDraw</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+<span class="w"> </span>
 <span class="p">}</span>
- 
-<span class="kt">void</span> <span class="nf">gui</span><span class="p">()</span> <span class="p">{</span>
-  <span class="n">currCameraMatrix</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PMatrix3D</span><span class="p">(</span><span class="n">g3</span><span class="p">.</span><span class="na">camera</span><span class="p">);</span>
-  <span class="n">camera</span><span class="p">();</span>
-  <span class="n">jControl</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
-  <span class="n">g3</span><span class="p">.</span><span class="na">camera</span> <span class="o">=</span> <span class="n">currCameraMatrix</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">gui</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">currCameraMatrix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PMatrix3D</span><span class="p">(</span><span class="n">g3</span><span class="p">.</span><span class="na">camera</span><span class="p">);</span>
+<span class="w">  </span><span class="n">camera</span><span class="p">();</span>
+<span class="w">  </span><span class="n">jControl</span><span class="p">.</span><span class="na">draw</span><span class="p">();</span>
+<span class="w">  </span><span class="n">g3</span><span class="p">.</span><span class="na">camera</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">currCameraMatrix</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 <p>Fish.pde</p>
@@ -178,239 +178,239 @@
 <span class="c1">// Copyright   : GNU General Public License</span>
 <span class="c1">// Description : Swarm 3D with Tail GUI</span>
 <span class="c1">//============================================================================</span>
- 
-<span class="kd">class</span> <span class="nc">Fish</span> <span class="p">{</span>
- 
-  <span class="c1">//PROPERTISE</span>
-  <span class="n">Vec3D</span> <span class="n">loc</span><span class="p">;</span> <span class="c1">//= new Vec3D(width/2, height/2, 0);</span>
-  <span class="n">Vec3D</span> <span class="n">speed</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">));</span>
-  <span class="n">Vec3D</span> <span class="n">acc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">();</span>
- 
-  <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span> 
-  <span class="kt">float</span><span class="o">[]</span> <span class="n">x</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="p">;</span>
-  <span class="kt">float</span><span class="o">[]</span> <span class="n">y</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="p">;</span>
-  <span class="kt">float</span><span class="o">[]</span> <span class="n">z</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">float</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">indexPosition</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
- 
- 
-  <span class="c1">//CONSTRUCTOR</span>
-  <span class="n">Fish</span><span class="p">(</span><span class="n">Vec3D</span> <span class="n">loc</span><span class="p">,</span> <span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">loc</span> <span class="o">=</span> <span class="n">loc</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">num</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="c1">//METHODS</span>
-  <span class="kt">void</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">displayTail</span><span class="p">();</span>
-    <span class="n">display</span><span class="p">();</span> 
-    <span class="n">swim</span><span class="p">();</span>
-    <span class="n">turnback</span><span class="p">();</span>
-    <span class="n">flock</span><span class="p">();</span>
-    <span class="c1">//lineBetween();</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">run2</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">displayTail</span><span class="p">();</span>
-    <span class="n">display</span><span class="p">();</span> 
-    <span class="c1">//2swim();</span>
-    <span class="c1">//turnback();</span>
-    <span class="c1">//flock();</span>
-    <span class="c1">//lineBetween();</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">initial</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">;</span> 
-      <span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
-      <span class="n">z</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">display</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
-    <span class="n">stroke</span><span class="p">(</span><span class="mi">232</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">116</span><span class="p">,</span> <span class="mi">220</span><span class="p">);</span>
-    <span class="n">point</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">);</span>
- 
-    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
-    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">attractor</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-      <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="n">point</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">);</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">displayTail</span><span class="p">()</span> <span class="p">{</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">stop</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// draw tail if the stop bottum is not pressed</span>
-      <span class="n">x</span><span class="o">[</span><span class="n">indexPosition</span><span class="o">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">;</span>
-      <span class="n">y</span><span class="o">[</span><span class="n">indexPosition</span><span class="o">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
-      <span class="n">z</span><span class="o">[</span><span class="n">indexPosition</span><span class="o">]</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">;</span>
-      <span class="n">indexPosition</span> <span class="o">=</span> <span class="p">(</span><span class="n">indexPosition</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="n">num</span><span class="p">;</span>
-    <span class="p">}</span>
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">indexPosition</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">%</span> <span class="n">num</span><span class="p">;</span>
-      <span class="kt">int</span> <span class="n">posb</span> <span class="o">=</span> <span class="p">(</span><span class="n">indexPosition</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">10</span><span class="p">))</span> <span class="o">%</span> <span class="n">num</span><span class="p">;</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">10</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">170</span><span class="p">);</span>
-        <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-        <span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span> <span class="n">y</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span> <span class="n">z</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">);</span>
-        <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-        <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span> <span class="n">y</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span> <span class="n">z</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span> <span class="n">x</span><span class="o">[</span><span class="n">posb</span><span class="o">]</span><span class="p">,</span> <span class="n">y</span><span class="o">[</span><span class="n">posb</span><span class="o">]</span><span class="p">,</span> <span class="n">z</span><span class="o">[</span><span class="n">posb</span><span class="o">]</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">swim</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">speed</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">acc</span><span class="p">);</span>
-    <span class="n">speed</span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-    <span class="n">loc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
-    <span class="n">acc</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">turnback</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">x</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="o">||</span> <span class="n">loc</span><span class="p">.</span><span class="na">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">speed</span><span class="p">.</span><span class="na">x</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">y</span> <span class="o">&gt;</span> <span class="mi">200</span> <span class="o">||</span> <span class="n">loc</span><span class="p">.</span><span class="na">y</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">speed</span><span class="p">.</span><span class="na">y</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="k">if</span> <span class="p">((</span><span class="n">loc</span><span class="p">.</span><span class="na">z</span> <span class="o">&gt;</span> <span class="mi">200</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">z</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">200</span><span class="p">))</span> <span class="p">{</span>
-      <span class="n">speed</span><span class="p">.</span><span class="na">z</span> <span class="o">*=</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">fishbox</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
-    <span class="n">strokeWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-    <span class="n">noFill</span><span class="p">();</span>
-    <span class="n">box</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
-  <span class="p">}</span>
- 
-  <span class="kt">float</span> <span class="nf">getLocX</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="kt">float</span> <span class="nf">getLocY</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
-  <span class="p">}</span>
- 
-  <span class="n">Vec3D</span> <span class="nf">getVel</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">speed</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">Vec3D</span> <span class="nf">getAcc</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">acc</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="n">Vec3D</span> <span class="nf">getLoc</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">loc</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="kt">void</span> <span class="nf">setLoc</span><span class="p">(</span><span class="n">Vec3D</span> <span class="n">loc</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">loc</span> <span class="o">=</span> <span class="n">loc</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="kt">void</span> <span class="nf">setVel</span><span class="p">(</span><span class="n">Vec3D</span> <span class="n">vel</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">speed</span> <span class="o">=</span> <span class="n">speed</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="kt">void</span> <span class="nf">setAcc</span><span class="p">(</span><span class="n">Vec3D</span> <span class="n">acc</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">acc</span> <span class="o">=</span> <span class="n">acc</span><span class="p">;</span>
-  <span class="p">}</span>
- 
- 
-  <span class="kt">void</span> <span class="nf">flock</span><span class="p">()</span> <span class="p">{</span>
- 
-    <span class="n">separate</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-    <span class="n">cohesion</span><span class="p">(</span><span class="mf">0.001</span><span class="p">);</span>
-    <span class="n">align</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">align</span><span class="p">(</span><span class="kt">float</span> <span class="n">magnitude</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Vec3D</span> <span class="n">steer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">();</span>
-    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Fish</span> <span class="n">other</span> <span class="o">=</span> <span class="p">(</span><span class="n">Fish</span><span class="p">)</span> <span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
- 
-      <span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">)</span> <span class="p">{</span>
- 
-        <span class="n">steer</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">speed</span><span class="p">);</span>
-        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>      
-      <span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">count</span><span class="p">);</span>
-    <span class="p">}</span>
- 
-    <span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="n">magnitude</span><span class="p">);</span>
- 
-    <span class="n">acc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">steer</span><span class="p">);</span>
-  <span class="p">}</span>
- 
- 
-  <span class="kt">void</span> <span class="nf">cohesion</span><span class="p">(</span><span class="kt">float</span> <span class="n">magnitude</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Vec3D</span> <span class="n">sum</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">();</span>
-    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Fish</span> <span class="n">other</span> <span class="o">=</span> <span class="p">(</span><span class="n">Fish</span><span class="p">)</span> <span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
- 
-      <span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
- 
-        <span class="n">sum</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
-        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>  
-    <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>       
-      <span class="n">sum</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">count</span><span class="p">);</span>
-    <span class="p">}</span>
- 
-    <span class="n">Vec3D</span> <span class="n">steer</span> <span class="o">=</span> <span class="n">sum</span><span class="p">.</span><span class="na">sub</span><span class="p">(</span><span class="n">loc</span><span class="p">);</span>
-    <span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="n">magnitude</span><span class="p">);</span>
-    <span class="n">acc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">steer</span><span class="p">);</span>
-  <span class="p">}</span>
- 
- 
-  <span class="kt">void</span> <span class="nf">separate</span><span class="p">(</span><span class="kt">float</span> <span class="n">maganitude</span><span class="p">)</span> <span class="p">{</span>
- 
-    <span class="n">Vec3D</span> <span class="n">steer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">();</span>
-    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Fish</span> <span class="n">other</span> <span class="o">=</span> <span class="p">(</span><span class="n">Fish</span><span class="p">)</span> <span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
- 
-      <span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
- 
-        <span class="n">Vec3D</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">sub</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
-        <span class="n">diff</span><span class="p">.</span><span class="na">normalizeTo</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">distance</span><span class="p">);</span>
- 
-        <span class="n">steer</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">diff</span><span class="p">);</span>
-        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
- 
-    <span class="k">if</span> <span class="p">(</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">count</span><span class="p">);</span>
-    <span class="p">}</span>   
- 
-    <span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="n">maganitude</span><span class="p">);</span>
-    <span class="n">acc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">steer</span><span class="p">);</span>
-  <span class="p">}</span>
-   
-  <span class="kt">void</span> <span class="nf">lineBetween</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Fish</span> <span class="n">other</span> <span class="o">=</span> <span class="p">(</span><span class="n">Fish</span><span class="p">)</span> <span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-      <span class="kt">float</span> <span class="n">distance</span> <span class="o">=</span> <span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">distance</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
-        <span class="n">strokeWeight</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
-        <span class="n">line</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">,</span> <span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">.</span><span class="na">x</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">.</span><span class="na">y</span><span class="p">,</span> <span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">.</span><span class="na">z</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<span class="w"> </span>
+<span class="kd">class</span> <span class="nc">Fish</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">//PROPERTISE</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">loc</span><span class="p">;</span><span class="w"> </span><span class="c1">//= new Vec3D(width/2, height/2, 0);</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">));</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="kt">float</span><span class="o">[]</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="o">[]</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">float</span><span class="o">[]</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">float</span><span class="o">[</span><span class="n">num</span><span class="o">]</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">indexPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">//CONSTRUCTOR</span>
+<span class="w">  </span><span class="n">Fish</span><span class="p">(</span><span class="n">Vec3D</span><span class="w"> </span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">//METHODS</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">displayTail</span><span class="p">();</span>
+<span class="w">    </span><span class="n">display</span><span class="p">();</span><span class="w"> </span>
+<span class="w">    </span><span class="n">swim</span><span class="p">();</span>
+<span class="w">    </span><span class="n">turnback</span><span class="p">();</span>
+<span class="w">    </span><span class="n">flock</span><span class="p">();</span>
+<span class="w">    </span><span class="c1">//lineBetween();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">run2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">displayTail</span><span class="p">();</span>
+<span class="w">    </span><span class="n">display</span><span class="p">();</span><span class="w"> </span>
+<span class="w">    </span><span class="c1">//2swim();</span>
+<span class="w">    </span><span class="c1">//turnback();</span>
+<span class="w">    </span><span class="c1">//flock();</span>
+<span class="w">    </span><span class="c1">//lineBetween();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">initial</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">x</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">;</span><span class="w"> </span>
+<span class="w">      </span><span class="n">y</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
+<span class="w">      </span><span class="n">z</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+<span class="w">    </span><span class="n">stroke</span><span class="p">(</span><span class="mi">232</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">116</span><span class="p">,</span><span class="w"> </span><span class="mi">220</span><span class="p">);</span>
+<span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+<span class="w">    </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">attractor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">point</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="n">c3</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">displayTail</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stop</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// draw tail if the stop bottum is not pressed</span>
+<span class="w">      </span><span class="n">x</span><span class="o">[</span><span class="n">indexPosition</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">;</span>
+<span class="w">      </span><span class="n">y</span><span class="o">[</span><span class="n">indexPosition</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
+<span class="w">      </span><span class="n">z</span><span class="o">[</span><span class="n">indexPosition</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">;</span>
+<span class="w">      </span><span class="n">indexPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">indexPosition</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">pos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">indexPosition</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">posb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">indexPosition</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">10</span><span class="p">))</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">%</span><span class="mi">10</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">stroke</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">170</span><span class="p">);</span>
+<span class="w">        </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">point</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">);</span>
+<span class="w">        </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">        </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="o">[</span><span class="n">pos</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="o">[</span><span class="n">posb</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">[</span><span class="n">posb</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="o">[</span><span class="n">posb</span><span class="o">]</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">swim</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">speed</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">acc</span><span class="p">);</span>
+<span class="w">    </span><span class="n">speed</span><span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<span class="w">    </span><span class="n">loc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">speed</span><span class="p">);</span>
+<span class="w">    </span><span class="n">acc</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">turnback</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">speed</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">speed</span><span class="p">.</span><span class="na">y</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">((</span><span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">200</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="o">-</span><span class="mi">200</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">speed</span><span class="p">.</span><span class="na">z</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="o">-</span><span class="mf">1.5</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">fishbox</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">);</span>
+<span class="w">    </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">    </span><span class="n">noFill</span><span class="p">();</span>
+<span class="w">    </span><span class="n">box</span><span class="p">(</span><span class="mi">400</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="nf">getLocX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="nf">getLocY</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="nf">getVel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="nf">getAcc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">acc</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="nf">getLoc</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">loc</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setLoc</span><span class="p">(</span><span class="n">Vec3D</span><span class="w"> </span><span class="n">loc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVel</span><span class="p">(</span><span class="n">Vec3D</span><span class="w"> </span><span class="n">vel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAcc</span><span class="p">(</span><span class="n">Vec3D</span><span class="w"> </span><span class="n">acc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">acc</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">flock</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">separate</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cohesion</span><span class="p">(</span><span class="mf">0.001</span><span class="p">);</span>
+<span class="w">    </span><span class="n">align</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">align</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">magnitude</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">steer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">        </span><span class="n">steer</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">speed</span><span class="p">);</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
+<span class="w">      </span><span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">count</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="n">magnitude</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">acc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">steer</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">cohesion</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">magnitude</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">60</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">        </span><span class="n">sum</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">       </span>
+<span class="w">      </span><span class="n">sum</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">count</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">steer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sum</span><span class="p">.</span><span class="na">sub</span><span class="p">(</span><span class="n">loc</span><span class="p">);</span>
+<span class="w">    </span><span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="n">magnitude</span><span class="p">);</span>
+<span class="w">    </span><span class="n">acc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">steer</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">separate</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">maganitude</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">steer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">30</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">        </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">sub</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
+<span class="w">        </span><span class="n">diff</span><span class="p">.</span><span class="na">normalizeTo</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">distance</span><span class="p">);</span>
+<span class="w"> </span>
+<span class="w">        </span><span class="n">steer</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">diff</span><span class="p">);</span>
+<span class="w">        </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">count</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w">   </span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">steer</span><span class="p">.</span><span class="na">scaleSelf</span><span class="p">(</span><span class="n">maganitude</span><span class="p">);</span>
+<span class="w">    </span><span class="n">acc</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">steer</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">   </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">lineBetween</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">      </span><span class="kt">float</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">distanceTo</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">);</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">distance</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">stroke</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="w">        </span><span class="n">strokeWeight</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">line</span><span class="p">(</span><span class="n">loc</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">loc</span><span class="p">.</span><span class="na">z</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">.</span><span class="na">x</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">.</span><span class="na">y</span><span class="p">,</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">loc</span><span class="p">.</span><span class="na">z</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 <p>Manage.pde</p>
@@ -421,65 +421,65 @@
 <span class="c1">// Copyright   : GNU General Public License</span>
 <span class="c1">// Description : Swarm 3D with Tail GUI</span>
 <span class="c1">//============================================================================</span>
- 
-<span class="kd">class</span> <span class="nc">Manage</span> <span class="p">{</span>
- 
-  <span class="c1">//Propertise</span>
-  <span class="n">Vec3D</span> <span class="n">loc</span><span class="p">;</span>
-  <span class="n">Vec3D</span> <span class="n">vel</span><span class="p">;</span>
-  <span class="n">Vec3D</span> <span class="n">acc</span><span class="p">;</span>
-  <span class="kt">int</span> <span class="n">tail</span><span class="p">;</span> 
-  <span class="n">Fish</span> <span class="n">myfish</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fish</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">tail</span><span class="p">);</span>
-  <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
- 
-  <span class="c1">//Constructor</span>
-  <span class="n">Manage</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">tail</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">tail</span> <span class="o">=</span> <span class="n">tail</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="na">num</span> <span class="o">=</span> <span class="n">num</span><span class="p">;</span> 
-    <span class="n">fishes</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="p">();</span>
-  <span class="p">}</span>
- 
-  <span class="c1">// Methods</span>
-  <span class="kt">void</span> <span class="nf">createFish</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Vec3D</span> <span class="n">loc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span> <span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span> <span class="mi">200</span><span class="p">));</span>
-      <span class="n">Vec3D</span> <span class="n">vel</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">));</span>
-      <span class="n">Vec3D</span> <span class="n">acc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-      <span class="n">Fish</span> <span class="n">myfish</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fish</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">tail</span><span class="p">);</span>
-      <span class="n">fishes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">myfish</span><span class="p">);</span>
-    <span class="p">}</span>
-     
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Fish</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> 
-      <span class="n">a</span><span class="p">.</span><span class="na">initial</span><span class="p">();</span>
-    <span class="p">}</span>
-     
-  <span class="p">}</span>
- 
-  <span class="kt">void</span> <span class="nf">display</span><span class="p">()</span> <span class="p">{</span>
- 
-    <span class="n">myfish</span><span class="p">.</span><span class="na">fishbox</span><span class="p">();</span>
- 
-    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">Fish</span> <span class="n">myfish</span> <span class="o">=</span> <span class="p">(</span><span class="n">Fish</span><span class="p">)</span> <span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>     
-      <span class="c1">//println(fishCollection.size());</span>
- 
-      <span class="k">if</span> <span class="p">(</span><span class="n">attractor</span> <span class="o">==</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Vec3D</span> <span class="n">m</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vec3D</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">);</span>
-        <span class="n">Vec3D</span> <span class="n">diff</span> <span class="o">=</span> <span class="n">m</span><span class="p">.</span><span class="na">subSelf</span><span class="p">(</span><span class="n">myfish</span><span class="p">.</span><span class="na">getLoc</span><span class="p">());</span> 
-        <span class="n">Vec3D</span> <span class="n">velPlus</span> <span class="o">=</span> <span class="n">diff</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">myfish</span><span class="p">.</span><span class="na">getVel</span><span class="p">());</span>
-        <span class="n">Vec3D</span> <span class="n">accPlus</span> <span class="o">=</span> <span class="n">velPlus</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">myfish</span><span class="p">.</span><span class="na">getAcc</span><span class="p">());</span>
-        <span class="n">accPlus</span><span class="p">.</span><span class="na">normalizeTo</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
-        <span class="n">myfish</span><span class="p">.</span><span class="na">setAcc</span><span class="p">(</span><span class="n">diff</span><span class="p">);</span>
-      <span class="p">}</span>
-      <span class="k">if</span> <span class="p">(</span><span class="n">stop</span> <span class="o">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">myfish</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
-      <span class="p">}</span> 
-      <span class="k">else</span> <span class="p">{</span>
-        <span class="n">myfish</span><span class="p">.</span><span class="na">run2</span><span class="p">();</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<span class="w"> </span>
+<span class="kd">class</span> <span class="nc">Manage</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">//Propertise</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">loc</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">vel</span><span class="p">;</span>
+<span class="w">  </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">acc</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">tail</span><span class="p">;</span><span class="w"> </span>
+<span class="w">  </span><span class="n">Fish</span><span class="w"> </span><span class="n">myfish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fish</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="n">tail</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">//Constructor</span>
+<span class="w">  </span><span class="n">Manage</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">tail</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">tail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tail</span><span class="p">;</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span>
+<span class="w">    </span><span class="n">fishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="c1">// Methods</span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">createFish</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">loc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">));</span>
+<span class="w">      </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">vel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">(</span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">),</span><span class="w"> </span><span class="n">random</span><span class="p">(</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.2</span><span class="p">));</span>
+<span class="w">      </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">acc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">myfish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Fish</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span><span class="w"> </span><span class="n">tail</span><span class="p">);</span>
+<span class="w">      </span><span class="n">fishes</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">myfish</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">     </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w"> </span>
+<span class="w">      </span><span class="n">a</span><span class="p">.</span><span class="na">initial</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">     </span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w"> </span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="n">myfish</span><span class="p">.</span><span class="na">fishbox</span><span class="p">();</span>
+<span class="w"> </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">size</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">Fish</span><span class="w"> </span><span class="n">myfish</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Fish</span><span class="p">)</span><span class="w"> </span><span class="n">fishes</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">     </span>
+<span class="w">      </span><span class="c1">//println(fishCollection.size());</span>
+<span class="w"> </span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">attractor</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Vec3D</span><span class="p">(</span><span class="n">c1</span><span class="p">,</span><span class="w"> </span><span class="n">c2</span><span class="p">,</span><span class="w"> </span><span class="n">c3</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="na">subSelf</span><span class="p">(</span><span class="n">myfish</span><span class="p">.</span><span class="na">getLoc</span><span class="p">());</span><span class="w"> </span>
+<span class="w">        </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">velPlus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">myfish</span><span class="p">.</span><span class="na">getVel</span><span class="p">());</span>
+<span class="w">        </span><span class="n">Vec3D</span><span class="w"> </span><span class="n">accPlus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">velPlus</span><span class="p">.</span><span class="na">addSelf</span><span class="p">(</span><span class="n">myfish</span><span class="p">.</span><span class="na">getAcc</span><span class="p">());</span>
+<span class="w">        </span><span class="n">accPlus</span><span class="p">.</span><span class="na">normalizeTo</span><span class="p">(</span><span class="mf">0.1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">myfish</span><span class="p">.</span><span class="na">setAcc</span><span class="p">(</span><span class="n">diff</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stop</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">myfish</span><span class="p">.</span><span class="na">run</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span>
+<span class="w">      </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">myfish</span><span class="p">.</span><span class="na">run2</span><span class="p">();</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 

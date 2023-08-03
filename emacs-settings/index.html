@@ -42,7 +42,7 @@
     <ul>
         
         <li>
-            <a href="/">Home</a>
+            <a href="/">Blog</a>
         </li>
         
         <li>
@@ -98,66 +98,66 @@
 <span class="c1">;; (load-theme &amp;#039;tsdh-dark t)</span>
 
 <span class="c1">;; MELPA package</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;package)</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="nv">&amp;#039</span><span class="c1">;package-archives</span>
-             <span class="nv">&amp;#039</span><span class="c1">;(&amp;quot;melpa&amp;quot; . &amp;quot;https://melpa.org/packages/&amp;quot;))</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">&amp;lt</span><span class="c1">; emacs-major-version 24)</span>
-  <span class="c1">;; For important compatibility libraries like cl-lib</span>
-  <span class="p">(</span><span class="nv">add-to-list</span> <span class="nv">&amp;#039</span><span class="c1">;package-archives &amp;#039;(&amp;quot;gnu&amp;quot; . &amp;quot;http://elpa.gnu.org/packages/&amp;quot;)))</span>
-<span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span> 
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;package)</span>
+<span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;package-archives</span>
+<span class="w">             </span><span class="nv">&amp;#039</span><span class="c1">;(&amp;quot;melpa&amp;quot; . &amp;quot;https://melpa.org/packages/&amp;quot;))</span>
+<span class="p">(</span><span class="nb">when</span><span class="w"> </span><span class="p">(</span><span class="nv">&amp;lt</span><span class="c1">; emacs-major-version 24)</span>
+<span class="w">  </span><span class="c1">;; For important compatibility libraries like cl-lib</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;package-archives &amp;#039;(&amp;quot;gnu&amp;quot; . &amp;quot;http://elpa.gnu.org/packages/&amp;quot;)))</span>
+<span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span><span class="w"> </span>
 
 
-<span class="p">(</span><span class="nv">load-theme</span> <span class="nv">&amp;#039</span><span class="c1">;tsdh-dark t) ;; load theme</span>
+<span class="p">(</span><span class="nv">load-theme</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;tsdh-dark t) ;; load theme</span>
 
 <span class="c1">;; maybe these two lines can be removed later. </span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">initial-frame-alist</span> <span class="nv">&amp;#039</span><span class="c1">;((left . 50)  ))</span>
-<span class="p">(</span><span class="nv">smart-frame-positioning-mode</span> <span class="no">nil</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">initial-frame-alist</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;((left . 50)  ))</span>
+<span class="p">(</span><span class="nv">smart-frame-positioning-mode</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span>
 
-<span class="p">(</span><span class="nv">ac-config-default</span><span class="p">)</span> <span class="c1">;; load auto-complete</span>
+<span class="p">(</span><span class="nv">ac-config-default</span><span class="p">)</span><span class="w"> </span><span class="c1">;; load auto-complete</span>
 
 <span class="c1">;; latex</span>
 <span class="c1">;; (setq TeX-auto-save t)</span>
 <span class="c1">;; (setq TeX-parse-self t)</span>
 <span class="c1">;; (setq-default TeX-master nil)</span>
 
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;visual-line-mode)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;flyspell-mode)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;LaTeX-math-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;visual-line-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;flyspell-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;LaTeX-math-mode)</span>
 
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;turn-on-reftex)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">reftex-plug-into-AUCTeX</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;turn-on-reftex)</span>
+<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">reftex-plug-into-AUCTeX</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 
 
 <span class="c1">;; irony-mode </span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c++-mode-hook &amp;#039;irony-mode)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c-mode-hook &amp;#039;irony-mode)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;objc-mode-hook &amp;#039;irony-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c++-mode-hook &amp;#039;irony-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c-mode-hook &amp;#039;irony-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;objc-mode-hook &amp;#039;irony-mode)</span>
 
 <span class="c1">;; replace the `completion-at-point&amp;#039; and `complete-symbol&amp;#039; bindings in</span>
 <span class="c1">;; irony-mode&amp;#039;s buffers by irony-mode&amp;#039;s function</span>
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">my-irony-mode-hook</span> <span class="p">()</span>
-  <span class="p">(</span><span class="nv">define-key</span> <span class="nv">irony-mode-map</span> <span class="nv">[remap</span> <span class="nv">completion-at-point]</span>
-    <span class="nv">&amp;#039</span><span class="c1">;irony-completion-at-point-async)</span>
-  <span class="p">(</span><span class="nv">define-key</span> <span class="nv">irony-mode-map</span> <span class="nv">[remap</span> <span class="nv">complete-symbol]</span>
-    <span class="nv">&amp;#039</span><span class="c1">;irony-completion-at-point-async))</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;irony-mode-hook &amp;#039;my-irony-mode-hook)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;irony-mode-hook &amp;#039;irony-cdb-autosetup-compile-options)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">my-irony-mode-hook</span><span class="w"> </span><span class="p">()</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">irony-mode-map</span><span class="w"> </span><span class="nv">[remap</span><span class="w"> </span><span class="nv">completion-at-point]</span>
+<span class="w">    </span><span class="nv">&amp;#039</span><span class="c1">;irony-completion-at-point-async)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">irony-mode-map</span><span class="w"> </span><span class="nv">[remap</span><span class="w"> </span><span class="nv">complete-symbol]</span>
+<span class="w">    </span><span class="nv">&amp;#039</span><span class="c1">;irony-completion-at-point-async))</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;irony-mode-hook &amp;#039;my-irony-mode-hook)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;irony-mode-hook &amp;#039;irony-cdb-autosetup-compile-options)</span>
 
 
 <span class="c1">;; company</span>
 <span class="c1">;;(add-hook &amp;#039;after-init-hook &amp;#039;global-company-mode) ;; disable company to work in all case </span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c++-mode-hook &amp;#039;global-company-mode) ;; to prevent python has weird autocomplete.</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c-mode-hook &amp;#039;global-company-mode)   ;; added to enable c++ and c mode </span>
-<span class="p">(</span><span class="nv">eval-after-load</span> <span class="nv">&amp;#039</span><span class="c1">;company</span>
-  <span class="nv">&amp;#039</span><span class="c1">;(add-to-list &amp;#039;company-backends &amp;#039;company-irony))</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c++-mode-hook &amp;#039;global-company-mode) ;; to prevent python has weird autocomplete.</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c-mode-hook &amp;#039;global-company-mode)   ;; added to enable c++ and c mode </span>
+<span class="p">(</span><span class="nv">eval-after-load</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;company</span>
+<span class="w">  </span><span class="nv">&amp;#039</span><span class="c1">;(add-to-list &amp;#039;company-backends &amp;#039;company-irony))</span>
 
 
 <span class="c1">;; highlight symbols</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;highlight-symbol)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">control</span> <span class="nv">f3</span><span class="p">)</span><span class="nv">]</span> <span class="nv">&amp;#039</span><span class="c1">;highlight-symbol)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[f3]</span> <span class="nv">&amp;#039</span><span class="c1">;highlight-symbol-next)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">shift</span> <span class="nv">f3</span><span class="p">)</span><span class="nv">]</span> <span class="nv">&amp;#039</span><span class="c1">;highlight-symbol-prev)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[</span><span class="p">(</span><span class="nv">meta</span> <span class="nv">f3</span><span class="p">)</span><span class="nv">]</span> <span class="nv">&amp;#039</span><span class="c1">;highlight-symbol-query-replace)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;highlight-symbol)</span>
+<span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="nv">[</span><span class="p">(</span><span class="nv">control</span><span class="w"> </span><span class="nv">f3</span><span class="p">)</span><span class="nv">]</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;highlight-symbol)</span>
+<span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="nv">[f3]</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;highlight-symbol-next)</span>
+<span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="nv">[</span><span class="p">(</span><span class="nv">shift</span><span class="w"> </span><span class="nv">f3</span><span class="p">)</span><span class="nv">]</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;highlight-symbol-prev)</span>
+<span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="nv">[</span><span class="p">(</span><span class="nv">meta</span><span class="w"> </span><span class="nv">f3</span><span class="p">)</span><span class="nv">]</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;highlight-symbol-query-replace)</span>
 
 
 <span class="c1">;; flycheck</span>
@@ -165,44 +165,44 @@
 
 
 <span class="c1">;; company-irony-c-headers</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;company-irony-c-headers)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;company-irony-c-headers)</span>
 <span class="c1">;; Load with `irony-mode` as a grouped backend</span>
-<span class="p">(</span><span class="nv">eval-after-load</span> <span class="nv">&amp;#039</span><span class="c1">;company</span>
-  <span class="nv">&amp;#039</span><span class="c1">;(add-to-list</span>
-    <span class="nv">&amp;#039</span><span class="c1">;company-backends &amp;#039;(company-irony-c-headers company-irony)))</span>
+<span class="p">(</span><span class="nv">eval-after-load</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;company</span>
+<span class="w">  </span><span class="nv">&amp;#039</span><span class="c1">;(add-to-list</span>
+<span class="w">    </span><span class="nv">&amp;#039</span><span class="c1">;company-backends &amp;#039;(company-irony-c-headers company-irony)))</span>
 
 
 <span class="c1">;; auto-complete &amp;amp; ac-math</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;package)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;package)</span>
 <span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;auto-complete)</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;auto-complete-config)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;auto-complete)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;auto-complete-config)</span>
 <span class="p">(</span><span class="nv">ac-config-default</span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;ac-math) </span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="nv">&amp;#039</span><span class="c1">;ac-modes &amp;#039;latex-mode)   ; make auto-complete aware of `latex-mode`</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;ac-math) </span>
+<span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;ac-modes &amp;#039;latex-mode)   ; make auto-complete aware of `latex-mode`</span>
 
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">ac-LaTeX-mode-setup</span> <span class="p">()</span> <span class="c1">; add ac-sources to default ac-sources</span>
-  <span class="p">(</span><span class="k">setq</span> <span class="nv">ac-sources</span>
-    <span class="p">(</span><span class="nb">append</span> <span class="nv">&amp;#039</span><span class="c1">;(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)</span>
-        <span class="nv">ac-sources</span><span class="p">))</span>
-  <span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;ac-LaTeX-mode-setup)</span>
-<span class="p">(</span><span class="nv">global-auto-complete-mode</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">ac-LaTeX-mode-setup</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="c1">; add ac-sources to default ac-sources</span>
+<span class="w">  </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">ac-sources</span>
+<span class="w">    </span><span class="p">(</span><span class="nb">append</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)</span>
+<span class="w">        </span><span class="nv">ac-sources</span><span class="p">))</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;LaTeX-mode-hook &amp;#039;ac-LaTeX-mode-setup)</span>
+<span class="p">(</span><span class="nv">global-auto-complete-mode</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 
-<span class="p">(</span><span class="k">setq</span> <span class="nv">ac-math-unicode-in-math-p</span> <span class="no">t</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">ac-math-unicode-in-math-p</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
 
 
 <span class="c1">;; start yasnippet</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;yasnippet)</span>
-<span class="p">(</span><span class="nv">yas-global-mode</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;yasnippet)</span>
+<span class="p">(</span><span class="nv">yas-global-mode</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 
 
 <span class="c1">;; neotree</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="nv">&amp;#039</span><span class="c1">;load-path &amp;quot;/some/path/neotree&amp;quot;)</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;neotree)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="nv">[f8]</span> <span class="nv">&amp;#039</span><span class="c1">;neotree-toggle)</span>
+<span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;load-path &amp;quot;/some/path/neotree&amp;quot;)</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;neotree)</span>
+<span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="nv">[f8]</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;neotree-toggle)</span>
 
 
 
@@ -212,11 +212,11 @@
 
 <span class="c1">;; namespace c++ indent</span>
 <span class="c1">;; telling .h file is using c++ mode</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="nv">&amp;#039</span><span class="c1">;auto-mode-alist &amp;#039;(&amp;quot;\\.h\\&amp;#039;&amp;quot; . c++-mode))</span>
+<span class="p">(</span><span class="nv">add-to-list</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;auto-mode-alist &amp;#039;(&amp;quot;\\.h\\&amp;#039;&amp;quot; . c++-mode))</span>
 <span class="c1">;; indenting c++ mode</span>
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">my-c-setup</span> <span class="p">()</span>
-  <span class="p">(</span><span class="nv">c-set-offset</span> <span class="nv">&amp;#039</span><span class="c1">;innamespace [0]))</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c++-mode-hook &amp;#039;my-c-setup)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">my-c-setup</span><span class="w"> </span><span class="p">()</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">c-set-offset</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;innamespace [0]))</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c++-mode-hook &amp;#039;my-c-setup)</span>
 
 
 <span class="c1">;; Projectile</span>
@@ -226,19 +226,19 @@
 
 
 <span class="c1">;; ggtags</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;ggtags)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c-mode-common-hook</span>
-          <span class="p">(</span><span class="k">lambda</span> <span class="p">()</span>
-            <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">derived-mode-p</span> <span class="nv">&amp;#039</span><span class="c1">;c-mode &amp;#039;c++-mode &amp;#039;java-mode &amp;#039;asm-mode)</span>
-              <span class="p">(</span><span class="nv">ggtags-mode</span> <span class="mi">1</span><span class="p">))))</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;ggtags)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c-mode-common-hook</span>
+<span class="w">          </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">()</span>
+<span class="w">            </span><span class="p">(</span><span class="nb">when</span><span class="w"> </span><span class="p">(</span><span class="nv">derived-mode-p</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c-mode &amp;#039;c++-mode &amp;#039;java-mode &amp;#039;asm-mode)</span>
+<span class="w">              </span><span class="p">(</span><span class="nv">ggtags-mode</span><span class="w"> </span><span class="mi">1</span><span class="p">))))</span>
 
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c g s&amp;quot;) &amp;#039;ggtags-find-other-symbol)</span>
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c g h&amp;quot;) &amp;#039;ggtags-view-tag-history)</span>
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c g r&amp;quot;) &amp;#039;ggtags-find-reference)</span>
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c g f&amp;quot;) &amp;#039;ggtags-find-file)</span>
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c g c&amp;quot;) &amp;#039;ggtags-create-tags)</span>
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c g u&amp;quot;) &amp;#039;ggtags-update-tags)</span>
-<span class="p">(</span><span class="nv">define-key</span> <span class="nv">ggtags-mode-map</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;M-,&amp;quot;) &amp;#039;pop-tag-mark)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c g s&amp;quot;) &amp;#039;ggtags-find-other-symbol)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c g h&amp;quot;) &amp;#039;ggtags-view-tag-history)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c g r&amp;quot;) &amp;#039;ggtags-find-reference)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c g f&amp;quot;) &amp;#039;ggtags-find-file)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c g c&amp;quot;) &amp;#039;ggtags-create-tags)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c g u&amp;quot;) &amp;#039;ggtags-update-tags)</span>
+<span class="p">(</span><span class="nv">define-key</span><span class="w"> </span><span class="nv">ggtags-mode-map</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;M-,&amp;quot;) &amp;#039;pop-tag-mark)</span>
 
 
 
@@ -247,102 +247,102 @@
 <span class="p">(</span><span class="nv">semantic-load-enable-primary-exuberent-ctags-support</span><span class="p">)</span>
 
 <span class="c1">;; define c++ file extension types</span>
-<span class="p">(</span><span class="nb">defvar</span> <span class="nv">c-files-regex</span> <span class="nv">&amp;quot</span><span class="c1">;.*\\.\\(c\\|cpp\\|h\\|hpp\\)&amp;quot;</span>
-  <span class="nv">&amp;quot</span><span class="c1">;A regular expression to match any c/c++ related files under a directory&amp;quot;)</span>
+<span class="p">(</span><span class="nb">defvar</span><span class="w"> </span><span class="nv">c-files-regex</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;.*\\.\\(c\\|cpp\\|h\\|hpp\\)&amp;quot;</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;A regular expression to match any c/c++ related files under a directory&amp;quot;)</span>
 
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">my-semantic-parse-dir-v2</span> <span class="p">(</span><span class="nv">root</span> <span class="nv">regex</span><span class="p">)</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-   <span class="nv">This</span> <span class="k">function</span> <span class="nv">is</span> <span class="nv">an</span> <span class="nv">attempt</span> <span class="nv">of</span> <span class="nv">mine</span> <span class="nv">to</span> <span class="nv">force</span> <span class="nv">semantic</span> <span class="nv">to</span>
-   <span class="nv">parse</span> <span class="nv">all</span> <span class="nv">source</span> <span class="nv">files</span> <span class="nv">under</span> <span class="nv">a</span> <span class="nv">root</span> <span class="nv">directory.</span> <span class="nv">Arguments:</span>
-   <span class="nv">--</span> <span class="nv">root:</span> <span class="nv">The</span> <span class="nv">full</span> <span class="nv">path</span> <span class="nv">to</span> <span class="k">the</span> <span class="nv">root</span> <span class="nb">directory</span>
-   <span class="nv">--</span> <span class="nv">regex:</span> <span class="nv">A</span> <span class="nv">regular</span> <span class="nv">expression</span> <span class="nv">against</span> <span class="nv">which</span> <span class="nv">to</span> <span class="nv">match</span> <span class="nv">all</span> <span class="nv">files</span> <span class="nv">in</span> <span class="k">the</span> <span class="nb">directory</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-  <span class="p">(</span><span class="k">let</span> <span class="p">(</span>
-        <span class="c1">;;make sure that root has a trailing slash and is a dir</span>
-        <span class="p">(</span><span class="nv">root</span> <span class="p">(</span><span class="nv">file-name-as-directory</span> <span class="nv">root</span><span class="p">))</span>
-        <span class="p">(</span><span class="nv">files</span> <span class="p">(</span><span class="nv">directory-files</span> <span class="nv">root</span> <span class="no">t</span> <span class="p">))</span>
-    <span class="p">)</span>
-    <span class="c1">;; remove current dir and parent dir from list</span>
-    <span class="p">(</span><span class="k">setq</span> <span class="nv">files</span> <span class="p">(</span><span class="nb">delete</span> <span class="p">(</span><span class="nb">format</span> <span class="nv">&amp;quot</span><span class="c1">;%s.&amp;quot; root) files))</span>
-    <span class="p">(</span><span class="k">setq</span> <span class="nv">files</span> <span class="p">(</span><span class="nb">delete</span> <span class="p">(</span><span class="nb">format</span> <span class="nv">&amp;quot</span><span class="c1">;%s..&amp;quot; root) files))</span>
-    <span class="c1">;; remove any known version control directories </span>
-    <span class="p">(</span><span class="k">setq</span> <span class="nv">files</span> <span class="p">(</span><span class="nb">delete</span> <span class="p">(</span><span class="nb">format</span> <span class="nv">&amp;quot</span><span class="c1">;%s.git&amp;quot; root) files))</span>
-    <span class="p">(</span><span class="k">setq</span> <span class="nv">files</span> <span class="p">(</span><span class="nb">delete</span> <span class="p">(</span><span class="nb">format</span> <span class="nv">&amp;quot</span><span class="c1">;%s.hg&amp;quot; root) files))</span>
-    <span class="p">(</span><span class="nv">while</span> <span class="nv">files</span>
-      <span class="p">(</span><span class="k">setq</span> <span class="nv">file</span> <span class="p">(</span><span class="nb">pop</span> <span class="nv">files</span><span class="p">))</span>
-      <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">not</span><span class="p">(</span><span class="nv">file-accessible-directory-p</span> <span class="nv">file</span><span class="p">))</span>
-          <span class="c1">;;if it&amp;#039;s a file that matches the regex we seek</span>
-          <span class="p">(</span><span class="k">progn</span> <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nv">string-match-p</span> <span class="nv">regex</span> <span class="nv">file</span><span class="p">)</span>
-           <span class="c1">;; get if buffer is open or open it if it&amp;#039;s not</span>
-           <span class="p">(</span><span class="k">setq</span> <span class="nv">buff</span> <span class="p">(</span><span class="nv">get-file-buffer</span> <span class="nv">file</span><span class="p">))</span>
-           <span class="p">(</span><span class="k">setq</span> <span class="nv">opened-buffer</span> <span class="no">nil</span><span class="p">)</span>
-           <span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">not</span> <span class="nv">buff</span><span class="p">)</span>
-             <span class="p">(</span><span class="k">progn</span> 
-               <span class="p">(</span><span class="k">setq</span> <span class="nv">opened-buffer</span> <span class="no">t</span><span class="p">)</span>
-               <span class="p">(</span><span class="k">setq</span> <span class="nv">buff</span> <span class="p">(</span><span class="nv">find-file-noselect</span> <span class="nv">file</span><span class="p">))</span>
-               <span class="p">))</span>
-           <span class="p">(</span><span class="nv">switch-to-buffer</span> <span class="nv">buff</span><span class="p">)</span>
-           <span class="c1">;; parse the buffer with semantic</span>
-           <span class="p">(</span><span class="nv">semantic-fetch-tags</span><span class="p">)</span>
-           <span class="c1">;; if we opened the buffer cleanup before proceeding</span>
-           <span class="p">(</span><span class="nb">when</span> <span class="nv">opened-buffer</span>
-             <span class="p">(</span><span class="nv">kill-buffer</span> <span class="p">(</span><span class="nv">buffer-name</span><span class="p">))</span>
-             <span class="p">)</span>
-           <span class="p">))</span>
-    <span class="c1">;;else if it&amp;#039;s a directory</span>
-    <span class="p">(</span><span class="nv">my-semantic-parse-dir</span> <span class="nv">file</span> <span class="nv">regex</span><span class="p">)</span>
-    <span class="p">)</span>
-      <span class="p">)</span>
-    <span class="p">)</span>
-  <span class="p">)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">my-semantic-parse-dir-v2</span><span class="w"> </span><span class="p">(</span><span class="nv">root</span><span class="w"> </span><span class="nv">regex</span><span class="p">)</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">   </span><span class="nv">This</span><span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">attempt</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">mine</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">force</span><span class="w"> </span><span class="nv">semantic</span><span class="w"> </span><span class="nv">to</span>
+<span class="w">   </span><span class="nv">parse</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">source</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">under</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">root</span><span class="w"> </span><span class="nv">directory.</span><span class="w"> </span><span class="nv">Arguments:</span>
+<span class="w">   </span><span class="nv">--</span><span class="w"> </span><span class="nv">root:</span><span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">full</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="k">the</span><span class="w"> </span><span class="nv">root</span><span class="w"> </span><span class="nb">directory</span>
+<span class="w">   </span><span class="nv">--</span><span class="w"> </span><span class="nv">regex:</span><span class="w"> </span><span class="nv">A</span><span class="w"> </span><span class="nv">regular</span><span class="w"> </span><span class="nv">expression</span><span class="w"> </span><span class="nv">against</span><span class="w"> </span><span class="nv">which</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">match</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="k">the</span><span class="w"> </span><span class="nb">directory</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="c1">;;make sure that root has a trailing slash and is a dir</span>
+<span class="w">        </span><span class="p">(</span><span class="nv">root</span><span class="w"> </span><span class="p">(</span><span class="nv">file-name-as-directory</span><span class="w"> </span><span class="nv">root</span><span class="p">))</span>
+<span class="w">        </span><span class="p">(</span><span class="nv">files</span><span class="w"> </span><span class="p">(</span><span class="nv">directory-files</span><span class="w"> </span><span class="nv">root</span><span class="w"> </span><span class="no">t</span><span class="w"> </span><span class="p">))</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="c1">;; remove current dir and parent dir from list</span>
+<span class="w">    </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="p">(</span><span class="nb">delete</span><span class="w"> </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;%s.&amp;quot; root) files))</span>
+<span class="w">    </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="p">(</span><span class="nb">delete</span><span class="w"> </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;%s..&amp;quot; root) files))</span>
+<span class="w">    </span><span class="c1">;; remove any known version control directories </span>
+<span class="w">    </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="p">(</span><span class="nb">delete</span><span class="w"> </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;%s.git&amp;quot; root) files))</span>
+<span class="w">    </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="p">(</span><span class="nb">delete</span><span class="w"> </span><span class="p">(</span><span class="nb">format</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;%s.hg&amp;quot; root) files))</span>
+<span class="w">    </span><span class="p">(</span><span class="nv">while</span><span class="w"> </span><span class="nv">files</span>
+<span class="w">      </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="p">(</span><span class="nb">pop</span><span class="w"> </span><span class="nv">files</span><span class="p">))</span>
+<span class="w">      </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">not</span><span class="p">(</span><span class="nv">file-accessible-directory-p</span><span class="w"> </span><span class="nv">file</span><span class="p">))</span>
+<span class="w">          </span><span class="c1">;;if it&amp;#039;s a file that matches the regex we seek</span>
+<span class="w">          </span><span class="p">(</span><span class="k">progn</span><span class="w"> </span><span class="p">(</span><span class="nb">when</span><span class="w"> </span><span class="p">(</span><span class="nv">string-match-p</span><span class="w"> </span><span class="nv">regex</span><span class="w"> </span><span class="nv">file</span><span class="p">)</span>
+<span class="w">           </span><span class="c1">;; get if buffer is open or open it if it&amp;#039;s not</span>
+<span class="w">           </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">buff</span><span class="w"> </span><span class="p">(</span><span class="nv">get-file-buffer</span><span class="w"> </span><span class="nv">file</span><span class="p">))</span>
+<span class="w">           </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">opened-buffer</span><span class="w"> </span><span class="no">nil</span><span class="p">)</span>
+<span class="w">           </span><span class="p">(</span><span class="nb">when</span><span class="w"> </span><span class="p">(</span><span class="nb">not</span><span class="w"> </span><span class="nv">buff</span><span class="p">)</span>
+<span class="w">             </span><span class="p">(</span><span class="k">progn</span><span class="w"> </span>
+<span class="w">               </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">opened-buffer</span><span class="w"> </span><span class="no">t</span><span class="p">)</span>
+<span class="w">               </span><span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">buff</span><span class="w"> </span><span class="p">(</span><span class="nv">find-file-noselect</span><span class="w"> </span><span class="nv">file</span><span class="p">))</span>
+<span class="w">               </span><span class="p">))</span>
+<span class="w">           </span><span class="p">(</span><span class="nv">switch-to-buffer</span><span class="w"> </span><span class="nv">buff</span><span class="p">)</span>
+<span class="w">           </span><span class="c1">;; parse the buffer with semantic</span>
+<span class="w">           </span><span class="p">(</span><span class="nv">semantic-fetch-tags</span><span class="p">)</span>
+<span class="w">           </span><span class="c1">;; if we opened the buffer cleanup before proceeding</span>
+<span class="w">           </span><span class="p">(</span><span class="nb">when</span><span class="w"> </span><span class="nv">opened-buffer</span>
+<span class="w">             </span><span class="p">(</span><span class="nv">kill-buffer</span><span class="w"> </span><span class="p">(</span><span class="nv">buffer-name</span><span class="p">))</span>
+<span class="w">             </span><span class="p">)</span>
+<span class="w">           </span><span class="p">))</span>
+<span class="w">    </span><span class="c1">;;else if it&amp;#039;s a directory</span>
+<span class="w">    </span><span class="p">(</span><span class="nv">my-semantic-parse-dir</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">regex</span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">      </span><span class="p">)</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">my-semantic-parse-current-dir</span> <span class="p">(</span><span class="nv">regex</span><span class="p">)</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-   <span class="nv">Parses</span> <span class="nv">all</span> <span class="nv">files</span> <span class="nv">under</span> <span class="k">the</span> <span class="nv">current</span> <span class="nb">directory</span> <span class="nv">matching</span> <span class="nv">regex</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-  <span class="p">(</span><span class="nv">my-semantic-parse-dir</span> <span class="p">(</span><span class="nv">file-name-directory</span><span class="p">(</span><span class="nv">buffer-file-name</span><span class="p">))</span> <span class="nv">regex</span><span class="p">)</span>
-  <span class="p">)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">my-semantic-parse-current-dir</span><span class="w"> </span><span class="p">(</span><span class="nv">regex</span><span class="p">)</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">   </span><span class="nv">Parses</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">under</span><span class="w"> </span><span class="k">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nb">directory</span><span class="w"> </span><span class="nv">matching</span><span class="w"> </span><span class="nv">regex</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">my-semantic-parse-dir</span><span class="w"> </span><span class="p">(</span><span class="nv">file-name-directory</span><span class="p">(</span><span class="nv">buffer-file-name</span><span class="p">))</span><span class="w"> </span><span class="nv">regex</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">lk-parse-curdir-c</span> <span class="p">()</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-   <span class="nv">Parses</span> <span class="nv">all</span> <span class="k">the</span> <span class="nv">c/c++</span> <span class="nv">related</span> <span class="nv">files</span> <span class="nv">under</span> <span class="k">the</span> <span class="nv">current</span> <span class="nb">directory</span>
-   <span class="nb">and</span> <span class="nv">inputs</span> <span class="nv">their</span> <span class="nv">data</span> <span class="nv">into</span> <span class="nv">semantic</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-  <span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">my-semantic-parse-current-dir</span> <span class="nv">c-files-regex</span><span class="p">)</span>
-  <span class="p">)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">lk-parse-curdir-c</span><span class="w"> </span><span class="p">()</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">   </span><span class="nv">Parses</span><span class="w"> </span><span class="nv">all</span><span class="w"> </span><span class="k">the</span><span class="w"> </span><span class="nv">c/c++</span><span class="w"> </span><span class="nv">related</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">under</span><span class="w"> </span><span class="k">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nb">directory</span>
+<span class="w">   </span><span class="nb">and</span><span class="w"> </span><span class="nv">inputs</span><span class="w"> </span><span class="nv">their</span><span class="w"> </span><span class="nv">data</span><span class="w"> </span><span class="nv">into</span><span class="w"> </span><span class="nv">semantic</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">interactive</span><span class="p">)</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">my-semantic-parse-current-dir</span><span class="w"> </span><span class="nv">c-files-regex</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">lk-parse-dir-c</span> <span class="p">(</span><span class="nv">dir</span><span class="p">)</span>
-  <span class="nv">&amp;quot</span><span class="c1">;Prompts the user for a directory and parses all c/c++ related files</span>
-   <span class="nv">under</span> <span class="k">the</span> <span class="nb">directory</span>
-  <span class="nv">&amp;quot</span><span class="c1">;</span>
-  <span class="p">(</span><span class="nv">interactive</span> <span class="p">(</span><span class="nb">list</span> <span class="p">(</span><span class="nv">read-directory-name</span> <span class="nv">&amp;quot</span><span class="c1">;Provide the directory to search in:&amp;quot;)))</span>
-  <span class="p">(</span><span class="nv">my-semantic-parse-dir</span> <span class="p">(</span><span class="nv">expand-file-name</span> <span class="nv">dri</span><span class="p">)</span> <span class="nv">c-files-regex</span><span class="p">)</span>
-  <span class="p">)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">lk-parse-dir-c</span><span class="w"> </span><span class="p">(</span><span class="nv">dir</span><span class="p">)</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;Prompts the user for a directory and parses all c/c++ related files</span>
+<span class="w">   </span><span class="nv">under</span><span class="w"> </span><span class="k">the</span><span class="w"> </span><span class="nb">directory</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">interactive</span><span class="w"> </span><span class="p">(</span><span class="nb">list</span><span class="w"> </span><span class="p">(</span><span class="nv">read-directory-name</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;Provide the directory to search in:&amp;quot;)))</span>
+<span class="w">  </span><span class="p">(</span><span class="nv">my-semantic-parse-dir</span><span class="w"> </span><span class="p">(</span><span class="nv">expand-file-name</span><span class="w"> </span><span class="nv">dri</span><span class="p">)</span><span class="w"> </span><span class="nv">c-files-regex</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
 
-<span class="p">(</span><span class="nb">provide</span> <span class="nv">&amp;#039</span><span class="c1">;lk-file-search)</span>
+<span class="p">(</span><span class="nb">provide</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;lk-file-search)</span>
 <span class="c1">;; to here </span>
 
 
 
 <span class="c1">;; cpputils-camke</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c-mode-common-hook</span>
-          <span class="p">(</span><span class="k">lambda</span> <span class="p">()</span>
-            <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nv">derived-mode-p</span> <span class="nv">&amp;#039</span><span class="c1">;c-mode &amp;#039;c++-mode)</span>
-                <span class="p">(</span><span class="nv">cppcm-reload-all</span><span class="p">)</span>
-              <span class="p">)))</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c-mode-common-hook</span>
+<span class="w">          </span><span class="p">(</span><span class="k">lambda</span><span class="w"> </span><span class="p">()</span>
+<span class="w">            </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nv">derived-mode-p</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c-mode &amp;#039;c++-mode)</span>
+<span class="w">                </span><span class="p">(</span><span class="nv">cppcm-reload-all</span><span class="p">)</span>
+<span class="w">              </span><span class="p">)))</span>
 <span class="c1">;; OPTIONAL, somebody reported that they can use this package with Fortran</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;c90-mode-hook (lambda () (cppcm-reload-all)))</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;c90-mode-hook (lambda () (cppcm-reload-all)))</span>
 <span class="c1">;; OPTIONAL, avoid typing full path when starting gdb</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="nv">&amp;quot</span><span class="c1">;C-c C-g&amp;quot;)</span>
-        <span class="nv">&amp;#039</span><span class="c1">;(lambda ()(interactive) (gud-gdb (concat &amp;quot;gdb --fullname &amp;quot; (cppcm-get-exe-path-current-buffer)))))</span>
+<span class="p">(</span><span class="nv">global-set-key</span><span class="w"> </span><span class="p">(</span><span class="nv">kbd</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;C-c C-g&amp;quot;)</span>
+<span class="w">        </span><span class="nv">&amp;#039</span><span class="c1">;(lambda ()(interactive) (gud-gdb (concat &amp;quot;gdb --fullname &amp;quot; (cppcm-get-exe-path-current-buffer)))))</span>
 <span class="c1">;; OPTIONAL, some users need specify extra flags forwarded to compiler</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">cppcm-extra-preprocss-flags-from-user</span> <span class="nv">&amp;#039</span><span class="c1">;(&amp;quot;-I/usr/src/linux/include&amp;quot; &amp;quot;-DNDEBUG&amp;quot;))</span>
+<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">cppcm-extra-preprocss-flags-from-user</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;(&amp;quot;-I/usr/src/linux/include&amp;quot; &amp;quot;-DNDEBUG&amp;quot;))</span>
 
 
 
 <span class="c1">;; indent</span>
-<span class="p">(</span><span class="nv">setq-default</span> <span class="nv">c-basic-offset</span> <span class="mi">4</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">setq-default</span><span class="w"> </span><span class="nv">c-basic-offset</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 
 
 
@@ -350,31 +350,31 @@
 <span class="c1">;; python mode </span>
 
 <span class="c1">;;pyenv-mode</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;pyenv-mode)</span>
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">projectile-pyenv-mode-set</span> <span class="p">()</span>
-  <span class="nv">&amp;quot</span><span class="c1">;Set pyenv version matching project name.&amp;quot;</span>
-  <span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">project</span> <span class="p">(</span><span class="nv">projectile-project-name</span><span class="p">)))</span>
-    <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="nb">member</span> <span class="nv">project</span> <span class="p">(</span><span class="nv">pyenv-mode-versions</span><span class="p">))</span>
-        <span class="p">(</span><span class="nv">pyenv-mode-set</span> <span class="nv">project</span><span class="p">)</span>
-      <span class="p">(</span><span class="nv">pyenv-mode-unset</span><span class="p">))))</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;pyenv-mode)</span>
+<span class="p">(</span><span class="nb">defun</span><span class="w"> </span><span class="nv">projectile-pyenv-mode-set</span><span class="w"> </span><span class="p">()</span>
+<span class="w">  </span><span class="nv">&amp;quot</span><span class="c1">;Set pyenv version matching project name.&amp;quot;</span>
+<span class="w">  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">((</span><span class="nv">project</span><span class="w"> </span><span class="p">(</span><span class="nv">projectile-project-name</span><span class="p">)))</span>
+<span class="w">    </span><span class="p">(</span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">member</span><span class="w"> </span><span class="nv">project</span><span class="w"> </span><span class="p">(</span><span class="nv">pyenv-mode-versions</span><span class="p">))</span>
+<span class="w">        </span><span class="p">(</span><span class="nv">pyenv-mode-set</span><span class="w"> </span><span class="nv">project</span><span class="p">)</span>
+<span class="w">      </span><span class="p">(</span><span class="nv">pyenv-mode-unset</span><span class="p">))))</span>
 
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;projectile-switch-project-hook &amp;#039;projectile-pyenv-mode-set)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;projectile-switch-project-hook &amp;#039;projectile-pyenv-mode-set)</span>
 
 
 
 <span class="c1">;; Anaconda mode</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="nv">&amp;#039</span><span class="c1">;python-mode-hook &amp;#039;anaconda-mode)</span>
+<span class="p">(</span><span class="nv">add-hook</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;python-mode-hook &amp;#039;anaconda-mode)</span>
 
 
 
 <span class="c1">;; language tool</span>
-<span class="p">(</span><span class="nb">require</span> <span class="nv">&amp;#039</span><span class="c1">;langtool)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">langtool-language-tool-jar</span> <span class="nv">&amp;quot</span><span class="c1">; /my/path/to/languagetool-commandline.jar&amp;quot;</span>
-      <span class="nv">langtool-mother-tongue</span> <span class="nv">&amp;quot</span><span class="c1">;zh&amp;quot;</span>
-      <span class="nv">langtool-disabled-rules</span> <span class="nv">&amp;#039</span><span class="c1">;(&amp;quot;WHITESPACE_RULE&amp;quot;</span>
-                                <span class="nv">&amp;quot</span><span class="c1">;EN_UNPAIRED_BRACKETS&amp;quot;</span>
-                                <span class="nv">&amp;quot</span><span class="c1">;COMMA_PARENTHESIS_WHITESPACE&amp;quot;</span>
-                                <span class="nv">&amp;quot</span><span class="c1">;EN_QUOTES&amp;quot;))&lt;/pre&gt;</span>
+<span class="p">(</span><span class="nb">require</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;langtool)</span>
+<span class="p">(</span><span class="k">setq</span><span class="w"> </span><span class="nv">langtool-language-tool-jar</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">; /my/path/to/languagetool-commandline.jar&amp;quot;</span>
+<span class="w">      </span><span class="nv">langtool-mother-tongue</span><span class="w"> </span><span class="nv">&amp;quot</span><span class="c1">;zh&amp;quot;</span>
+<span class="w">      </span><span class="nv">langtool-disabled-rules</span><span class="w"> </span><span class="nv">&amp;#039</span><span class="c1">;(&amp;quot;WHITESPACE_RULE&amp;quot;</span>
+<span class="w">                                </span><span class="nv">&amp;quot</span><span class="c1">;EN_UNPAIRED_BRACKETS&amp;quot;</span>
+<span class="w">                                </span><span class="nv">&amp;quot</span><span class="c1">;COMMA_PARENTHESIS_WHITESPACE&amp;quot;</span>
+<span class="w">                                </span><span class="nv">&amp;quot</span><span class="c1">;EN_QUOTES&amp;quot;))&lt;/pre&gt;</span>
 </pre></div>
 
             </div>
