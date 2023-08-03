@@ -4,33 +4,19 @@ title: About
 ---
 body:
 
-Gene Ting-Chun Kao 高鼎鈞
+Gene Ting-Chun Kao | 高鼎鈞
 
 
 <img src="Gene_profile.jpg" alt="drawing" width="100%" onmouseover="this.src='Gene_profile2.jpg';" onmouseout="this.src='Gene_profile.jpg';" />
 
 
-### Short bio: 
+I am a passionate designer, engineer, and scientist deeply drawn to the world of computational geometry, 3D geometry processing, and simulation. Currently, I am an R&D Engineer II at Ansys - Meshing Development Unit (MDU), where I focus on 3D computational geometry processing topics. I bring diversity and an interdisciplinary perspective to my work and life, with a Doctor of Sciences degree from ETH Zurich, a CAS in Computer Science from the same institution, an MSc in ITECH from Stuttgart University, a BArch from Tamkang University, many international R&D experiences, and lived in Sweden🇸🇪, Switzerland🇨🇭, Germany🇩🇪, and Taiwan🇹🇼. Additionally, I love swimming🏊🏼‍♂️, cooking👨🏻‍🍳, reading📚, games👾, and dogs🐶.
 
-Gene is a designer, researcher, engineer, and programmer who specialises in computational design, digital fabrication, and visual computing in architecture & computer science. He believes interdisciplinary research boosts innovation. His passion is combining computation and mathematics with design and fabrication. He received a CAS in Computer Science at ETH Zurich, MSc in Integrative Technologies & Architectural Design Research at Stuttgart University, and BArch at Tamkang University. He worked in software development and R&D in both Germany and Taiwan. Gene is a PhD candidate at the Institute of Technology in Architecture at ETH Zurich, where he is a research assistant in the Block Research Group and NCCR Digital Fabrication. He is supervised by Prof. Philippe Block and co-supervised by Prof. Stelian Coros.
-
-### Long bio:  
-
-Gene is a designer, researcher and programmer who specialises in computational design, digital fabrication in architecture and visual computing in computer science.
-
-In 2013, he graduated with a Bachelor of Architecture degree from Taiwan Tamkang University, earning the Best Project Award for Undergraduate Design Thesis and the Excellent Performance Award of Overall Academic Performance. In 2016, he obtained a Master of Science degree in [Integrative Technologies and Architectural Design Research](https://www.uni-stuttgart.de/en/study/study-programs/Integrative-Technologies-and-Architectural-Design-Research-ITECH-M.Sc-00002./) ([ITECH](https://icd.uni-stuttgart.de/?p=6111)) from Stuttgart University. His master's thesis, titled "[Assembly-Aware Design of Masonry Shell Structures: A Computational Approach](https://www.geneatcg.com/assembly-aware-design-of-masonry-shell-structures-a-computational-approach/)," supervised by Prof. Jan Knippers ([ITKE](https://www.itke.uni-stuttgart.de/)) and Prof. Achim Menges ([ICD](https://icd.uni-stuttgart.de/)), and was presented in the Pecha Kucha plenary session in IASS 2017 in Hamburg. During his master study, Gene participated in the computational design group of the [ICD/ITKE Research Pavilion 2015-16](https://boty.archdaily.com/us/2017/candidates/103332/icd-itke-research-pavilion-2015-16-icd-itke-university-of-stuttgart), which is the winner of the 2017 ArchDaily BUILDING OF THE YEAR Award in the Small Scale Architecture category.
-
-From 2013 to 2014, Gene worked as a research and teaching assistant at the [Digital Design & Fabrication LAB](https://www.facebook.com/digitalaieou/) ([CCC Lab](https://labccc.wordpress.com/)), Tamkang University, under the supervision of Prof. Chen Chen-Cheng. From 2016 to 2018, he was a software developer at [Ed. Züblin AG](https://www.zueblin.de/databases/internet/_public/content30.nsf/web30?Openagent&id=EN-ZUEBLIN.DEN_welcome.html) / [Strabag AG](https://www.strabag.com/) and focused on research & development, innovation and software development for various construction and national wise research projects.
-
-Gene strongly believes interdisciplinary research boosts innovation. He loves programming, mathematics, geometry, and has developed many open-source projects to combine his research interests in architectural design and computer science. He received a [Computer Science CAS](https://inf.ethz.ch/continuing-education/certificate-program.html) degree at ETH Zurich in 2020, focusing on [Visual Computing](https://en.wikipedia.org/wiki/Visual_computing).
-
-Gene is a PhD candidate at the [Institute of Technology in Architecture](https://ita.arch.ethz.ch/) at [ETH Zurich](https://www.ethz.ch/en.html), where he is a research assistant in the [Block Research Group](http://www.block.arch.ethz.ch/brg/) and [NCCR Digital Fabrication](http://www.dfab.ch/). He is supervised by [Prof. Philippe Block](https://block.arch.ethz.ch/brg/people/philippe-block) and co-supervised by [Prof. Stelian Coros](http://crl.ethz.ch/coros.html). 
-
-### Follow me 
-- [Github](https://github.com/GeneKao)
+### Find me on:
+- [GitHub](https://github.com/GeneKao)
 - [LinkedIn](https://www.linkedin.com/in/kaogene/)
-- [Block Research Group](https://block.arch.ethz.ch/brg/content/person/gene-ting-chun-kao)
 - [Google Scholar](https://scholar.google.com/citations?hl=en&user=_gZPfuwAAAAJ)
+- [Block Research Group](https://block.arch.ethz.ch/brg/content/person/gene-ting-chun-kao)
 
 ### License
 
@@ -39,4 +25,4 @@ The content for this site, including blog posts, images and other assets are cov
 ---
 metadesc: About page of Gene Ting-Chun Kao
 ---
-modified_date: 2021-03-05
+modified_date: 2023-08-03

@@ -9,7 +9,7 @@
             </h1>
         </div>
         <div class="post-body">
-        {% if post.parent.title != "Home" %}
+        {% if post.parent.title != "Blog" %}
         {% set total_children = post.parent.children.include_undiscoverable(True).count() %}
         <div class="post-part">
             Part {{post.part}} of {{total_children}} of Series <a href="{{ post.parent|url }}">{{ post.parent.title }}</a>
