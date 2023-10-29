@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title> — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/rhinopython/rhinopython-mesh-boy-surface-subdivision-and-analysis sep /blog" href="../../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div id="generic-page" class="page-content-container">
+  <div class="page-content">
+    <div class="text-center fh5co-heading">
+      <div class="rule-under-heading"></div>
+    </div>
+    <div class="center">
+      <h4>Rhino.Python - Boy Surface and subdivision</h4>
+<p><img src="boyRendering02-1024x730.jpg" alt="drawing" width="100%"/></p>
+<p>Boy Surface and two subdivision rules. Boy Surface with different parameters</p>
+<p><img src="boyRendering01.jpg" alt="drawing" width="100%"/></p>
+<p>Mesh Analysis – Number of neighbor vertexes.</p>
+<p><img src="analysis.jpg" alt="drawing" width="100%"/></p>
+<p>Subdivision Rule – Window Frames:</p>
+<p><img src="diagram1-1024x270.png" alt="drawing" width="100%"/></p>
+<pre><code class="lang-python">
+“””
+####################################################################
+Computational Design Assignment 05
+Kao, Ting-Chun
+Mesh subdivision and analysis 
+####################################################################
+“””
+import Rhino as rh
+import Rhino.Geometry as rg
+import rhinoscriptsyntax as rs
+import math 
+import System as sys
+import scriptcontext as sc
+ 
+from random import random
+from scriptcontext import escape_test
+ 
+def crossCapVertex(domainXY, resolutionXY):
+    vertex = []
+    for i in range(resolutionXY[0]+1):
+        u = domainXY[0] + (domainXY[1]-domainXY[0])*i/resolutionXY[0]
+        for j in range(resolutionXY[1]+1):
+            v = domainXY[2] + (domainXY[3]-domainXY[2])*j/resolutionXY[1]
+            a = 10
+            x = a/2 * math.sin(u) * math.sin(2*v)
+            y = a * math.sin(2*u) * math.pow(math.sin(v),2)
+            z = a * math.cos(2*u) * math.pow(math.sin(v),2)
+            vertex.append( (x,y,z) )
+    return vertex
+ 
+def boySurface(domainXY, resolutionXY):
+    vertex = []
+    for i in range(resolutionXY[0]+1):
+        u = domainXY[0] + (domainXY[1]-domainXY[0])*i/resolutionXY[0]
+        for j in range(resolutionXY[1]+1):
+            v = domainXY[2] + (domainXY[3]-domainXY[2])*j/resolutionXY[1]
+            a = 10
+            r = 0.5 # 0 to 1
+            b = 2 - r*math.sqrt(2)*math.sin(3*u)*math.sin(2*v) 
+            x = a * ( math.sqrt(2) * math.cos(2*u) * math.pow(math.cos(v),2) + math.cos(u) * math.sin(2*v) ) / b
+            y = a * ( math.sqrt(2) * math.sin(2*u) * math.pow(math.cos(v),2) - math.sin(u) * math.sin(2*v) ) / b
+            z = a* 3 *  math.pow(math.cos(v),2) / b
+            vertex.append( (x,y,z) )
+    return vertex
+ 
+def createmeshfaces(resolutionXY):
+    nX = resolutionXY[0]
+    nY = resolutionXY[1]
+    f = []
+    for i in range(nX): 
+        for j in range(nY):
+            baseindex = i*(nY+1)+j
+            A = baseindex
+            B = baseindex+1
+            C = baseindex+nY+2
+            D = baseindex+nY+1
+            f.append( (A, B, C, D) )
+    return f
+ 
+def meshfunction_xy():
+    domain = (-math.pi, 0, -math.pi, 0)
+    resolutionXY = (30,10)
+    #verts = crossCapVertex(domain, resolutionXY)
+    verts = boySurface(domain, resolutionXY)
+    faces = createmeshfaces(resolutionXY)
+     
+    return rs.AddMesh(verts, faces)
+ 
+def midPt(ptsList):
+     
+    o = rg.Vector3d(0,0,0)
+    for pt in ptsList:
+        pt = rg.Vector3d(pt)
+        o = rg.Vector3d.Add(o, pt)
+    mid = rg.Vector3d.Divide(o, len(ptsList))
+     
+    return rg.Point3d(mid)
+ 
+def midPtList(ptsList):
+     
+    o = midPt(ptsList)
+    mList = []
+    for pt in ptsList:
+        pt = rg.Vector3d(pt)
+        o = rg.Vector3d(o)
+        m = rg.Vector3d.Add(o, pt)
+        m = rg.Vector3d.Divide(m, 2)
+        m = rg.Point3d(m)
+        mList.append(m)
+     
+    return mList
+ 
+def extrudePt(pt, normal, scale):
+    if type(pt) is rg.Point3d:
+        pt = rg.Vector3d(pt)
+        normal = rg.Vector3d.Multiply(scale, normal)
+        pt = rg.Vector3d.Add(pt, normal)
+        pt = rg.Point3d(pt)
+    if type(pt) is list:
+        ptList = []
+        for p in pt:
+            p = rg.Vector3d(p)
+            normal = rg.Vector3d.Multiply(scale, normal)
+            p = rg.Vector3d.Add(p, normal)
+            p = rg.Point3d(p)
+            ptList.append(p)
+        pt = ptList
+    return pt
+ 
+def meshSubdivisionToCentor(mesh):
+    faceVerts = rs.MeshFaceVertices( mesh )  
+    faceNormal = rs.MeshFaceNormals( mesh )
+    verts = rs.MeshVertices(mesh)
+     
+    newPtList = verts[:]
+    newPtIndexList = []
+     
+    for i in range(len(faceVerts)):
+        a = faceVerts[i][0]
+        b = faceVerts[i][1]
+        c = faceVerts[i][2]
+        d = faceVerts[i][3]
+        fourPt = [verts[a], verts[b], verts[c], verts[d]]
+         
+        mid = midPt(fourPt)
+        mid = extrudePt(mid, faceNormal[i], 0.2)
+         
+        newPtList.append(mid)
+        newPtIndexList.append((len(verts)+i))
+         
+        #rs.AddPoint(mid)
+        escape_test()
+     
+    newFaceVertx = []
+     
+    for i in range(len(faceVerts)):
+        a = faceVerts[i][0]
+        b = faceVerts[i][1]
+        c = faceVerts[i][2]
+        d = faceVerts[i][3]
+        e = newPtIndexList[i]
+         
+        FaceA = (a, b, e) 
+        FaceB = (b, c, e) 
+        FaceC = (c, d, e) 
+        FaceD = (d, a, e) 
+         
+        newFaceVertx.append(FaceA)
+        newFaceVertx.append(FaceB)
+        newFaceVertx.append(FaceC)
+        newFaceVertx.append(FaceD)
+     
+    newMesh = rs.AddMesh(newPtList, newFaceVertx)
+     
+    return newMesh
+ 
+def meshSubdivisionHole(mesh, iteration = 1):
+    faceVerts = rs.MeshFaceVertices( mesh )  
+    faceNormal = rs.MeshFaceNormals( mesh )
+    verts = rs.MeshVertices(mesh)
+     
+    newPtList = verts[:]
+    newPtIndexList = []
+     
+    for i in range(len(faceVerts)):
+        a = faceVerts[i][0]
+        b = faceVerts[i][1]
+        c = faceVerts[i][2]
+        d = faceVerts[i][3]
+        fourPt = [verts[a], verts[b], verts[c], verts[d]]
+         
+        mid4 = midPtList(fourPt)
+        if iteration &lt;= 1:
+            scale = 0.1
+        else:
+            scale = 0.4
+        mid4List = extrudePt(mid4, faceNormal[i], scale)
+         
+        for count, p in enumerate(mid4List):
+            newPtList.append(p)
+            newPtIndexList.append((len(verts) + i*4 + count))
+             
+        escape_test()
+     
+    newFaceVertx = []
+     
+    for i in range(len(faceVerts)):
+        a = faceVerts[i][0]
+        b = faceVerts[i][1]
+        c = faceVerts[i][2]
+        d = faceVerts[i][3]
+        e = newPtIndexList[i*4+0]
+        f = newPtIndexList[i*4+1]
+        g = newPtIndexList[i*4+2]
+        h = newPtIndexList[i*4+3]
+         
+        FaceA = (a, b, f, e) 
+        FaceB = (b, c, g, f) 
+        FaceC = (c, d, h, g) 
+        FaceD = (d, a, e, h) 
+         
+        newFaceVertx.append(FaceA)
+        newFaceVertx.append(FaceB)
+        newFaceVertx.append(FaceC)
+        newFaceVertx.append(FaceD)
+     
+    newMesh = rs.AddMesh(newPtList, newFaceVertx)
+     
+    if iteration &gt; 0:
+        escape_test()
+        previousMesh = meshSubdivisionHole(newMesh, iteration-1)
+         
+        rs.DeleteObject(newMesh)
+        return previousMesh
+         
+    #”””
+    if iteration == 0:
+        triangleMesh = meshSubdivisionToCentor(newMesh)
+     
+    rs.DeleteObject(newMesh)
+    return triangleMesh
+    #”””
+    #return newMesh
+ 
+def setMeshColor(oMesh):
+    faceVerts = rs.MeshFaceVertices( oMesh )  
+    faceNormal = rs.MeshFaceNormals( oMesh )
+    verts = rs.MeshVertices(oMesh)
+     
+    mesh = rg.Mesh()
+     
+    for i in verts:
+        mesh.Vertices.Add(i)
+     
+    for i in faceVerts:
+        mesh.Faces.AddFace(i[0], i[1], i[2], i[3])
+     
+    topoMeshVertex = mesh.TopologyVertices
+    vs = mesh.Vertices
+    vs.GetConnectedVertices(0)
+     
+    edgeNumber = []
+    for i in range(vs.Count):
+        index = vs.GetConnectedVertices(i)
+        num = len(index)
+        edgeNumber.append(num)
+     
+    nMax = max(edgeNumber)
+    nMin = min(edgeNumber)
+     
+    colors = []
+    for i in range(vs.Count):
+        index = vs.GetConnectedVertices(i)
+        num = len(index)
+        num = (num-nMin) * 255/(nMax-nMin)
+        color = sys.Drawing.Color.FromArgb(num, 255-num,255-num)
+        colors.append(color)
+     
+    rs.MeshVertexColors(oMesh, colors)
+ 
+def main():
+     
+    rs.EnableRedraw(False)
+     
+    obj = meshfunction_xy()
+    newObj = meshSubdivisionHole(obj, 2)
+    rs.DeleteObject(obj)
+    setMeshColor(newObj)
+     
+    rs.EnableRedraw(True)
+ 
+ 
+if __name__ == “__main__”:
+    main()
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>

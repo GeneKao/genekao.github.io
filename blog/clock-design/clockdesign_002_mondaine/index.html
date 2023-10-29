@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title> — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/clock-design/clockdesign_002_mondaine sep /blog" href="../../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div id="generic-page" class="page-content-container">
+  <div class="page-content">
+    <div class="text-center fh5co-heading">
+      <div class="rule-under-heading"></div>
+    </div>
+    <div class="center">
+      <p>Clock Design through code. <a href="http://www.mondaine.com/mondaine-watches/display/83">Mondaine</a> 時間設計 — 瑞士國鐵表</p>
+<p><img src="mondaine.png" alt="drawing" width="100%"/></p>
+<pre><code class="lang-java">float h, m, s; 
+ 
+void setup() {
+  size(650, 650);
+  smooth();
+  strokeCap(SQUARE);
+}
+ 
+void draw() {
+  background(200);
+ 
+  pushMatrix();
+  translate(width/2, height/2);
+ 
+  strokeWeight(5);
+  stroke(50);
+  //noFill();
+  fill(242);
+  ellipse(0, 0, 450, 450);
+ 
+  s = 6*second()*(TWO_PI)/360 - PI/2;
+  m = 6*(minute())*(TWO_PI)/360 - PI/2;
+  h = 30*hour()*(TWO_PI)/360 - PI/2;
+ 
+  fill(255);
+  for (int i = 0; i &lt;= 60; i++) {
+    strokeWeight(6);
+    line(cos(i*6*(TWO_PI)/360)*210, sin(i*6*(TWO_PI)/360)*210, cos(i*6*(TWO_PI)/360)*195, sin(i*6*(TWO_PI)/360)*195);
+    //ellipse(cos(i*6*(TWO_PI)/360)*200, sin(i*6*(TWO_PI)/360)*200, 5, 5);
+     
+    if (i % 5 == 0) {
+      strokeWeight(14);
+      line(cos(i*6*(TWO_PI)/360)*210, sin(i*6*(TWO_PI)/360)*210, cos(i*6*(TWO_PI)/360)*173, sin(i*6*(TWO_PI)/360)*173);
+      //ellipse(cos(i/5*30*(TWO_PI)/360)*200, sin(i/5*30*(TWO_PI)/360)*200, 10, 10);
+    }
+  }
+  fill(50);
+   
+  ////// logo
+  textSize(22);
+  text(&quot;MONDAINE&quot;, -60, -95);
+  textSize(12);
+  text(&quot;SBB CFF FFS&quot;, -15, -75);
+  strokeWeight(12);
+  stroke(166, 73, 66);
+  line(-50, -79, -20, -79);
+  strokeWeight(2);
+  stroke(242);
+  line(-37, -79, -23, -79);
+  line(-30, -75, -30, -83);
+  line(-37, -79, -33, -83);
+  line(-37, -79, -33, -75);
+  line(-23, -79, -27, -83);
+  line(-23, -79, -27, -75);
+  ////// logo 
+   
+  noStroke();
+  fill(255);
+  ellipse(0, 0, 10, 10);
+ 
+  stroke(50);
+  strokeWeight(18);
+  line(cos(m+(s+PI/2)/60)*200, sin(m+(s+PI/2)/60)*200, -cos(m+(s+PI/2)/60)*30, -sin(m+(s+PI/2)/60)*30);
+  strokeWeight(20);
+  line(cos(h+(m+PI/2)/12)*160, sin(h+(m+PI/2)/12)*160, -cos(h+(m+PI/2)/12)*30, -sin(h+(m+PI/2)/12)*30);
+  strokeWeight(7);
+  stroke(184, 7, 34);
+  line(cos(s)*160, sin(s)*160, -cos(s)*50, -sin(s)*50);
+  ellipse(0, 0, 10, 10);
+  fill(184, 7, 34);
+  ellipse(cos(s)*160, sin(s)*160, 20, 20);
+ 
+  popMatrix();
+}
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>

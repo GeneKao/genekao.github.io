@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title>Blog | Emacs settings — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;<span class="pipe-colored">|</span> Blog</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/emacs-settings sep /blog" href="../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="blog-content-container" data-section="Blog">
+  <div id="blog-center" class="center">
+
+<div class="blog-post">
+  <div class="blog-header blog-post-header">
+    <div class="row">
+      <div class="meta-blog-index">
+        <p>
+          <span class="small">2016-05-23</span>
+        </p>
+      </div>
+    </div>
+    <h1>Emacs settings</h1>
+    <p>There are some modes I used to turn my emacs into a powerful IDE environment for c++, python and latex editing. So I post it here to share with anyone who might have interest in using emacs as main editor.</p>
+<p><img src="emacs-cpp-editing-1024x640.png" alt="drawing" width="100%"/></p>
+<p>In my OS X, I have installed those packages and Lisp scripts including, <a href="https://melpa.org/" target="_blank">MELPA package manager</a>, <a href="https://www.gnu.org/software/auctex/" target="_blank">AUCTeX</a>, <a href="https://gist.github.com/soonhokong/7c2bf6e8b72dbc71c93b" target="_blank">irony-mode</a>, <a href="http://company-mode.github.io" target="_blank">company-mode</a>, <a href="https://github.com/nschum/highlight-symbol.el" target="_blank">highlight-symbol</a>, <a href="http://www.flycheck.org/en/latest/" target="_blank">flycheck</a>, <a href="https://github.com/hotpxl/company-irony-c-headers" target="_blank">company-irony-c-header</a>, <a href="http://auto-complete.org" target="_blank">auto-complete</a>, <a href="https://github.com/vspinu/ac-math" target="_blank">ac-math</a>, <a href="https://github.com/joaotavora/yasnippet" target="_blank">Yasnippet</a>, <a href="https://www.emacswiki.org/emacs/NeoTree" target="_blank">Neo Tree</a>, 
+<a href="https://melpa.org/#/company-auctex" target="_blank">company-auctex</a>, <a href="https://github.com/leoliu/ggtags" target="_blank">ggtags</a>, <a href="https://github.com/redguardtoo/cpputils-cmake" target="_blank">cpputils-camke</a>, <a href="https://github.com/proofit404/pyenv-mode" target="_blank">pyenv-mode</a>, <a href="https://github.com/proofit404/anaconda-mode" target="_blank">anaconda-mode</a>, <a href="https://www.languagetool.org" target="_blank">languagetool</a></p>
+<p>For more information about c++ IDE environment settings please see <a href="http://tuhdo.github.io/c-ide.html" target="_blank">this</a> amazing introduction.</p>
+<p><strong>Here is my emacs/aquamacs setting file:</strong></p>
+<pre><code class="lang-lisp">
+;; This is the Aquamacs Preferences file.
+;; Add Emacs-Lisp code here that should be executed whenever
+;; you start Aquamacs Emacs. If errors occur, Aquamacs will stop
+;; evaluating this file and print errors in the *Messags* buffer.
+;; Use this file in place of ~/.emacs (which is loaded as well.)
+
+
+;; (package-initialize)
+;; (load-theme &amp;#039;tsdh-dark t)
+
+;; MELPA package
+(require &amp;#039;package)
+(add-to-list &amp;#039;package-archives
+             &amp;#039;(&amp;quot;melpa&amp;quot; . &amp;quot;https://melpa.org/packages/&amp;quot;))
+(when (&amp;lt; emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list &amp;#039;package-archives &amp;#039;(&amp;quot;gnu&amp;quot; . &amp;quot;http://elpa.gnu.org/packages/&amp;quot;)))
+(package-initialize) 
+
+
+(load-theme &amp;#039;tsdh-dark t) ;; load theme
+
+;; maybe these two lines can be removed later. 
+(setq initial-frame-alist &amp;#039;((left . 50)  ))
+(smart-frame-positioning-mode nil)
+
+(ac-config-default) ;; load auto-complete
+
+;; latex
+;; (setq TeX-auto-save t)
+;; (setq TeX-parse-self t)
+;; (setq-default TeX-master nil)
+
+(add-hook &amp;#039;LaTeX-mode-hook &amp;#039;visual-line-mode)
+(add-hook &amp;#039;LaTeX-mode-hook &amp;#039;flyspell-mode)
+(add-hook &amp;#039;LaTeX-mode-hook &amp;#039;LaTeX-math-mode)
+
+(add-hook &amp;#039;LaTeX-mode-hook &amp;#039;turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+
+
+;; irony-mode 
+(add-hook &amp;#039;c++-mode-hook &amp;#039;irony-mode)
+(add-hook &amp;#039;c-mode-hook &amp;#039;irony-mode)
+(add-hook &amp;#039;objc-mode-hook &amp;#039;irony-mode)
+
+;; replace the `completion-at-point&amp;#039; and `complete-symbol&amp;#039; bindings in
+;; irony-mode&amp;#039;s buffers by irony-mode&amp;#039;s function
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map [remap completion-at-point]
+    &amp;#039;irony-completion-at-point-async)
+  (define-key irony-mode-map [remap complete-symbol]
+    &amp;#039;irony-completion-at-point-async))
+(add-hook &amp;#039;irony-mode-hook &amp;#039;my-irony-mode-hook)
+(add-hook &amp;#039;irony-mode-hook &amp;#039;irony-cdb-autosetup-compile-options)
+
+
+;; company
+;;(add-hook &amp;#039;after-init-hook &amp;#039;global-company-mode) ;; disable company to work in all case 
+(add-hook &amp;#039;c++-mode-hook &amp;#039;global-company-mode) ;; to prevent python has weird autocomplete.
+(add-hook &amp;#039;c-mode-hook &amp;#039;global-company-mode)   ;; added to enable c++ and c mode 
+(eval-after-load &amp;#039;company
+  &amp;#039;(add-to-list &amp;#039;company-backends &amp;#039;company-irony))
+
+
+;; highlight symbols
+(require &amp;#039;highlight-symbol)
+(global-set-key [(control f3)] &amp;#039;highlight-symbol)
+(global-set-key [f3] &amp;#039;highlight-symbol-next)
+(global-set-key [(shift f3)] &amp;#039;highlight-symbol-prev)
+(global-set-key [(meta f3)] &amp;#039;highlight-symbol-query-replace)
+
+
+;; flycheck
+(global-flycheck-mode)
+
+
+;; company-irony-c-headers
+(require &amp;#039;company-irony-c-headers)
+;; Load with `irony-mode` as a grouped backend
+(eval-after-load &amp;#039;company
+  &amp;#039;(add-to-list
+    &amp;#039;company-backends &amp;#039;(company-irony-c-headers company-irony)))
+
+
+;; auto-complete &amp;amp; ac-math
+(require &amp;#039;package)
+(package-initialize)
+
+(require &amp;#039;auto-complete)
+(require &amp;#039;auto-complete-config)
+(ac-config-default)
+
+(require &amp;#039;ac-math) 
+(add-to-list &amp;#039;ac-modes &amp;#039;latex-mode)   ; make auto-complete aware of `latex-mode`
+
+(defun ac-LaTeX-mode-setup () ; add ac-sources to default ac-sources
+  (setq ac-sources
+    (append &amp;#039;(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
+        ac-sources))
+  )
+(add-hook &amp;#039;LaTeX-mode-hook &amp;#039;ac-LaTeX-mode-setup)
+(global-auto-complete-mode t)
+
+(setq ac-math-unicode-in-math-p t)
+
+
+;; start yasnippet
+(require &amp;#039;yasnippet)
+(yas-global-mode 1)
+
+
+;; neotree
+(add-to-list &amp;#039;load-path &amp;quot;/some/path/neotree&amp;quot;)
+(require &amp;#039;neotree)
+(global-set-key [f8] &amp;#039;neotree-toggle)
+
+
+
+;; company auctex
+(company-auctex-init)
+
+
+;; namespace c++ indent
+;; telling .h file is using c++ mode
+(add-to-list &amp;#039;auto-mode-alist &amp;#039;(&amp;quot;\\.h\\&amp;#039;&amp;quot; . c++-mode))
+;; indenting c++ mode
+(defun my-c-setup ()
+  (c-set-offset &amp;#039;innamespace [0]))
+(add-hook &amp;#039;c++-mode-hook &amp;#039;my-c-setup)
+
+
+;; Projectile
+(projectile-global-mode)
+
+
+
+
+;; ggtags
+(require &amp;#039;ggtags)
+(add-hook &amp;#039;c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p &amp;#039;c-mode &amp;#039;c++-mode &amp;#039;java-mode &amp;#039;asm-mode)
+              (ggtags-mode 1))))
+
+(define-key ggtags-mode-map (kbd &amp;quot;C-c g s&amp;quot;) &amp;#039;ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd &amp;quot;C-c g h&amp;quot;) &amp;#039;ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd &amp;quot;C-c g r&amp;quot;) &amp;#039;ggtags-find-reference)
+(define-key ggtags-mode-map (kbd &amp;quot;C-c g f&amp;quot;) &amp;#039;ggtags-find-file)
+(define-key ggtags-mode-map (kbd &amp;quot;C-c g c&amp;quot;) &amp;#039;ggtags-create-tags)
+(define-key ggtags-mode-map (kbd &amp;quot;C-c g u&amp;quot;) &amp;#039;ggtags-update-tags)
+(define-key ggtags-mode-map (kbd &amp;quot;M-,&amp;quot;) &amp;#039;pop-tag-mark)
+
+
+
+
+;; semantic
+(semantic-load-enable-primary-exuberent-ctags-support)
+
+;; define c++ file extension types
+(defvar c-files-regex &amp;quot;.*\\.\\(c\\|cpp\\|h\\|hpp\\)&amp;quot;
+  &amp;quot;A regular expression to match any c/c++ related files under a directory&amp;quot;)
+
+(defun my-semantic-parse-dir-v2 (root regex)
+  &amp;quot;
+   This function is an attempt of mine to force semantic to
+   parse all source files under a root directory. Arguments:
+   -- root: The full path to the root directory
+   -- regex: A regular expression against which to match all files in the directory
+  &amp;quot;
+  (let (
+        ;;make sure that root has a trailing slash and is a dir
+        (root (file-name-as-directory root))
+        (files (directory-files root t ))
+    )
+    ;; remove current dir and parent dir from list
+    (setq files (delete (format &amp;quot;%s.&amp;quot; root) files))
+    (setq files (delete (format &amp;quot;%s..&amp;quot; root) files))
+    ;; remove any known version control directories 
+    (setq files (delete (format &amp;quot;%s.git&amp;quot; root) files))
+    (setq files (delete (format &amp;quot;%s.hg&amp;quot; root) files))
+    (while files
+      (setq file (pop files))
+      (if (not(file-accessible-directory-p file))
+          ;;if it&amp;#039;s a file that matches the regex we seek
+          (progn (when (string-match-p regex file)
+           ;; get if buffer is open or open it if it&amp;#039;s not
+           (setq buff (get-file-buffer file))
+           (setq opened-buffer nil)
+           (when (not buff)
+             (progn 
+               (setq opened-buffer t)
+               (setq buff (find-file-noselect file))
+               ))
+           (switch-to-buffer buff)
+           ;; parse the buffer with semantic
+           (semantic-fetch-tags)
+           ;; if we opened the buffer cleanup before proceeding
+           (when opened-buffer
+             (kill-buffer (buffer-name))
+             )
+           ))
+    ;;else if it&amp;#039;s a directory
+    (my-semantic-parse-dir file regex)
+    )
+      )
+    )
+  )
+
+(defun my-semantic-parse-current-dir (regex)
+  &amp;quot;
+   Parses all files under the current directory matching regex
+  &amp;quot;
+  (my-semantic-parse-dir (file-name-directory(buffer-file-name)) regex)
+  )
+
+(defun lk-parse-curdir-c ()
+  &amp;quot;
+   Parses all the c/c++ related files under the current directory
+   and inputs their data into semantic
+  &amp;quot;
+  (interactive)
+  (my-semantic-parse-current-dir c-files-regex)
+  )
+
+(defun lk-parse-dir-c (dir)
+  &amp;quot;Prompts the user for a directory and parses all c/c++ related files
+   under the directory
+  &amp;quot;
+  (interactive (list (read-directory-name &amp;quot;Provide the directory to search in:&amp;quot;)))
+  (my-semantic-parse-dir (expand-file-name dri) c-files-regex)
+  )
+
+(provide &amp;#039;lk-file-search)
+;; to here 
+
+
+
+;; cpputils-camke
+(add-hook &amp;#039;c-mode-common-hook
+          (lambda ()
+            (if (derived-mode-p &amp;#039;c-mode &amp;#039;c++-mode)
+                (cppcm-reload-all)
+              )))
+;; OPTIONAL, somebody reported that they can use this package with Fortran
+(add-hook &amp;#039;c90-mode-hook (lambda () (cppcm-reload-all)))
+;; OPTIONAL, avoid typing full path when starting gdb
+(global-set-key (kbd &amp;quot;C-c C-g&amp;quot;)
+        &amp;#039;(lambda ()(interactive) (gud-gdb (concat &amp;quot;gdb --fullname &amp;quot; (cppcm-get-exe-path-current-buffer)))))
+;; OPTIONAL, some users need specify extra flags forwarded to compiler
+(setq cppcm-extra-preprocss-flags-from-user &amp;#039;(&amp;quot;-I/usr/src/linux/include&amp;quot; &amp;quot;-DNDEBUG&amp;quot;))
+
+
+
+;; indent
+(setq-default c-basic-offset 4)
+
+
+
+;;==============================================================
+;; python mode 
+
+;;pyenv-mode
+(require &amp;#039;pyenv-mode)
+(defun projectile-pyenv-mode-set ()
+  &amp;quot;Set pyenv version matching project name.&amp;quot;
+  (let ((project (projectile-project-name)))
+    (if (member project (pyenv-mode-versions))
+        (pyenv-mode-set project)
+      (pyenv-mode-unset))))
+
+(add-hook &amp;#039;projectile-switch-project-hook &amp;#039;projectile-pyenv-mode-set)
+
+
+
+;; Anaconda mode
+(add-hook &amp;#039;python-mode-hook &amp;#039;anaconda-mode)
+
+
+
+;; language tool
+(require &amp;#039;langtool)
+(setq langtool-language-tool-jar &amp;quot; /my/path/to/languagetool-commandline.jar&amp;quot;
+      langtool-mother-tongue &amp;quot;zh&amp;quot;
+      langtool-disabled-rules &amp;#039;(&amp;quot;WHITESPACE_RULE&amp;quot;
+                                &amp;quot;EN_UNPAIRED_BRACKETS&amp;quot;
+                                &amp;quot;COMMA_PARENTHESIS_WHITESPACE&amp;quot;
+                                &amp;quot;EN_QUOTES&amp;quot;))&lt;/pre&gt;
+</code></pre>
+
+  </div>
+</div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>

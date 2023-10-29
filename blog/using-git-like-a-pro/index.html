@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title>Blog | Using Git like a Pro — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;<span class="pipe-colored">|</span> Blog</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/using-git-like-a-pro sep /blog" href="../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="blog-content-container" data-section="Blog">
+  <div id="blog-center" class="center">
+
+<div class="blog-post">
+  <div class="blog-header blog-post-header">
+    <div class="row">
+      <div class="meta-blog-index">
+        <p>
+          <span class="small">2020-04-01</span>
+        </p>
+      </div>
+    </div>
+    <h1>Using Git like a Pro</h1>
+    <p>I wrote a Git tutorial a while ago and share it on the <a href="https://github.com/GeneKao/programming-notes/tree/master/git">GitHub</a>. 
+Now I would like to share it again here on my website.</p>
+<p>To see some of my other notes, please have a look at my <a href="https://github.com/GeneKao/programming-notes">programming-notes</a>.</p>
+<h3>Table of Contents</h3>
+<ol>
+<li><a href="#1">Git vs GitHub vs GitLab</a></li>
+<li><a href="#2">Set up your Git</a></li>
+<li><a href="#3">Basic commands</a></li>
+<li><a href="#4">Review a repo&#39;s history</a></li>
+<li><a href="#5">Add commit to a repo</a></li>
+<li><a href="#6">Tagging, branching, merging</a></li>
+<li><a href="#7">Experiments using checkout</a></li>
+<li><a href="#8">Undoing changes</a></li>
+<li><a href="#9">Collaborating and syncing with GitLab</a></li>
+<li><a href="#10">Other useful commands</a></li>
+<li><a href="#11">Development pipeline, branching model and discussion</a></li>
+</ol>
+<h3>Appendix</h3>
+<p>A. <a href="#12">Git Bash setup</a>
+B. <a href="#13">Cygwin setup</a></p>
+<h2>1. Git vs GitHub vs GitLab <a name="1"></a></h2>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-1-1.bmp" alt=""></p>
+<p>Figure 1‑1: Icon of Git, Github and GitLab.</p>
+<p>Git is a very powerful tool that every developer should be familiar with.</p>
+<blockquote><p>By far, the most widely used modern version control system in the world
+today is Git. Git is a mature, actively maintained open-source project
+originally developed in 2005 by Linus Torvalds, the famous creator of the Linux
+operating system kernel. A staggering number of software projects rely on Git
+for version control, including commercial projects as well as open-source.
+<a href="https://www.atlassian.com/git/tutorials/what-is-git">Atlassian.com</a></p>
+</blockquote>
+<p>However, many people confuse Git with Github, GitLab, but they are not the same.
+<a href="https://git-scm.com/"><b>Git</b></a> <b>is a free and open-source distributed version
+control system, a tool that you can manage your code history. Where</b>
+<a href="https://github.com/"><b>Github</b></a> <b>and</b> <a href="https://about.gitlab.com/"><b>GitLab</b></a> 
+<b> are web-based hosting services for Git
+repositories. With Git, you don't even need Internet access, you can
+work everything locally and have all version controls.</b> To connect to GitLab
+and working with others, you will need Internet access. The purpose of this
+document is to guide readers through all the necessary elements and commands of
+using Git, so readers will be able to use Git confidently, and in the proper
+way.</p>
+<p>More discussion about Git and Github can be found here in the <a href="https://stackoverflow.com/questions/13321556/difference-between-git-and-github">Stack
+Overflow</a>.</p>
+<p>Here are some nice free tutorials you can find online too:</p>
+<ol>
+<li><a href="https://git-scm.com/docs/gittutorial">Official Git documentation</a>.</li>
+<li><a href="https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud">Learn Git with Bitbucket
+Cloud</a>.</li>
+<li>Udacity: <a href="https://www.udacity.com/course/version-control-with-git--ud123">Version Control with
+Git</a> and <a href="https://www.udacity.com/course/how-to-use-git-and-github--ud775">How
+to Use Git and
+Github</a>.</li>
+<li><a href="https://www.learnenough.com/git-tutorial">Learn Enough Git to Be Dangerous</a>.</li>
+<li><a href="https://try.github.io/levels/1/challenges/1">Try Git: Git Tutorial</a>.</li>
+</ol>
+<h2>2. Set up your Git <a name="2"></a></h2>
+<p>In this chapter, you are going to set up your Git environment in Windows, Mac or
+Linux.  In Linux and Mac, using the default terminal should be just fine. In
+windows, you can use <a href="https://git-for-windows.github.io/">Git Bash</a> or
+<a href="https://www.cygwin.com/">Cygwin</a> (See appendix A and B). After the
+installation, run the command which shows in Figure 2-1 and sees if you have Git
+installed properly.</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-2-1.bmp" alt=""></p>
+<p>Figure 2‑1: To see the Git version from the terminal.</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-2-2.bmp" alt=""></p>
+<p>Figure 2‑2: Attachment files</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-2-3.bmp" alt=""></p>
+<p>Figure 2‑3: git terminal setup</p>
+<p>To make your terminal console more git-friendly, you can copy-paste the folder
+from attachment to your root directory, and copy the content of .bash_profile
+to your .bashrc or .bash_profile in the root directory too. (Figure 2-2).
+And after copying and pasting those files and file contents, type <code>$ source
+.bashrc</code>. Then you should see something like Figure 2-3 later when you work
+with git.</p>
+<p>You should do those configuration commands below before start using git. It is
+also important to set up your favourite editor first so you won't get panic
+when annoying vi pop out later (I am sorry for vi users lol). For beginners, I
+will suggest using nano or other editors with GUI. (Those strings with the brown
+colour you should replace whatever makes sense to you. Blue are comments,
+don't type it in your terminal.)</p>
+<pre><code class="lang-bash">- $ git config --global user.name &quot;Git Rock&quot;
+- $ git config --global user.email &quot;git.rock@email.com&quot;
+- $ git config --global color.ui auto
+- $ git config --global merge.conflictstyle diff3
+- $ git config --global core.editor &quot;emacs -nw&quot; # (vi is default setting)
+- $ git config --list # (to see your git configurations.)
+</code></pre>
+<p><b>Before moving on to the next chapter, take a look at all key terms describe</b>
+<a href="http://video.udacity-data.com.s3.amazonaws.com/topher/2017/March/58d31eb5_ud123-git-keyterms/ud123-git-keyterms.pdf">here</a>.</p>
+<h2>3. Basic commands <a name="3"></a></h2>
+<p>If you would like to use git as your version control, the first thing you would
+have to do is to initialize the git in your project folder with <code>git init</code>
+command. After git is initialized, you will see a hidden .git folder in your
+directory, see Figure 3-1. This is where git store all its information about
+your code version. And remember, <b>do not modify anything in this .git
+directory</b> unless you know what you are doing, they are hidden for good
+reasons.</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-3-1.bmp" alt=""></p>
+<p>Figure 3‑1: list directory after before and after initialize git.</p>
+<p>And one important thing is that <b>try to use</b>  <code>$ git status</code> <b>all the time
+or after each command. It always shows you some hints about what you should
+do when something goes wrong.</b></p>
+<p>The following commands are some of the most basic commands that you will use
+very often, I will explain other commands later, I just list them here so you
+can check the most basic commands after finishing this tutorial.</p>
+<pre><code class="lang-bash">- $ git init
+- $ git clone https://github.com/GeneKao/udacity-build-a-portfolio-site.git
+- $ git status # (Please use it all the time!)
+- $ git log
+- $ git add
+- $ git commit
+- $ git diff
+</code></pre>
+<h2>4. Review a repo&#39;s history <a name="4"></a></h2>
+<p>In this chapter, you will learn how to use commands such as <code>$ git log</code> with
+different flags to see all commit history from the repo. (Tips for readers not
+familiar with the command line. Whenever you are in the
+<a href="https://en.wikipedia.org/wiki/Less_(Unix">less</a>) command environment, which you
+will see &quot;<b>:</b>&quot; on the bottom-left corner, press <b>B</b> and <b>space</b>
+to go one page up and down. Press <b>J</b> and <b>K</b> to scroll up and down. <b>Q</b>
+to quit.)</p>
+<p>Let&#39;s clone an existing repo to learn from professional developers. To clone
+this <a href="https://github.com/nvie/gitflow">repo</a> you can type <code>$ git clone
+https://github.com/nvie/gitflow.git</code>  to make a copy of existing repo and <code>$
+cd gitflow</code> to move to the directory.</p>
+<p>Now you can type one of the most commonly used commands <code>$ git log --oneline
+--graph --all</code> in your terminal, this will list all the commits and branches
+like in Figure 4-1.</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-4-1.bmp" alt=""></p>
+<p>Figure 4‑1: list all commits and branches using <code>git log --oneline --graph --all</code></p>
+<p>If you want to see more about all commits you can use to <code>$ git log --stat</code>
+or <code>$ git log --patch</code> to show all the details. Or you can use different flags
+like <code>--after, --author, --grep, -S</code> to constrain or to filter the git
+information that you want.  Try out all those commands and see what kind of
+information you will get:</p>
+<pre><code class="lang-bash">- $ git log --online
+- $ git log --stat
+- $ git log -p, git log --patch
+- $ git log --oneline --decorate --graph --all
+- $ git log --after=&quot;2017-10-1&quot;
+- $ git log --after=&quot;yesterday&quot;
+- $ git log --after=&quot;2017-10-1&quot; --before=&quot;2017-10-1&quot;
+- $ git log --author=&quot;Vincent&quot;
+- $ git log --grep=&quot;bugs&quot;
+- $ git log -- md # (check changes only for README)
+- $ git log -S&quot;Hello World&quot; # (any file that string was modified)
+- $ git show
+</code></pre>
+<p>If you would like to see more detail documentation of those optional flags
+type<code>$ git log --help</code>.</p>
+<p>And don't forget, you can always type your command together with the SHA to
+print the specific commit. For example, by typing <code>$ git show b72a395</code>
+you will see all detail commit information include the lines have been modified
+and line numbers, see Figure 4-2.</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-4-2.bmp" alt=""></p>
+<p>Figure 4‑2: git show one commit by specifying its SHA.</p>
+<h2>5. Add commit to a repo <a name="5"></a></h2>
+<p>Basically, in Figure 5-1 you can see a diagram of how Git works. Let's focus on
+all local Git functions first. To begin with, three major components of Git are
+working directory, staging index and repository. Simply speaking, working
+directory is where all your current files are which includes tracked, untracked
+and ignored files, staging index is a cache of files that you would like to
+commit and the repository is where all Git store all snapshots of your code.</p>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-5-1.bmp" alt=""></p>
+<p>Figure 5‑1: Diagram of Git work directory, staging index and repo</p>
+<p>To create a commit to the repo, basically you will need to do it in two steps:</p>
+<pre><code class="lang-bash">1. $ git add md #(or $ git add . to add everything under current directory.)
+2. $ git commit -m &quot;add a readme file&quot;
+</code></pre>
+<p>What we have done here is add a file that we would like to commit and move it
+from working directory to staging index. Assuming we have other files still in
+the directory. If we do the commit now, only the change of readme file will be
+recorded to the repository.</p>
+<p>By the way, it is better not to use the word "<b>and</b>" in the one Git commit,
+because normally it just makes more sense to separate tasks into two commits.</p>
+<p>For more details, I will suggest the reader go through this online course
+<a href="https://www.udacity.com/course/version-control-with-git--ud123">Version Control with
+Git</a>, this
+course explains clearly the concept of the working directory, staging index and
+repo. Figure 5-1 shows the summarized diagram, and useful comments are listed
+below. (Just ignore the stash command for now or you can try it on your own. I
+will explain git stash in the next edition.)</p>
+<pre><code class="lang-bash">- $ git config -global core.editor emacs # (Configure your favourite editor)
+- $ git add # (put them in staging index / stage files)
+- $ git commit -m &quot;your comment&quot; # (commit staged files to repo)
+- $ git diff
+- $ git stash # (make your code WIP and try something else)
+- $ git stash pop # (reverse the stash or git stash apply)
+- $ git stash list
+- $ git stash save &quot;Add style to our site&quot;
+- $ git stash show
+- $ git log --oneline --graph stash@{1}
+- $ git stash branch add-stylesheetstash@{1}
+- $ git stash drop stash@{1}
+- $ git stash clear
+  # (Set up .gitignore file)
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/GeneKao/programming-notes/master/git/img/git-5-2.bmp" alt=""></p>
+<p>Figure 5‑2: git stash</p>
+<h2>6. Tagging, branching, merging <a name="6"></a></h2>
+<p>When you want to create a separated development, you can create the branch.
+You can imagine this as actual tree branches. You store all your different
+development in different branches so they are separated from each other. So
+let's create a branch called develop by typing <code>$ git branch develop</code>. 
+Then if you type <code>$ git branch --list -all</code> you will see all
+branches, and the * symbol indicates the current development branch you are at,
+and the default branch is <b>master</b>. By switching between different branches you
+need to type <code>$ git checkout develop</code>. <b>One thing amazing is that all
+your files switch automatically whenever you switch between branches</b>. By doing
+this, you can experiment different kinds of stuff and don't need to worry
+about messing up your correct code or to back up all your previous development
+files.</p>
+<p>After you modify your separated development, you can use Git merge to merge one
+branch with another branch. Normally Git will merge it automatically unless two
+branches have modified the same lines, then you will have to manually fix them.</p>
+<pre><code class="lang-bash">- $ git tag -a v1.0 (create)
+- $ git tag -a v1.0 a87984 (create)
+- $ git tag -d v1.0 (delete)
+- $ git branch (check)
+- $ git branch dev_frontend =git checkout -b dev_frontend
+- $ git branch -d dev_frontend (delete)
+- $ git checkout dev_frontend
+- $ git checkout dev_frontend43s20r
+- $ git checkout dev_frontendmaster
+- $ git merge dev_frontend
+</code></pre>
+<h2>7. Experiments using checkout <a name="7"></a></h2>
+<p>You can not only experiment with your code using different branches and switch
+between them by using git checkout, but also switch to your previous commit or
+specific files.</p>
+<pre><code class="lang-bash">- $ git checkout dev\_frontend # (branch)
+- $ git checkout 43s20r # (commit)
+- $ git checkout 43s20rpy # (file)
+- $ git checkout HEADpy # (go back)
+</code></pre>
+<h2>8. Undoing changes <a name="8"></a></h2>
+<p>To modify the commit, you can type <code>$ git commit --amend</code> to modify the last
+commit. To delete commits use <code>$ git reset</code> , and it has three different
+flags. Mixed is to move the commit back to the working directory, and this is
+the default flag. Soft is to move commit to staging index. Hard is to move
+commit to trash directly, so be careful to use it. When you better not use reset
+on the public repo, because this will mess up other people's development.
+Use git revert instead, this will create a new commit to undo the previous
+commit.</p>
+<pre><code class="lang-bash">- $ git commit --amend # (modify the last commit Don&amp;#39;t use it in Public History)
+- $ git revert 43s20r # (create a new commit to undo)
+- $ git reset HEAD~1 # (Be careful! Don&#39;t use it in Public History)
+- $ git reset --mixed HEAD~1 # (move to the working directory, this is the default, add and commit)
+- $ git reset --soft HEAD~1 # (move to staging index, commit)
+- $ git reset --hard HEAD~1 # (move to trash, deleted)
+</code></pre>
+<h2>9. Collaborating and syncing with GitLab <a name="9"></a></h2>
+<p>After having some commits, you might want other people to join your development
+or back up the code on GitHub or GitLab. By doing this, you must set up the
+connection between your local repo and remote repo. To see the connection you
+can type <code>$ git remote -v</code> and use <code>$ git remote add remote
+YourRemoteURL</code> to set the connections. And <code>$ git pull</code> to download all
+the changes and <code>$ git push origin mater</code> to upload your repo.</p>
+<p>More information to see <a href="https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/#platform-linux">GitHub
+documentation</a>
+(GitLab is more or less the same).</p>
+<pre><code class="lang-bash">- $ git remote
+- $ git fetch
+- $ git pull
+- $ git push
+</code></pre>
+<h2>10. Other useful commands <a name="10"></a></h2>
+<pre><code class="lang-bash">- $ git diff-tree --no-commit-id --name-only -r d51488d # (list all files changes in a commit)
+- $ git ls-tree --name-only -r d51488d # (list all files in a commit)
+</code></pre>
+<h2>11. Development pipeline, branching model and discussion <a name="11"></a></h2>
+<p>I will suggest using gitflow to managing your version and big software
+development. You can also install it on the command line so everything become so
+easy.</p>
+<p>Check the official repository on GitHub:</p>
+<p><a href="https://github.com/nvie/gitflow">https://github.com/nvie/gitflow</a></p>
+<pre><code class="lang-bash">- $ git flow init
+- $ git flow feature start feature/dev-gk-responsive
+- $ git flow feature finish feature/dev-gk-responsive
+- $ git flow feature publish feature/dev-gk-responsive
+- $ git flow feature pull remote feature/dev-gk-responsive
+</code></pre>
+<h1>Appendix</h1>
+<h2>A. Git Bash setup <a name="12"></a></h2>
+<p>Installation procedure for using git bash as Linux VM connector:</p>
+<p><a href="https://git-for-windows.github.io/">https://git-for-windows.github.io/</a></p>
+<p>Create a .profile in the home directory like:</p>
+<pre><code class="lang-bash">alias q=&quot;exit&quot;
+alias dir=&quot;ls -al&quot;
+alias vm=&quot;ssh -i ~/.ssh/id_rsa_np new_user@YOUR_IP&quot;
+
+function cd {
+    builtin cd &quot;$@&quot; &amp;&amp; dir
+}
+
+# Interactive operation...
+alias rm=&#39;rm -i&#39;
+alias cp=&#39;cp -i&#39;
+alias mv=&#39;mv -i&#39;
+
+# Default to human-readable figures
+alias df=&#39;df -h&#39;
+alias du=&#39;du -h&#39;
+
+# Misc :)
+alias less=&#39;less -r&#39; # raw control characters
+alias whence=&#39;type -a&#39; # where, of a sort
+alias grep=&#39;grep --color&#39; # show differences in colour
+alias egrep=&#39;egrep --color=auto&#39; # show differences in colour
+alias fgrep=&#39;fgrep --color=auto&#39; # show differences in colour
+
+
+# Some shortcuts for different directory listings
+alias ls=&#39;ls -hF --color=tty&#39; # classify files in colour
+alias dir=&#39;ls --color=auto --format=vertical&#39;
+alias vdir=&#39;ls --color=auto --format=long&#39;
+alias ll=&#39;ls -l&#39; # long list
+alias la=&#39;ls -A&#39; # all but . and ..
+alias l=&#39;ls -CF&#39; #
+
+# Enable tab completion
+source ~/.git-terminal-config/git-completion.bash
+
+# Change command prompt
+source ~/.git-terminal-config/git-prompt.sh
+
+# colors!
+red=&quot;\[\033[38;5;203m\]&quot;
+green=&quot;\[\033[38;05;38m\]&quot;
+blue=&quot;\[\033[0;34m\]&quot;
+yellow=&quot;\[\033[1;33m\]&quot;
+gray=&quot;\[\033[1;30m\]&quot;
+reset=&quot;\[\033[0m\]&quot;
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+
+# &#39;\u&#39; adds the name of the current user to the prompt
+# &#39;\$(__git_ps1)&#39; adds git-related stuff
+# &#39;\W&#39; adds the name of the current directory
+export PS1=&quot;$red\u$yellow\$(__git_ps1)$green \W
+$ $reset&quot;
+# Set Git language to English
+#alias git=&#39;LANG=en_US git&#39;
+alias git=&#39;LANG=en_GB git&#39;
+# Set Git language to English
+#alias git=&#39;LC_ALL=en_US git&#39;
+alias git=&#39;LC_ALL=en_GB git&#39;
+</code></pre>
+<p>In git bash, run the following commands:</p>
+<h2>B. Cygwin setup <a name="13"></a></h2>
+<p>This is nothing to do with the Git setup. It is just how we setup the Cygwin,
+and with this documented you can save your time googling around.</p>
+<pre><code>1. First install cygwin 32 bit, because some function don't work in 64 bit.
+2. Download the file from "rawgit.com/transcode-open/apt-cyg/master/apt-cyg"
+3. Copy apt-cyg file to /bin in your C:\cygwin\bin
+4. Run &amp;quot;chmod +x /bin/apt-cyg&amp;quot; to make sure that apt-cyg is executable.
+5. $ echo 'export http_proxy=proxy:8080'&gt;&gt;~/.bashrc # to make sure that proxy settings.
+6. $ echo 'export https_proxy=proxy:8080'&gt;&gt;~/.bashrc
+7. Use the original package manager to install wget first.
+8. Everything should be fine at this moment, try "apt-cyg install nano"
+9. You can also use apt-cyg searchall to search packages.
+</code></pre>
+<p>Dependency for x please see <a href="https://x.cygwin.com/docs/ug/setup.html">https://x.cygwin.com/docs/ug/setup.html</a></p>
+<p>To install python inside cygwin see <a href="https://github.com/h2oai/h2o-2/wiki/Installing-Python-inside-Cygwin">https://github.com/h2oai/h2o-2/wiki/Installing-Python-inside-Cygwin</a></p>
+
+  </div>
+</div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>

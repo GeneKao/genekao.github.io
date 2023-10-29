@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title>Blog | Emacs Org Mode export to pdf — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;<span class="pipe-colored">|</span> Blog</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/emacs-org-mode-export-to-pdf sep /blog" href="../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="blog-content-container" data-section="Blog">
+  <div id="blog-center" class="center">
+
+<div class="blog-post">
+  <div class="blog-header blog-post-header">
+    <div class="row">
+      <div class="meta-blog-index">
+        <p>
+          <span class="small">2020-11-10</span>
+        </p>
+      </div>
+    </div>
+    <h1>Emacs Org Mode export to pdf</h1>
+    <p><a href="https://orgmode.org/"><b>Emacs Org Mode</b></a> is a perfect tool to do almost anything! I particularly like its slogan and design concept: <a href="http://doc.norang.ca/org-mode.html"><b>Organize Your Life In Plain Text</b></a>!</p>
+<p>I use Org Mode for many things, which includes writing a to-do list, building a study plan, writing blog posts (including this one), scribbling documents to organise my thoughts (you can also run code in Org Mode, how cool is that!), and planning a research paper.</p>
+<p>I would like to share my .org files with <a href="https://www.latex-project.org/">LaTex</a> starter code and show how I use it to write research documents. Later I export them from .org file to .tex then to .pdf. I like this pipeline because I don't need to worry about the layout while writing. I can also combine many different syntaxes, such as latex in the .org file.</p>
+<p>Here are some screenshots:</p>
+<p>.org file 
+<img src="simple-org.png" alt="img"></p>
+<p>.pdf
+<img src="simple-pdf.png" alt="img"></p>
+<h1>Table of Contents</h1>
+<ol>
+<li><a href="#org9a91d10">My org-mode templates for latex-style writing</a></li>
+<li><a href="#orga3e0278">Emacs settings</a></li>
+<li><a href="#org1a80e12">Export from .org file to .pdf</a></li>
+</ol>
+<p><a id="org9a91d10"></a></p>
+<h1>My org-mode templates for latex-style writing</h1>
+<p><a href="https://github.com/GeneKao/orgmode-latex-templates"><b>This repo</b></a> contains different templates as a starter code to write org-mode which can later be exported to latex and pdf.</p>
+<p><a id="orga3e0278"></a></p>
+<h1>Emacs settings</h1>
+<p>I am using <a href="https://github.com/seagle0128/.emacs.d">Centaur Emacs</a> for my emacs setting,
+so if you encounter any different exporting result, please refer to the emacs setting and my <a href="https://github.com/GeneKao/.emacs.d">fork</a> version (in the branch <b>gene-emacs</b>).</p>
+<p>Or those lines to your .emacs setting file.</p>
+<pre><code class="lang-lisp">    (setq org-latex-pdf-process
+          &#39;(&quot;latexmk -pdflatex=&#39;pdflatex -interaction nonstopmode&#39; -pdf -bibtex -f %f&quot;))
+
+
+
+    (unless (boundp &#39;org-latex-classes)
+      (setq org-latex-classes nil))
+
+    (add-to-list &#39;org-latex-classes
+                 &#39;(&quot;ethz&quot;
+                   &quot;\\documentclass[a4paper,11pt,titlepage]{memoir}
+    \\usepackage[utf8]{inputenc}
+    \\usepackage[T1]{fontenc}
+    \\usepackage{fixltx2e}
+    \\usepackage{graphicx}
+    \\usepackage{longtable}
+    \\usepackage{float}
+    \\usepackage{wrapfig}
+    \\usepackage{rotating}
+    \\usepackage[normalem]{ulem}
+    \\usepackage{amsmath}
+    \\usepackage{textcomp}
+    \\usepackage{marvosym}
+    \\usepackage{wasysym}
+    \\usepackage{amssymb}
+    \\usepackage{hyperref}
+    \\usepackage{mathpazo}
+    \\usepackage{color}
+    \\usepackage{enumerate}
+    \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+    \\tolerance=1000
+          [NO-DEFAULT-PACKAGES]
+          [PACKAGES]
+          [EXTRA]
+    \\linespread{1.1}
+    \\hypersetup{pdfborder=0 0 0}&quot;
+                   (&quot;\\chapter{%s}&quot; . &quot;\\chapter*{%s}&quot;)
+                   (&quot;\\section{%s}&quot; . &quot;\\section*{%s}&quot;)
+                   (&quot;\\subsection{%s}&quot; . &quot;\\subsection*{%s}&quot;)
+                   (&quot;\\subsubsection{%s}&quot; . &quot;\\subsubsection*{%s}&quot;)
+                   (&quot;\\paragraph{%s}&quot; . &quot;\\paragraph*{%s}&quot;)
+                   (&quot;\\subparagraph{%s}&quot; . &quot;\\subparagraph*{%s}&quot;)))
+
+
+    (add-to-list &#39;org-latex-classes
+                 &#39;(&quot;article&quot;
+                   &quot;\\documentclass[11pt,a4paper]{article}
+    \\usepackage[utf8]{inputenc}
+    \\usepackage[T1]{fontenc}
+    \\usepackage{fixltx2e}
+    \\usepackage{graphicx}
+    \\usepackage{longtable}
+    \\usepackage{float}
+    \\usepackage{wrapfig}
+    \\usepackage{rotating}
+    \\usepackage[normalem]{ulem}
+    \\usepackage{amsmath}
+    \\usepackage{textcomp}
+    \\usepackage{marvosym}
+    \\usepackage{wasysym}
+    \\usepackage{amssymb}
+    \\usepackage{hyperref}
+    \\usepackage{mathpazo}
+    \\usepackage{color}
+    \\usepackage{enumerate}
+    \\definecolor{bg}{rgb}{0.95,0.95,0.95}
+    \\tolerance=1000
+          [NO-DEFAULT-PACKAGES]
+          [PACKAGES]
+          [EXTRA]
+    \\linespread{1.1}
+    \\hypersetup{pdfborder=0 0 0}&quot;
+                   (&quot;\\section{%s}&quot; . &quot;\\section*{%s}&quot;)
+                   (&quot;\\subsection{%s}&quot; . &quot;\\subsection*{%s}&quot;)
+                   (&quot;\\subsubsection{%s}&quot; . &quot;\\subsubsection*{%s}&quot;)
+                   (&quot;\\paragraph{%s}&quot; . &quot;\\paragraph*{%s}&quot;)))
+
+
+    (add-to-list &#39;org-latex-classes &#39;(&quot;ebook&quot;
+                                      &quot;\\documentclass[11pt, oneside]{memoir}
+    \\setstocksize{9in}{6in}
+    \\settrimmedsize{\\stockheight}{\\stockwidth}{*}
+    \\setlrmarginsandblock{2cm}{2cm}{*} % Left and right margin
+    \\setulmarginsandblock{2cm}{2cm}{*} % Upper and lower margin
+    \\checkandfixthelayout
+    % Much more laTeX code omitted
+    &quot;
+                                      (&quot;\\chapter{%s}&quot; . &quot;\\chapter*{%s}&quot;)
+                                      (&quot;\\section{%s}&quot; . &quot;\\section*{%s}&quot;)
+                                      (&quot;\\subsection{%s}&quot; . &quot;\\subsection*{%s}&quot;)))
+</code></pre>
+<p><a id="org1a80e12"></a></p>
+<h1>Export from .org file to .pdf</h1>
+<p>Use the key combination</p>
+<pre><code>C-c C-e l o
+</code></pre>
+<p>For more information, please refer to the <a href="https://orgmode.org/guide/LaTeX-and-PDF-export.html">official documentation</a>.</p>
+
+  </div>
+</div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>

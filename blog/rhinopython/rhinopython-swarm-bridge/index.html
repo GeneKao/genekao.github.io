@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title> — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/rhinopython/rhinopython-swarm-bridge sep /blog" href="../../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div id="generic-page" class="page-content-container">
+  <div class="page-content">
+    <div class="text-center fh5co-heading">
+      <div class="rule-under-heading"></div>
+    </div>
+    <div class="center">
+      <h4>Rhino.Python - Swarm bridge</h4>
+<p>Swarm Behavior + Attractor : Agent methods: 1. Align : Move in the same direction as your neighbours. 2. Cohesion : Remain close to your neighbours. 3. Seperation : Avoid collisions with your neighbours. Attractor methods: (Controlling the shape) From starting points move to target points to create bridge. Using swarm simulation in Grasshopper is in this post: Swarm Python GH Component</p>
+<p><img src="bridgeRendering01.jpg" alt="drawing" width="100%"/></p>
+<iframe src="//www.youtube.com/embed/Vl4k08GAAzU?list=UUXVRZ5CbwNMhPv5l894U8jw" width="100%" height="480" frameborder="0" allowfullscreen="allowfullscreen"></iframe><p><img src="bridgeRendering02.jpg" alt="drawing" width="100%"/></p>
+<p><img src="bridgeRendering03.jpg" alt="drawing" width="100%"/></p>
+<pre><code class="lang-python">
+import rhinoscriptsyntax as rs 
+import Rhino as rc
+import time
+import math
+import scriptcontext as rc
+import Rhino.Geometry as rg
+from scriptcontext import escape_test
+from random import *
+ 
+rectX = 600
+rectY = 600
+ 
+class Runner:
+    def __init__(self, p, v):
+        self.p = p
+        self.v = v
+        self.a = rs.VectorCreate( (0,0,0),(0,0,0) )
+        self.ptList = []
+          
+    def ptRun(self):
+        self.v = rs.VectorAdd(self.v, self.a)
+        v = rs.VectorLength(self.v)
+        if v &gt; 15:
+            self.v = rs.VectorScale(rs.VectorUnitize(self.v), 15)
+        self.p = rs.VectorAdd(self.p, self.v)
+        self.a = rs.VectorCreate( (0,0,0),(0,0,0) )
+         
+        self.ptList.append(self.p)
+      
+    def flock(self):
+        self.separate(4.0)
+        self.cohesion(0.001)
+        self.align(0.1)
+         
+        self.attractor(0.7)
+      
+    def align(self, mag):
+          
+        steer = rs.VectorCreate( (0,0,0) , (0,0,0) )
+        count = 0
+          
+        for i in pts:
+            distance = rs.Distance(i.p, self.p)
+            if distance &gt; 0 and distance &lt; 40:
+                steer = rs.VectorAdd(steer, i.v)
+                count += 1
+          
+        if count&gt;0:
+            steer = rs.VectorScale(steer, 1.0/count)
+          
+        steer = rs.VectorScale(steer, mag)
+        self.a = rs.VectorAdd(self.a, steer)
+      
+    def cohesion(self, mag):
+          
+        sum = rs.VectorCreate( (0,0,0) , (0,0,0) )
+        count = 0
+          
+        for i in pts:
+            distance = rs.Distance(i.p, self.p)
+            if distance &gt; 0 and distance &lt; 60:
+                sum = rs.VectorAdd(sum, i.p)
+                count += 1
+          
+        if count&gt;0:
+            sum = rs.VectorScale(sum, 1.0/count)
+          
+        steer = rs.VectorSubtract(sum, self.p)
+        steer = rs.VectorScale(steer, mag)
+        self.a = rs.VectorAdd(self.a, steer)
+      
+    def separate(self, mag):
+          
+        steer = rs.VectorCreate( (0,0,0) , (0,0,0) )
+        count = 0
+          
+        for i in pts:
+            distance = rs.Distance(i.p, self.p)
+            if distance &gt; 0 and distance &lt; 30:
+                diff = rs.VectorSubtract(self.p, i.p)
+                diff = rs.VectorUnitize(diff)
+                diff = rs.VectorScale(diff, 1.0/distance)
+                  
+                steer = rs.VectorAdd(steer , diff)
+                count += 1
+          
+        if count&gt;0:
+            steer = rs.VectorScale(steer, 1.0/count)
+          
+        steer = rs.VectorScale(steer, mag)
+        self.a = rs.VectorAdd(self.a, steer)
+     
+    def attractor(self, mag):
+         
+        attrPt = rs.VectorCreate((-800,-700,0) , (0,0,0))
+        steer = rs.VectorCreate( (0,0,0) , (0,0,0) )
+        diff = rs.VectorSubtract( attrPt, self.p )
+        diff = rs.VectorUnitize(diff)
+         
+        steer = rs.VectorAdd(steer , diff)
+        steer = rs.VectorScale(steer, mag)
+          
+        self.a = rs.VectorAdd(self.a, steer)
+     
+    def drawLines(self):
+        for i in pts:
+            distance = rs.Distance(i.p, self.p)
+            if distance &lt; 40 and distance &gt; 0:
+                pt1 = rg.Point3d(i.p[0], i.p[1], i.p[2])
+                pt2 = rg.Point3d(self.p[0], self.p[1], self.p[2])
+                lns.append(rs.AddLine(pt1, pt2))
+     
+    def drawPt(self):
+        pt = rs.AddPoint(self.p[0], self.p[1], self.p[2])
+        return pt
+ 
+def setup():
+    global pts
+    pts = []
+    global lns
+    lns = []
+    numAG = 36
+     
+    for i in range(numAG):
+        p = rs.VectorCreate( rs.AddPoint( 100*math.cos(i*2*math.pi/numAG), 100*math.sin(i*2*math.pi/numAG),0) , rs.AddPoint(0,0,0) )
+        v = rs.VectorCreate(   rs.AddPoint( -randint(2,18),-randint(18,36),randint(-2,26)   )  ,  rs.AddPoint(0,0,0  )    )
+        run1 = Runner(p, v)
+        pts.append(run1)
+ 
+def run():
+    pos = []
+    vec = []
+     
+    for i in pts:
+        pos.append(i.drawPt())
+        vec.append(i.v)
+    for i in pts:
+        i.flock()
+        i.ptRun()
+        if t &gt; 10 and t%6==1:
+            i.drawLines()
+ 
+def drawTime():
+    FPS = 30
+    last_time = time.time()
+    global t
+    t = 0
+    curves = []
+    # whatever the loop is...
+    while True:
+        # draw animation
+        t += 1
+        # pause so that the animation runs at 30 fps
+        new_time = time.time()
+        # see how many milliseconds we have to sleep for
+        # then divide by 1000.0 since time.sleep() uses seconds
+        sleep_time = ((1000.0 / FPS) - (new_time - last_time)) / 1000.0
+        if sleep_time &gt; 0:
+            time.sleep(sleep_time)
+        last_time = new_time
+         
+        run()
+         
+        print t
+         
+        if t &gt; 108:
+            for k in pts:
+                curves.append(rs.AddCurve(k.ptList))
+             
+            rs.EnableRedraw(False)
+            for crv in curves:
+                rs.AddPipe(crv, [0,0.5,1], [4,1,4], cap=2)
+             
+            for ln in lns:
+                rs.AddPipe(ln, 0, 1, cap=2)
+            rs.EnableRedraw(True)
+            break
+         
+        escape_test()
+ 
+def main():
+    setup()
+    drawTime()
+ 
+if __name__ == “__main__”:
+    main()
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>

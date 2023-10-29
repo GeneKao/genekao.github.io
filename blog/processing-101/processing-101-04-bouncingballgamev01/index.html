@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="Origin">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1">
+  <meta name="referrer" content="never">  <!-- Fallback for IE/Edge/Safari -->
+  <meta name="referrer" content="no-referrer">  <!-- Fallback for Chrome lt 61 -->
+  <meta name="referrer" content="same-origin">
+
+  <!-- FREE HTML5 TEMPLATE  -->
+  <!-- DESIGNED & DEVELOPED by FREEHTML5.CO -->
+
+  <!-- Website:        https://freehtml5.co/ -->
+  <!-- Email:          info@freehtml5.co -->
+  <!-- Twitter:        https://twitter.com/fh5co -->
+  <!-- Facebook:       https://www.facebook.com/fh5co -->
+
+  <!-- HUGO TEMPLATE PORTED BY SteveLane -->
+  <!-- Website:        https://interadata.io/ -->
+
+  <!-- LEKTOR THEME PORTED BY Daniel Althviz -->
+  <!-- Website:        https://dalthviz.github.io/ -->
+
+  <!-- LEKTOR THEME MAINTAINED AND EXPANED BY Spyder Dev Team -->
+  <!-- Website:        https://github.com/spyder-ide/lektor-icon -->
+
+  <!-- Copyright (c) 2016- Lektor-Icon Contributors -->
+
+  <!-- Original standalone HTML5 theme distributed under the terms of the -->
+  <!-- Creative Commons Attribution 3.0 license -->
+  <!-- https://creativecommons.org/licenses/by/3.0/ -->
+
+  <!-- Additions, modifications and porting released under the terms of the -->
+  <!-- MIT (Expat) License: https://opensource.org/licenses/MIT -->
+  <!-- See the LICENSE.txt file for more details -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/LICENSE.txt -->
+
+  <!-- For information on the included third-party assets, see NOTICE.txt -->
+  <!-- https://github.com/spyder-ide/lektor-icon/blob/master/NOTICE.txt -->
+
+  <title> — GENEATCG</title>
+  <meta name="author" content="Gene Ting-Chun Kao"en-US>
+  <meta name="copyright" content="&amp;copy; 2023 Gene Ting-Chun Kao"en-US>
+  <meta name="theme-color" content="#cd0067">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --theme-fg-color: #000000;
+      --theme-fg-alt-color: #333333;
+      --theme-bg-color: #ffffff;
+      --theme-bg-alt-color: #e8ecf1;
+      --theme-bg-accent-color: #f5f5f5;
+      --theme-accent-color: #cd0067;
+      --theme-accent-alt-color: #d50000;
+      --theme-pipe-color: #0067cd
+    }
+  </style>
+  <!-- Google fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../static/css/style.css?h=038b8d38" type="text/css">
+  <!-- User Custom CSS -->
+  <link rel="stylesheet" href="../../../static/css/custom-styles.css?h=896fd394" type="text/css">
+</head>
+
+<body>
+<div class="fh5co-page">
+  <div id="fh5co-container">
+    <div class="js-sticky">
+      <div class="fh5co-main-nav navbar fixed-top">
+        <div class="container">
+          <div class="fh5co-menu-1">
+            <div class='pull-left'>
+              <ul class='dropdown menu' data-dropdown-menu>
+                <li id='menu-logo'>
+                  <p></p>
+                    <a href='../../../'>
+                    <span class="logo-text-container">
+                      <span class="logo-text">GENEATCG&nbsp;</span>
+                    </span>
+                  </a>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="main-nav-container">
+              <div class="side-nav-container">
+                <a class="pull-right nav-link-external" href="https://geneatcg.com/portfolio"> Portfolio</a>
+                <a class="pull-right nav-link-internal" href="../../../resume/">Resume</a>
+                <a class="pull-right nav-link-internal" href="../../../talks/">Talks</a>
+                <a class="pull-right nav-link-internal" href="../../../publications/">Publications</a>
+                <a class="pull-right nav-link-internal nav-link-active-section /blog/processing-101/processing-101-04-bouncingballgamev01 sep /blog" href="../../">Blog</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div id="generic-page" class="page-content-container">
+  <div class="page-content">
+    <div class="text-center fh5co-heading">
+      <div class="rule-under-heading"></div>
+    </div>
+    <div class="center">
+      <h3>BouncingBallGame – version 0.001</h3>
+<p>A brief testing of bouncing ball game.
+Rules: 1. Press the mouse button for initial ball speed.</p>
+<ol>
+<li>Bounce each bat for getting one point.</li>
+<li>Try not to hit the red bat, because it will fasten the speed.</li>
+<li>Press “UP” &amp; “Down” can change your bat size.</li>
+<li>Tell me your score.</li>
+</ol>
+<p>簡單小遊戲</p>
+<p>遊戲規則：</p>
+<ol>
+<li>按下滑鼠按鈕，調整開始球速。</li>
+<li>每彈跳一下，加一分。</li>
+<li>嘗試著不要碰到紅色球拍，每碰一下，球會加速。</li>
+<li>按下鍵盤“上”“下” 可調整球拍大小。</li>
+<li>告訴我您的分數。</li>
+</ol>
+<p>code based on Bouncing Ball</p>
+<pre><code class="lang-java">
+///////////////////////////////////////
+/**************************************
+ //www.geneatcg.com/
+  
+ Processing 101 - 04
+ Wriiten by Gene Kao
+ Date --- 2014/04/09
+  
+ **************************************/
+///////////////////////////////////////
+ 
+ 
+Ball b; 
+boolean status; 
+int batSize = 150; 
+int batThick = 10; 
+int AddSpeed = 1;
+int score = 0; 
+ 
+void setup() {
+  size(650, 450);
+  rectMode(CENTER);
+  smooth();
+  b = new Ball(new PVector(width/2, height/2));
+  status = true;
+}
+ 
+void draw() {
+  background(200);
+  b.draw();
+}
+ 
+void mousePressed() {
+  b = new Ball(new PVector(width/2, height/2));
+  status = true;
+  score = 0;
+}
+ 
+void keyPressed() {
+  if (key == CODED)
+    if (keyCode == UP) {
+      batSize += 10;
+    } 
+    else if (keyCode == DOWN) {
+      batSize -= 10;
+    }
+}
+ 
+class Ball {
+ 
+  PVector pos; 
+  PVector dir = new PVector(mouseX-width/2, mouseY-height/2);
+  PVector vel; 
+  int rad = 20; 
+ 
+  Ball(PVector pos) {
+    this.pos = pos;
+    vel = PVector.div(dir, (width/2)/5);
+  }
+ 
+  void draw() {
+ 
+    if (status) {
+      display();
+      bound();
+      run();
+    }
+    bat();
+    fill(0, 102, 153);
+    text(&quot;Ball Position = &quot; + (int)pos.x + &quot;, &quot; + (int)pos.y, 10, 20);
+    text(&quot;Ball Velocity = &quot; + vel.mag(), 10, 40);
+    fill(255,0,239);
+    text(&quot;Score = &quot; + score, 10, 60);
+  }
+ 
+ 
+ 
+  void bound() {
+ 
+    if (pos.x &lt; rad - batThick/2 &amp;&amp; (pos.y &lt; mouseY+batSize/2 &amp;&amp; pos.y &gt; mouseY-batSize/2) ) {
+      vel.x *= -1;
+      vel.x += AddSpeed; 
+      vel.y += AddSpeed;
+ 
+      score++;
+    } 
+    else if (pos.x &lt; rad - batThick/2 &amp;&amp; (pos.y &lt; mouseY+batSize/2 &amp;&amp; pos.y &gt; mouseY-batSize/2) ) {
+      status = false;
+    }
+ 
+    if (pos.x &gt; width-rad + batThick/2 &amp;&amp; (pos.y &lt; mouseY+batSize/2 &amp;&amp; pos.y &gt; mouseY-batSize/2)) {
+ 
+      vel.x += AddSpeed; 
+      vel.y += AddSpeed;
+      vel.x *= -1;
+      score++;
+    } 
+    else if (pos.x &gt; width-rad + batThick/2 &amp;&amp; !(pos.y &lt; mouseY+batSize/2 &amp;&amp; pos.y &gt; mouseY-batSize/2)) {
+      status = false;
+    }
+ 
+    if (pos.y &lt; rad - batThick/2 &amp;&amp; (pos.x &lt; mouseX+batSize/2 &amp;&amp; pos.x &gt; mouseX-batSize/2) ) {
+ 
+      score++;
+      vel.y *= -1;
+    } 
+    else if (pos.y &lt; rad - batThick/2 &amp;&amp; !(pos.x &lt; mouseX+batSize/2 &amp;&amp; pos.x &gt; mouseX-batSize/2) ) {
+      status = false;
+    }
+ 
+    if (pos.y &gt; height-rad + batThick/2 &amp;&amp; (pos.x &lt; mouseX+batSize/2 &amp;&amp; pos.x &gt; mouseX-batSize/2)) {
+      vel.y *= -1;
+ 
+      score++;
+    } 
+    else if (pos.y &gt; height-rad + batThick/2 &amp;&amp; !(pos.x &lt; mouseX+batSize/2 &amp;&amp; pos.x &gt; mouseX-batSize/2)) {
+      status = false;
+    }
+  }
+ 
+  void run() {
+    pos.add(vel);
+  }
+ 
+  void display() {
+    fill(255);
+    noStroke();
+    ellipse(pos.x, pos.y, rad, rad);
+    displayArrow();
+  }
+ 
+  void displayArrow() {
+    strokeWeight(dist(width/2, height/2, mouseX, mouseY)/100);
+    stroke(255, 100);
+    line(width/2, height/2, mouseX, mouseY);
+    stroke(255, 255, 0);
+    fill(255, 255, 0, 100);
+    ellipse(mouseX, mouseY, 20, 20);
+    if (mousePressed) {
+      stroke(255, 255, 0);
+      fill(255, 255, 0);
+      ellipse(mouseX, mouseY, 40, 40);
+    }
+  }
+ 
+  void bat() {
+    fill(255);
+    noStroke();
+    rect(mouseX, height-5, batSize, batThick);
+    rect(mouseX, 5, batSize, batThick);
+ 
+    fill(255, 0, 0);
+    rect(width-5, mouseY, batThick, batSize);
+    rect(5, mouseY, batThick, batSize);
+  }
+   
+}
+</code></pre>
+
+    </div>
+  </div>
+</div>
+
+    <div id="fh5co-footer">
+      <div class="container">
+        <div class="row footer-connect-line">
+          <div class="text-center">
+            <p>
+              Connect with us on:
+              <a href="https://github.com/GeneKao"> GitHub </a>
+              <span class="pipe-colored">|</span>
+              <a href="https://www.linkedin.com/in/kaogene"> LinkedIn </a>
+            </p>
+          </div>
+        </div>
+        <div class="row footer-copyright">
+          <div class="text-center">
+            <p>
+              &copy; 2023 Gene Ting-Chun Kao
+              <br>
+              <a href="https://freehtml5.co/icon-free-website-template-using-bootstrap/" target="_blank" rel="noopener noreferrer">Template</a> design by <a href="https://freehtml5.co/" target="_blank" rel="noopener noreferrer">FreeHTML5.co</a>&nbsp;(<a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC&#8209;BY&nbsp;3.0</a>)
+              <br><a href="https://github.com/SteveLane/hugo-icon" target="_blank" rel="noopener noreferrer">Hugo port</a> by <a href="https://github.com/SteveLane/" target="_blank" rel="noopener noreferrer">SteveLane</a> <span class="pipe-colored">|</span> <a href="https://github.com/spyder-ide/lektor-icon" target="_blank" rel="noopener noreferrer">Lektor&nbsp;port</a>&nbsp;by&nbsp;<a href="https://github.com/dalthviz/" target="_blank" rel="noopener noreferrer">Dalthviz</a>
+              <br>Rewrite by <a href="http://gerlach.cam" target="_blank" rel="noopener noreferrer">C.A.M.&nbsp;Gerlach</a> <span class="pipe-colored">|</span> Maintained by <a href="https://www.spyder-ide.org/" target="_blank" rel="noopener noreferrer">Spyder&nbsp;IDE</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- jQuery -->
+<script src="../../../static/js/jquery-3.5.1.min.js?h=c8e1c8b3" type="application/javascript" charset="UTF-8"></script>
+<!-- Waypoints -->
+<script src="../../../static/js/jquery.waypoints.min.js?h=a2b72d43" type="application/javascript" charset="UTF-8"></script>
+<!-- Main JS -->
+<script src="../../../static/js/main.js?h=b7b497b4" type="application/javascript" charset="UTF-8"></script>
+<!-- <script src="https://code.jquery.com/jquery-migrate-3.0.1.js" type="application/javascript" charset="UTF-8"></script> -->
+</body>
+</html>
