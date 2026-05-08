@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.geneatcg.com/sitemap.xml

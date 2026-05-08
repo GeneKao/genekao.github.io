@@ -1,0 +1,26 @@
+# GENEATCG — Gene Ting-Chun Kao
+
+Personal website of Gene Ting-Chun Kao (pronounced 'genetic'), a computational geometry engineer and researcher.
+
+## About
+
+Gene works at the intersection of computational geometry, geometry processing, and computational design. He holds a Dr. sc. ETH Zurich (Doctor of Sciences) from ETH Zurich and currently works as a Senior Research & Development Engineer at Synopsys. His background spans academic research and production software engineering. He builds geometry tools, meshing algorithms, and computational design systems.
+
+## Site sections
+
+- Blog: /blog/ — technical posts on computational geometry, software, and personal writing
+- Portfolio: /portfolio/ — selected projects in computational geometry, fabrication, and design
+- Resume: /resume/ — work experience and education timeline
+- Publications: /publications/ — academic papers and research
+- Talks: /talks/ — conference talks and podcast appearances
+
+## Geometry Toolbox series
+
+A blog series explaining fundamental geometry concepts with derivations and C++ implementations.
+- Barycentric Coordinates: /blog/barycentric-coordinates/
+
+## Contact / profiles
+
+- GitHub: https://github.com/GeneKao
+- LinkedIn: https://www.linkedin.com/in/kaogene
+- Website source: https://github.com/GeneKao/geneatcg (open source)
